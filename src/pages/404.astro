@@ -1,0 +1,252 @@
+---
+import { themeConfig } from '@/config'
+import IndexLayout from '@/layouts/IndexLayout.astro'
+---
+
+<IndexLayout title={`404 - ${themeConfig.site.title}`} description="Page not found - Totem Grid">
+  <main class="error-page">
+    <div class="error-content">
+      <div class="error-visual">
+        <div class="error-icon">📵</div>
+        <div class="signal-lost">
+          <div class="signal-bar"></div>
+          <div class="signal-bar"></div>
+          <div class="signal-bar"></div>
+          <div class="signal-bar"></div>
+        </div>
+      </div>
+
+      <h1 class="error-title">Lost Connection</h1>
+      <p class="error-subtitle">404 - Page Not Found</p>
+
+      <p class="error-message">
+        Looks like you've wandered off the grid. Don't worry, we'll help you find your way back to
+        your tribe.
+      </p>
+
+      <div class="error-actions">
+        <a href="/" class="back-home-btn">
+          <span class="btn-text">Back to Home</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="/beta-test" class="beta-btn">
+          <span class="btn-text">Join Beta</span>
+        </a>
+      </div>
+    </div>
+  </main>
+</IndexLayout>
+
+<style>
+  .error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .error-content {
+    max-width: 32rem;
+    margin: 0 auto;
+    animation: errorFadeIn 0.8s ease-out;
+  }
+
+  .error-visual {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .error-icon {
+    font-size: 4rem;
+    animation: iconShake 1s ease-in-out infinite;
+  }
+
+  .signal-lost {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+  }
+
+  .signal-bar {
+    width: 6px;
+    background-color: #ef4444;
+    border-radius: 2px;
+    animation: barFlicker 1.5s ease-in-out infinite;
+  }
+
+  .signal-bar:nth-child(1) {
+    height: 12px;
+    animation-delay: 0s;
+  }
+  .signal-bar:nth-child(2) {
+    height: 16px;
+    animation-delay: 0.2s;
+  }
+  .signal-bar:nth-child(3) {
+    height: 20px;
+    animation-delay: 0.4s;
+  }
+  .signal-bar:nth-child(4) {
+    height: 24px;
+    animation-delay: 0.6s;
+  }
+
+  .error-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--color-text-primary) 0%, #ef4444 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .error-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+
+  .error-message {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin-bottom: 2.5rem;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .error-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .back-home-btn,
+  .beta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .back-home-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+
+  .back-home-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  }
+
+  .beta-btn {
+    background: transparent;
+    color: var(--color-text-primary);
+    border: 2px solid var(--color-text-primary);
+  }
+
+  .beta-btn:hover {
+    background: var(--color-text-primary);
+    color: var(--color-bg);
+    transform: translateY(-2px);
+  }
+
+  .btn-arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .back-home-btn:hover .btn-arrow {
+    transform: translateX(3px);
+  }
+
+  @keyframes errorFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes iconShake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-3px);
+    }
+    75% {
+      transform: translateX(3px);
+    }
+  }
+
+  @keyframes barFlicker {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .error-page {
+      min-height: 50vh;
+      padding: 1.5rem 1rem;
+    }
+
+    .error-icon {
+      font-size: 3rem;
+    }
+
+    .error-title {
+      font-size: 2rem;
+    }
+
+    .error-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .back-home-btn,
+    .beta-btn {
+      width: 100%;
+      max-width: 220px;
+      justify-content: center;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .error-content,
+    .error-icon,
+    .signal-bar {
+      animation: none;
+    }
+
+    .back-home-btn,
+    .beta-btn,
+    .btn-arrow {
+      transition: none;
+    }
+  }
+</style>

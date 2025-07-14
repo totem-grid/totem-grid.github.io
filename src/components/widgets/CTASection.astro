@@ -1,0 +1,680 @@
+---
+import { themeConfig } from '@/config'
+---
+
+<section class="cta-section">
+  <div class="cta-content">
+    <!-- Disconnected State Visual - Made more prominent -->
+    <div class="disconnected-showcase">
+      <h2 class="disconnect-title">
+        And Goodbye to the disconnected state: <span class="emoji">📵</span>
+      </h2>
+      <div class="disconnect-visual">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="signal-bars-container">
+              <div class="signal-bars">
+                <div class="bar" data-bar="1"></div>
+                <div class="bar" data-bar="2"></div>
+                <div class="bar" data-bar="3"></div>
+                <div class="bar" data-bar="4"></div>
+              </div>
+              <span class="carrier-text">No Service</span>
+            </div>
+            <div class="disconnect-overlay">
+              <div class="no-signal-icon">📵</div>
+              <p class="disconnect-message">Connection Lost</p>
+            </div>
+          </div>
+        </div>
+        <div class="vs-arrow">→</div>
+        <div class="phone-mockup connected">
+          <div class="phone-screen">
+            <div class="signal-bars-container">
+              <div class="signal-bars connected">
+                <div class="bar active" data-bar="1"></div>
+                <div class="bar active" data-bar="2"></div>
+                <div class="bar active" data-bar="3"></div>
+                <div class="bar active" data-bar="4"></div>
+              </div>
+              <span class="carrier-text">Totem Grid</span>
+            </div>
+            <div class="connection-visual">
+              <div class="mesh-dots">
+                <div class="mesh-dot"></div>
+                <div class="mesh-dot"></div>
+                <div class="mesh-dot"></div>
+              </div>
+              <p class="connect-message">Connected ✅</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="disconnect-description">
+        Never lose touch with your crew, even when traditional networks fail
+      </p>
+    </div>
+
+    <!-- CTA Cards Grid -->
+    <div class="cta-grid">
+      <!-- Beta Signup Section -->
+      <div class="cta-card primary">
+        <div class="card-header">
+          <div class="card-icon">🚀</div>
+          <h2 class="cta-title">Ready to never lose your friends again?</h2>
+        </div>
+        <p class="cta-subtitle">Join our beta test program</p>
+
+        <div class="beta-cta">
+          <a href="/beta-test" class="beta-btn">
+            <span class="btn-text">Join Beta Test</span>
+            <span class="btn-arrow">→</span>
+          </a>
+          <p class="beta-note">Groups and event organizers get priority access</p>
+        </div>
+      </div>
+
+      <!-- Organizer Partnership Section -->
+      <div class="cta-card secondary">
+        <div class="card-header">
+          <div class="card-icon">🤝</div>
+          <h3 class="organizer-title">Organizers: Want this at your next event?</h3>
+        </div>
+        <p class="organizer-subtitle">Partner with us to bring Totem Grid to your events</p>
+        <a href="/partner-up" class="partner-btn">
+          <span class="btn-text">Partner Up</span>
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-section {
+    padding: 5rem 0;
+    background: linear-gradient(
+      135deg,
+      rgba(102, 126, 234, 0.08) 0%,
+      rgba(118, 75, 162, 0.08) 50%,
+      rgba(102, 126, 234, 0.08) 100%
+    );
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.5), transparent);
+  }
+
+  .cta-content {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* Disconnected State Showcase */
+  .disconnected-showcase {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: showcaseSlideUp 0.8s ease-out;
+  }
+
+  .disconnect-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--color-text-primary);
+    line-height: 1.2;
+  }
+
+  .disconnect-title .emoji {
+    margin-left: 0.5rem;
+    animation: emojiPulse 2s ease-in-out infinite;
+  }
+
+  .disconnect-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .phone-mockup {
+    width: 180px;
+    height: 320px;
+    background: linear-gradient(145deg, #f1f5f9, #e2e8f0);
+    border-radius: 2rem;
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    animation: phoneSlideUp 0.8s ease-out;
+  }
+
+  .phone-mockup.connected {
+    animation-delay: 0.4s;
+  }
+
+  .phone-mockup:hover {
+    transform: translateY(-5px);
+  }
+
+  .phone-screen {
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .signal-bars-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .signal-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+  }
+
+  .bar {
+    width: 4px;
+    background-color: #666;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+  }
+
+  .bar[data-bar='1'] {
+    height: 8px;
+  }
+  .bar[data-bar='2'] {
+    height: 12px;
+  }
+  .bar[data-bar='3'] {
+    height: 16px;
+  }
+  .bar[data-bar='4'] {
+    height: 20px;
+  }
+
+  .signal-bars.connected .bar.active {
+    background-color: #22c55e;
+    animation: barPulse 2s ease-in-out infinite;
+  }
+
+  .signal-bars.connected .bar[data-bar='1'] {
+    animation-delay: 0s;
+  }
+  .signal-bars.connected .bar[data-bar='2'] {
+    animation-delay: 0.2s;
+  }
+  .signal-bars.connected .bar[data-bar='3'] {
+    animation-delay: 0.4s;
+  }
+  .signal-bars.connected .bar[data-bar='4'] {
+    animation-delay: 0.6s;
+  }
+
+  .carrier-text {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  .disconnect-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    color: white;
+  }
+
+  .no-signal-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: shakeIcon 1s ease-in-out infinite;
+  }
+
+  .disconnect-message {
+    font-size: 0.875rem;
+    color: #ef4444;
+    margin: 0;
+  }
+
+  .connection-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+  }
+
+  .mesh-dots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .mesh-dot {
+    width: 12px;
+    height: 12px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: meshPulse 1.5s ease-in-out infinite;
+  }
+
+  .mesh-dot:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .mesh-dot:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  .mesh-dot:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+
+  .connect-message {
+    font-size: 0.875rem;
+    color: #22c55e;
+    margin: 0;
+  }
+
+  .vs-arrow {
+    font-size: 2rem;
+    color: var(--color-text-primary);
+    font-weight: bold;
+    animation: arrowPulse 2s ease-in-out infinite;
+  }
+
+  .disconnect-description {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    max-width: 36rem;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* CTA Grid */
+  .cta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .cta-card {
+    background: var(--color-bg);
+    border-radius: 1.25rem;
+    padding: 2.5rem;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: cardSlideUp 0.8s ease-out;
+    animation-fill-mode: both;
+  }
+
+  .cta-card.primary {
+    animation-delay: 0.2s;
+  }
+
+  .cta-card.secondary {
+    animation-delay: 0.4s;
+  }
+
+  .cta-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .cta-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .cta-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(102, 126, 234, 0.2);
+    border-color: rgba(102, 126, 234, 0.3);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+    animation: iconFloat 2s ease-in-out infinite;
+  }
+
+  .cta-card.primary .card-icon {
+    animation-delay: 0s;
+  }
+
+  .cta-card.secondary .card-icon {
+    animation-delay: 1s;
+  }
+
+  .cta-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--color-text-primary);
+    line-height: 1.3;
+  }
+
+  .organizer-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--color-text-primary);
+    line-height: 1.3;
+  }
+
+  .cta-subtitle,
+  .organizer-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+
+  .beta-cta {
+    text-align: center;
+  }
+
+  .beta-btn,
+  .partner-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .beta-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  .beta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .beta-btn:hover::before {
+    left: 100%;
+  }
+
+  .partner-btn {
+    background: transparent;
+    color: var(--color-text-primary);
+    border: 2px solid var(--color-text-primary);
+  }
+
+  .partner-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--color-text-primary);
+    transition: width 0.3s ease;
+    z-index: -1;
+  }
+
+  .partner-btn:hover::before {
+    width: 100%;
+  }
+
+  .partner-btn:hover {
+    color: var(--color-bg);
+  }
+
+  .beta-btn:hover,
+  .partner-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  }
+
+  .btn-arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .beta-btn:hover .btn-arrow,
+  .partner-btn:hover .btn-arrow {
+    transform: translateX(3px);
+  }
+
+  .beta-note {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    font-style: italic;
+  }
+
+  /* Animations */
+  @keyframes showcaseSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes phoneSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes cardSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes emojiPulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes shakeIcon {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-2px);
+    }
+    75% {
+      transform: translateX(2px);
+    }
+  }
+
+  @keyframes barPulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }
+
+  @keyframes meshPulse {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes arrowPulse {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+  }
+
+  @keyframes iconFloat {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cta-section {
+      padding: 4rem 0;
+    }
+
+    .disconnected-showcase {
+      margin-bottom: 3rem;
+    }
+
+    .disconnect-title {
+      font-size: 2rem;
+    }
+
+    .disconnect-visual {
+      gap: 1rem;
+    }
+
+    .phone-mockup {
+      width: 140px;
+      height: 250px;
+    }
+
+    .vs-arrow {
+      font-size: 1.5rem;
+    }
+
+    .cta-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .card-header {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.5rem;
+    }
+
+    .cta-title,
+    .organizer-title {
+      font-size: 1.25rem;
+    }
+
+    .beta-btn,
+    .partner-btn {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+    }
+
+    .disconnect-description {
+      font-size: 1rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .disconnected-showcase,
+    .phone-mockup,
+    .cta-card {
+      animation: none;
+    }
+
+    .disconnect-title .emoji,
+    .no-signal-icon,
+    .signal-bars.connected .bar.active,
+    .mesh-dot,
+    .vs-arrow,
+    .card-icon {
+      animation: none;
+    }
+
+    .cta-card,
+    .phone-mockup,
+    .beta-btn,
+    .partner-btn,
+    .btn-arrow {
+      transition: none;
+    }
+
+    .beta-btn::before,
+    .partner-btn::before {
+      transition: none;
+    }
+  }
+</style>

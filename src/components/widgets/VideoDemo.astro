@@ -1,0 +1,463 @@
+---
+import { themeConfig } from '@/config'
+---
+
+<section class="video-demo" id="video-demo">
+  <div class="video-demo-content">
+    <header class="video-header">
+      <h2 class="video-demo-title">
+        See it in Action <span class="emoji">▶️</span>
+      </h2>
+      <p class="video-subtitle">Experience the power of mesh networking at crowded events</p>
+    </header>
+
+    <div class="video-container">
+      <!-- Placeholder for actual video - can be replaced with YouTube embed, Vimeo, or direct video -->
+      <div class="video-placeholder" id="video-placeholder">
+        <div class="video-background">
+          <div class="connection-dots">
+            <div class="dot" data-dot="1"></div>
+            <div class="dot" data-dot="2"></div>
+            <div class="dot" data-dot="3"></div>
+            <div class="dot" data-dot="4"></div>
+            <div class="dot" data-dot="5"></div>
+            <svg class="connection-lines" viewBox="0 0 640 360">
+              <line class="connection-line" x1="120" y1="100" x2="320" y2="180"></line>
+              <line class="connection-line" x1="320" y1="180" x2="520" y2="100"></line>
+              <line class="connection-line" x1="200" y1="260" x2="320" y2="180"></line>
+              <line class="connection-line" x1="320" y1="180" x2="440" y2="260"></line>
+            </svg>
+          </div>
+          <div class="play-button-wrapper">
+            <div class="play-button">
+              <svg
+                width="80"
+                height="80"
+                viewBox="0 0 80 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="40" cy="40" r="40" fill="rgba(255, 255, 255, 0.95)"></circle>
+                <path d="M32 24L56 40L32 56V24Z" fill="#667eea"></path>
+              </svg>
+              <div class="play-pulse"></div>
+            </div>
+          </div>
+        </div>
+        <div class="video-overlay">
+          <p class="placeholder-text">Demo Video Coming Soon</p>
+          <p class="placeholder-subtitle">Watch real-time mesh networking in action</p>
+        </div>
+      </div>
+
+      <!-- Example of how to embed a YouTube video when ready:
+      <iframe
+        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+        title="Totem Grid Demo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      -->
+    </div>
+
+    <div class="video-features">
+      <div class="video-feature">
+        <span class="feature-icon">🔗</span>
+        <span class="feature-text">Instant Connection</span>
+      </div>
+      <div class="video-feature">
+        <span class="feature-icon">📡</span>
+        <span class="feature-text">Mesh Network</span>
+      </div>
+      <div class="video-feature">
+        <span class="feature-icon">🔒</span>
+        <span class="feature-text">Secure Communication</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .video-demo {
+    padding: 5rem 0;
+    text-align: center;
+    max-width: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(102, 126, 234, 0.05) 0%,
+      rgba(118, 75, 162, 0.05) 100%
+    );
+  }
+
+  .video-demo-content {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .video-header {
+    margin-bottom: 3rem;
+    animation: headerSlideUp 0.8s ease-out;
+  }
+
+  .video-demo-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--color-text-primary);
+    line-height: 1.2;
+  }
+
+  .video-demo-title .emoji {
+    margin-left: 0.5rem;
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  .video-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto 3rem;
+    aspect-ratio: 16 / 9;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.2);
+    animation: containerSlideUp 0.8s ease-out 0.2s both;
+  }
+
+  .video-placeholder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .connection-dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: dotPulse 2s ease-in-out infinite;
+  }
+
+  .dot[data-dot='1'] {
+    top: 25%;
+    left: 18%;
+    animation-delay: 0s;
+  }
+  .dot[data-dot='2'] {
+    top: 45%;
+    left: 48%;
+    animation-delay: 0.4s;
+  }
+  .dot[data-dot='3'] {
+    top: 25%;
+    right: 18%;
+    animation-delay: 0.8s;
+  }
+  .dot[data-dot='4'] {
+    bottom: 25%;
+    left: 30%;
+    animation-delay: 1.2s;
+  }
+  .dot[data-dot='5'] {
+    bottom: 25%;
+    right: 30%;
+    animation-delay: 1.6s;
+  }
+
+  .connection-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .connection-line {
+    stroke: rgba(255, 255, 255, 0.4);
+    stroke-width: 2;
+    stroke-dasharray: 5, 5;
+    animation: lineFlow 3s linear infinite;
+  }
+
+  .play-button-wrapper {
+    position: relative;
+    z-index: 10;
+  }
+
+  .play-button {
+    position: relative;
+    transition: transform 0.3s ease;
+    z-index: 2;
+  }
+
+  .play-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: pulseRing 2s ease-out infinite;
+  }
+
+  .video-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .placeholder-text {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .placeholder-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  .video-placeholder:hover {
+    transform: scale(1.02);
+  }
+
+  .video-placeholder:hover .play-button {
+    transform: scale(1.15);
+  }
+
+  .video-features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    animation: featuresSlideUp 0.8s ease-out 0.4s both;
+  }
+
+  .video-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .video-feature:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+    border-color: rgba(102, 126, 234, 0.3);
+  }
+
+  .feature-icon {
+    font-size: 1.25rem;
+  }
+
+  .feature-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  /* When using actual video iframe */
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Animations */
+  @keyframes headerSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes containerSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes featuresSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulseGlow {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes dotPulse {
+    0%,
+    100% {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes lineFlow {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: 20;
+    }
+  }
+
+  @keyframes pulseRing {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(2);
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .video-demo {
+      padding: 4rem 0;
+    }
+
+    .video-header {
+      margin-bottom: 2rem;
+    }
+
+    .video-demo-title {
+      font-size: 1.875rem;
+    }
+
+    .video-subtitle {
+      font-size: 1rem;
+    }
+
+    .video-container {
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .play-button svg {
+      width: 60px;
+      height: 60px;
+    }
+
+    .play-pulse {
+      width: 60px;
+      height: 60px;
+    }
+
+    .placeholder-text {
+      font-size: 1.1rem;
+    }
+
+    .placeholder-subtitle {
+      font-size: 0.875rem;
+    }
+
+    .video-features {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .video-feature {
+      width: fit-content;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .video-header,
+    .video-container,
+    .video-features {
+      animation: none;
+    }
+
+    .video-demo-title .emoji,
+    .dot,
+    .connection-line,
+    .play-pulse {
+      animation: none;
+    }
+
+    .video-placeholder,
+    .play-button,
+    .video-feature {
+      transition: none;
+    }
+  }
+</style>
