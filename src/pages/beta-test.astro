@@ -1,0 +1,408 @@
+---
+import IndexLayout from '@/layouts/IndexLayout.astro'
+import { themeConfig } from '@/config'
+---
+
+<IndexLayout
+  title="Beta Test Enrollment - Totem Grid"
+  description="Join the Totem Grid beta test program. Early access for groups, event organizers, and communities."
+>
+  <main class="beta-test-page">
+    <div class="beta-content">
+      <header class="beta-header">
+        <h1>Beta Test Enrollment</h1>
+      </header>
+
+      <div class="beta-description">
+        <p>
+          As a peer-to-peer network, Totem Grid requires groups of participants to form a working
+          network. Communities and regions with high interest-density will be prioritized. We
+          recommend signing up in groups. Event organizers, promoters, and artists who want to
+          integrate the system into their events will be given special priority.
+        </p>
+        <p class="timeline">
+          <strong>Watch for new early-access and testing opportunities in summer 2025.</strong>
+        </p>
+      </div>
+
+      <form class="beta-form" id="beta-test-form">
+        <div class="form-section">
+          <label class="form-label">
+            Name <span class="required">*</span>
+          </label>
+          <div class="name-fields">
+            <input
+              type="text"
+              name="firstName"
+              placeholder="First Name"
+              class="form-input"
+              required
+            />
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Last Name"
+              class="form-input"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label for="email" class="form-label">
+            Email <span class="required">*</span>
+          </label>
+          <input type="email" id="email" name="email" class="form-input" required />
+        </div>
+
+        <div class="form-section">
+          <label class="form-label">
+            Group size <span class="required">*</span>
+          </label>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="groupSize" value="just-me" required />
+              <span class="radio-text">Just me</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="groupSize" value="5-9" required />
+              <span class="radio-text">Group of 5-9</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="groupSize" value="10-25" required />
+              <span class="radio-text">Group of 10-25</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="groupSize" value="26-50+" required />
+              <span class="radio-text">Group of 26-50+</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="groupSize" value="promoter" required />
+              <span class="radio-text">Promoter with a large community</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="groupSize" value="organizer" required />
+              <span class="radio-text">Event Organizer</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="groupSize" value="artist" required />
+              <span class="radio-text">Touring Artist</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="groupSize" value="other" required />
+              <span class="radio-text">Other (we will reach out for clarification)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label for="metro" class="form-label">
+            Major Metropolitan Area <span class="required">*</span>
+          </label>
+          <select id="metro" name="metro" class="form-select" required>
+            <option value="">Select your area</option>
+            <option value="atlanta">Atlanta</option>
+            <option value="austin">Austin</option>
+            <option value="baltimore">Baltimore</option>
+            <option value="boston">Boston</option>
+            <option value="chicago">Chicago</option>
+            <option value="dallas">Dallas</option>
+            <option value="denver">Denver</option>
+            <option value="detroit">Detroit</option>
+            <option value="edmonton">Edmonton</option>
+            <option value="houston">Houston</option>
+            <option value="las-vegas">Las Vegas</option>
+            <option value="los-angeles">Los Angeles</option>
+            <option value="miami">Miami</option>
+            <option value="milwaukee">Milwaukee</option>
+            <option value="minneapolis">Minneapolis</option>
+            <option value="montreal">Montreal</option>
+            <option value="nashville">Nashville</option>
+            <option value="new-orleans">New Orleans</option>
+            <option value="nyc">NYC Metro</option>
+            <option value="philadelphia">Philadelphia</option>
+            <option value="phoenix">Phoenix</option>
+            <option value="portland">Portland</option>
+            <option value="sacramento">Sacramento</option>
+            <option value="san-diego">San Diego</option>
+            <option value="san-francisco">San Francisco Bay Area</option>
+            <option value="seattle">Seattle</option>
+            <option value="toronto">Toronto</option>
+            <option value="vancouver">Vancouver BC</option>
+            <option value="virginia-beach">Virginia Beach</option>
+            <option value="washington-dc">Washington DC</option>
+          </select>
+        </div>
+
+        <div class="form-section">
+          <label for="events" class="form-label">
+            Events or venues of particular interest <span class="required">*</span>
+          </label>
+          <textarea
+            id="events"
+            name="events"
+            class="form-textarea"
+            rows="4"
+            placeholder="Tell us about specific events, venues, or festivals where you'd like to use Totem Grid..."
+            required
+          >
+          </textarea>
+        </div>
+
+        <button type="submit" class="submit-btn"> Join Beta Test </button>
+
+        <div class="success-message" id="success-message" style="display: none;">
+          <h3>Thank you!</h3>
+          <p>
+            We've received your beta test enrollment. We'll be in touch with updates about early
+            access opportunities.
+          </p>
+        </div>
+      </form>
+    </div>
+  </main>
+</IndexLayout>
+
+<style>
+  .beta-test-page {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .beta-content {
+    width: 100%;
+  }
+
+  .beta-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .beta-header h1 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .beta-description {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: var(--color-bg-secondary, rgba(128, 128, 128, 0.05));
+    border-radius: 0.75rem;
+    border-left: 4px solid var(--color-text-primary);
+  }
+
+  .beta-description p {
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+  }
+
+  .beta-description p:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline {
+    font-weight: 500;
+    color: var(--color-text-primary) !important;
+  }
+
+  .beta-form {
+    background-color: var(--color-bg);
+    border: 2px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-section {
+    margin-bottom: 2rem;
+  }
+
+  .form-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: var(--color-text-primary);
+    font-size: 1rem;
+  }
+
+  .required {
+    color: #ef4444;
+  }
+
+  .name-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--color-border);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    transition: border-color 0.2s ease;
+    font-family: inherit;
+  }
+
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: var(--color-text-primary);
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .radio-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s ease;
+  }
+
+  .radio-option:hover {
+    background-color: var(--color-bg-secondary, rgba(128, 128, 128, 0.05));
+  }
+
+  .radio-option input[type='radio'] {
+    margin-right: 0.75rem;
+    accent-color: var(--color-text-primary);
+  }
+
+  .radio-text {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: var(--color-text-primary);
+    color: var(--color-bg);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+  }
+
+  .submit-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
+  .submit-btn:active {
+    transform: translateY(0);
+  }
+
+  .success-message {
+    text-align: center;
+    padding: 2rem;
+    background-color: #10b981;
+    color: white;
+    border-radius: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .success-message h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+  }
+
+  .success-message p {
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    .beta-test-page {
+      padding: 1rem 0.5rem;
+    }
+
+    .beta-header h1 {
+      font-size: 1.875rem;
+    }
+
+    .beta-description {
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .beta-form {
+      padding: 1.5rem;
+    }
+
+    .name-fields {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    .form-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .radio-group {
+      gap: 0.5rem;
+    }
+
+    .radio-option {
+      padding: 0.375rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('beta-test-form') as HTMLFormElement
+    const successMessage = document.getElementById('success-message')
+
+    if (form && successMessage) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault()
+
+        // Collect form data
+        const formData = new FormData(form)
+        const data = {
+          firstName: formData.get('firstName'),
+          lastName: formData.get('lastName'),
+          email: formData.get('email'),
+          groupSize: formData.get('groupSize'),
+          metro: formData.get('metro'),
+          events: formData.get('events')
+        }
+
+        // Here you would integrate with your backend/email service
+        console.log('Beta test signup:', data)
+
+        // Show success message
+        form.style.display = 'none'
+        successMessage.style.display = 'block'
+
+        // Scroll to success message
+        successMessage.scrollIntoView({ behavior: 'smooth' })
+      })
+    }
+  })
+</script>

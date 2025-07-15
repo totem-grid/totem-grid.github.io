@@ -1,0 +1,411 @@
+---
+import { themeConfig } from '@/config'
+---
+
+<section class="testimonials">
+  <div class="testimonials-content">
+    <header class="testimonials-header">
+      <h2 class="testimonials-title">What People Say</h2>
+      <div class="testimonials-subtitle">
+        <span class="subtitle-text">Real feedback from real people</span>
+        <span class="emoji-sparkle">✨</span>
+      </div>
+    </header>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-section" data-group="organizers">
+        <div class="section-header">
+          <div class="section-icon">🎪</div>
+          <h3 class="section-title">What Organizers say:</h3>
+        </div>
+
+        <div class="testimonials-list">
+          <blockquote class="testimonial-card" data-priority="high">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">safety is our biggest concern</p>
+            <div class="testimonial-accent"></div>
+          </blockquote>
+
+          <blockquote class="testimonial-card" data-priority="medium">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">we've been looking for a platform that does this</p>
+            <div class="testimonial-accent"></div>
+          </blockquote>
+
+          <blockquote class="testimonial-card" data-priority="medium">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">an upgraded Walkie Talkie</p>
+            <div class="testimonial-accent"></div>
+          </blockquote>
+
+          <blockquote class="testimonial-card" data-priority="high">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">Game Changer!</p>
+            <div class="testimonial-accent"></div>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="testimonial-section" data-group="attendees">
+        <div class="section-header">
+          <div class="section-icon">🎵</div>
+          <h3 class="section-title">What Attendees say:</h3>
+        </div>
+
+        <div class="testimonials-list">
+          <blockquote class="testimonial-card" data-priority="high">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">Dude, I needed this at the gorge last weekend</p>
+            <div class="testimonial-accent"></div>
+          </blockquote>
+
+          <blockquote class="testimonial-card" data-priority="medium">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">Finally, we've needed someone to solve this for so long</p>
+            <div class="testimonial-accent"></div>
+          </blockquote>
+
+          <blockquote class="testimonial-card" data-priority="medium">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">I can't wait to send this to my friends</p>
+            <div class="testimonial-accent"></div>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding: 5rem 0;
+    background: linear-gradient(
+      135deg,
+      rgba(102, 126, 234, 0.02) 0%,
+      rgba(118, 75, 162, 0.05) 50%,
+      rgba(102, 126, 234, 0.02) 100%
+    );
+    position: relative;
+    overflow: hidden;
+  }
+
+  .testimonials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.3), transparent);
+  }
+
+  .testimonials-content {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .testimonials-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    animation: headerSlideUp 0.8s ease-out;
+  }
+
+  .testimonials-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-text-primary);
+    line-height: 1.2;
+  }
+
+  .testimonials-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .subtitle-text {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    font-weight: 400;
+  }
+
+  .emoji-sparkle {
+    font-size: 1.25rem;
+    animation: sparkleRotate 3s ease-in-out infinite;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 4rem;
+  }
+
+  .testimonial-section {
+    animation: sectionSlideUp 0.8s ease-out;
+    animation-fill-mode: both;
+  }
+
+  .testimonial-section[data-group='organizers'] {
+    animation-delay: 0.2s;
+  }
+
+  .testimonial-section[data-group='attendees'] {
+    animation-delay: 0.4s;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-icon {
+    font-size: 1.75rem;
+    animation: iconBounce 2s ease-in-out infinite;
+  }
+
+  .testimonial-section[data-group='organizers'] .section-icon {
+    animation-delay: 0s;
+  }
+
+  .testimonial-section[data-group='attendees'] .section-icon {
+    animation-delay: 1s;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .testimonials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .testimonial-card {
+    background: var(--color-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid var(--color-border);
+    margin: 0;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    animation: cardSlideUp 0.8s ease-out;
+    animation-fill-mode: both;
+  }
+
+  .testimonial-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .testimonial-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .testimonial-card:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .testimonial-card:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  .testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.15);
+    border-color: rgba(102, 126, 234, 0.2);
+  }
+
+  .testimonial-card[data-priority='high']:hover {
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+  }
+
+  .quote-mark {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    font-size: 3rem;
+    color: rgba(102, 126, 234, 0.2);
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  .testimonial-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin: 0;
+    font-style: italic;
+    padding-left: 1rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .testimonial-accent {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .testimonial-card:hover .testimonial-accent {
+    opacity: 1;
+  }
+
+  /* Animations */
+  @keyframes headerSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes sectionSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes cardSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes sparkleRotate {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(15deg);
+    }
+    75% {
+      transform: rotate(-15deg);
+    }
+  }
+
+  @keyframes iconBounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .testimonials {
+      padding: 4rem 0;
+    }
+
+    .testimonials-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .testimonials-title {
+      font-size: 1.875rem;
+    }
+
+    .subtitle-text {
+      font-size: 1rem;
+    }
+
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .section-header {
+      gap: 0.5rem;
+    }
+
+    .section-icon {
+      font-size: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+    }
+
+    .testimonial-card {
+      padding: 1.5rem;
+    }
+
+    .quote-mark {
+      font-size: 2.5rem;
+      top: 0.75rem;
+      left: 1.25rem;
+    }
+
+    .testimonial-text {
+      font-size: 1rem;
+      padding-left: 0.75rem;
+    }
+
+    .testimonials-list {
+      gap: 1rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .testimonials-header,
+    .testimonial-section,
+    .testimonial-card {
+      animation: none;
+    }
+
+    .emoji-sparkle,
+    .section-icon {
+      animation: none;
+    }
+
+    .testimonial-card,
+    .testimonial-accent {
+      transition: none;
+    }
+  }
+</style>

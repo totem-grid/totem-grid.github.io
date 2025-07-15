@@ -1,0 +1,581 @@
+---
+import IndexLayout from '@/layouts/IndexLayout.astro'
+import { themeConfig } from '@/config'
+---
+
+<IndexLayout
+  title="Partner Up - Totem Grid"
+  description="Turn your event up to 11 with Totem Grid. Reliable connectivity to ensure event safety, simplify logistics, and elevate attendee experiences."
+>
+  <main class="partner-page">
+    <div class="partner-content">
+      <!-- Hero Section -->
+      <section class="partner-hero">
+        <div class="hero-badge">
+          <span class="badge-text">🎸 For Event Organizers</span>
+        </div>
+        <h1 class="hero-title">
+          Turn Your Event Up to 11 with Totem Grid
+          <span class="title-accent">🎸✨</span>
+        </h1>
+        <p class="hero-subtitle">
+          🪩 <strong>Reliable connectivity</strong> to ensure event safety, simplify logistics, and elevate
+          attendee experiences.
+        </p>
+        <div class="hero-cta">
+          <a
+            href="https://calendar.app.google/D91BfcdzWRircLBx6"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="demo-btn"
+            id="book-demo-btn"
+          >
+            <span class="btn-text">Book Demo</span>
+            <span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Game Changing Section -->
+      <section class="game-changer">
+        <h2 class="section-title">Game-changing event connectivity.</h2>
+      </section>
+
+      <!-- Why Festivals Love Section -->
+      <section class="why-festivals">
+        <h2 class="section-title">🎉 Why Festivals Love Totem Grid</h2>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">✅</div>
+            <h3 class="feature-title">Easy Setup</h3>
+            <p class="feature-description">
+              We handle setup and logistics, simplifying operations so you can focus on delivering
+              an unforgettable event.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <h3 class="feature-title">Safety, Simplified</h3>
+            <p class="feature-description">
+              Improve emergency response accuracy with precise attendee locations and reliable
+              communications.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📡</div>
+            <h3 class="feature-title">Superior Coordination Tools</h3>
+            <p class="feature-description">
+              Better communication & coordination tools that beat walkie-talkies—simple, reliable,
+              no special training required.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">💸</div>
+            <h3 class="feature-title">App Profitability</h3>
+            <p class="feature-description">
+              Turn your event apps into revenue generators instead of expenses.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🗺️</div>
+            <h3 class="feature-title">Custom Interactive Maps</h3>
+            <p class="feature-description">
+              Intuitive maps and waypoints ensure seamless navigation to premium amenities.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3 class="feature-title">Premium Branded Experience</h3>
+            <p class="feature-description">
+              Deliver exclusive, branded digital experiences specifically for your community.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="final-cta">
+        <div class="cta-card">
+          <h2 class="cta-title">Ready to Make It Happen?</h2>
+          <p class="cta-subtitle">Let's discuss how Totem Grid can transform your next event</p>
+          <button class="contact-btn" id="contact-btn">
+            <span class="btn-text">Get in Touch</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
+      </section>
+    </div>
+  </main>
+</IndexLayout>
+
+<style>
+  .partner-page {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .partner-content {
+    width: 100%;
+  }
+
+  /* Hero Section */
+  .partner-hero {
+    text-align: center;
+    padding: 3rem 0 5rem;
+    background: linear-gradient(
+      135deg,
+      rgba(102, 126, 234, 0.05) 0%,
+      rgba(118, 75, 162, 0.05) 100%
+    );
+    border-radius: 2rem;
+    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .partner-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(102, 126, 234, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    animation: badgeSlideIn 0.8s ease-out 0.2s both;
+  }
+
+  .badge-text {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    animation: titleSlideUp 0.8s ease-out 0.4s both;
+  }
+
+  .title-accent {
+    display: inline-block;
+    animation: emojiFloat 2s ease-in-out infinite;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin-bottom: 2.5rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    animation: subtitleSlideUp 0.8s ease-out 0.6s both;
+  }
+
+  .hero-subtitle strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+  }
+
+  .hero-cta {
+    animation: ctaSlideUp 0.8s ease-out 0.8s both;
+  }
+
+  .demo-btn,
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.25rem 2.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  .demo-btn::before,
+  .contact-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .demo-btn:hover::before,
+  .contact-btn:hover::before {
+    left: 100%;
+  }
+
+  .demo-btn:hover,
+  .contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  }
+
+  .btn-arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .demo-btn:hover .btn-arrow,
+  .contact-btn:hover .btn-arrow {
+    transform: translateX(3px);
+  }
+
+  /* Game Changer Section */
+  .game-changer {
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  /* Why Festivals Section */
+  .why-festivals {
+    padding: 4rem 0;
+    margin-bottom: 4rem;
+  }
+
+  .why-festivals .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.25rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .feature-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: cardSlideUp 0.8s ease-out;
+    animation-fill-mode: both;
+  }
+
+  .feature-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .feature-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .feature-card:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .feature-card:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .feature-card:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .feature-card:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
+    border-color: rgba(102, 126, 234, 0.2);
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    animation: iconFloat 2s ease-in-out infinite;
+  }
+
+  .feature-card:nth-child(1) .feature-icon {
+    animation-delay: 0s;
+  }
+  .feature-card:nth-child(2) .feature-icon {
+    animation-delay: 0.3s;
+  }
+  .feature-card:nth-child(3) .feature-icon {
+    animation-delay: 0.6s;
+  }
+  .feature-card:nth-child(4) .feature-icon {
+    animation-delay: 0.9s;
+  }
+  .feature-card:nth-child(5) .feature-icon {
+    animation-delay: 1.2s;
+  }
+  .feature-card:nth-child(6) .feature-icon {
+    animation-delay: 1.5s;
+  }
+
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .feature-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  /* Final CTA Section */
+  .final-cta {
+    padding: 4rem 0;
+  }
+
+  .cta-card {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    border-radius: 2rem;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .cta-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+  }
+
+  /* Animations */
+  @keyframes badgeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes titleSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes subtitleSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes ctaSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes cardSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes emojiFloat {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes iconFloat {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .partner-hero {
+      padding: 2rem 1rem 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .hero-title {
+      font-size: 2.25rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .why-festivals .section-title {
+      font-size: 1.875rem;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .cta-card {
+      padding: 3rem 1.5rem;
+    }
+
+    .cta-title {
+      font-size: 1.875rem;
+    }
+
+    .demo-btn,
+    .contact-btn {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-badge,
+    .hero-title,
+    .hero-subtitle,
+    .hero-cta,
+    .feature-card {
+      animation: none;
+    }
+
+    .title-accent,
+    .feature-icon {
+      animation: none;
+    }
+
+    .demo-btn,
+    .contact-btn,
+    .feature-card,
+    .btn-arrow {
+      transition: none;
+    }
+
+    .demo-btn::before,
+    .contact-btn::before {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const contactBtn = document.getElementById('contact-btn')
+
+    if (contactBtn) {
+      contactBtn.addEventListener('click', function () {
+        // Here you would integrate with your contact form or redirect to contact page
+        alert('Contact form coming soon! Please reach out via email for now.')
+      })
+    }
+  })
+</script>
