@@ -18,17 +18,20 @@ Totem Grid is a revolutionary platform that enables seamless connections at crow
 ### Getting Started
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/totem-grid/totem-grid.github.io.git
    cd totem-grid.github.io
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Start the development server:
+
    ```bash
    npm run dev
    ```

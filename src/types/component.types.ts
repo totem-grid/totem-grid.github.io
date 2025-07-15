@@ -1,5 +1,3 @@
-
-
 // Transition props interface
 export interface TransitionProps {
   type: 'post' | 'page'
@@ -32,5 +30,3 @@ export interface ImageOptimizerProps {
   caption?: string
   priority?: boolean
 }
-
-

@@ -1,5 +1,3 @@
-
-
 // Site info configuration type
 export interface SiteInfo {
   website: string
@@ -18,8 +16,6 @@ export interface GeneralSettings {
   footer: boolean
   fadeAnimation: boolean
 }
-
-
 
 // Totem Grid specific settings configuration type
 export interface TotemGridSettings {

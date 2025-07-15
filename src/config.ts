@@ -6,7 +6,8 @@ export const themeConfig: ThemeConfig = {
     website: 'https://www.totemgrid.io', // Site domain
     title: 'Totem Grid', // Site title
     author: 'Totem Grid', // Author name
-    description: 'Find your tribe, instantly. Seamless connection at crowded events, no compass or cell service required.', // Site description
+    description:
+      'Find your tribe, instantly. Seamless connection at crowded events, no compass or cell service required.', // Site description
     language: 'en-US' // Default language
   },
 
@@ -19,8 +20,6 @@ export const themeConfig: ThemeConfig = {
     footer: true, // Show footer
     fadeAnimation: true // Enable fade animations
   },
-
-
 
   // TOTEM GRID SPECIFIC SETTINGS ///////////////////////////////////////////////////////////////////////
   totemGrid: {
