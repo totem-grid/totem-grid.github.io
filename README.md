@@ -1,59 +1,76 @@
-# Chiri 🌸
+# Totem Grid Marketing Website
 
-![screenshot-light](public/images/screenshot-light.png)
-![screenshot-dark](public/images/screenshot-dark.png)
+Find your tribe, instantly. Seamless connection at crowded events, no compass or cell service required.
 
-Chiri is a minimal blog theme built with [Astro](https://astro.build), offering customization options while preserving its clean aesthetic.
+🌐 **Live Site**: [https://www.totemgrid.io](https://www.totemgrid.io)
 
-Check the [demo](https://astro-chiri.netlify.app/) for more details.
+## About Totem Grid
 
-## Features
+Totem Grid is a revolutionary platform that enables seamless connections at crowded events without requiring compass navigation or cell service. Our technology helps people find their tribe instantly, making event networking effortless and intuitive.
 
-- Built with Astro
-- Responsive
-- Light / Dark mode
-- MD & MDX
-- KaTeX
-- Sitemap
-- RSS
-- ...
+## Development
 
-## Getting Started
+### Prerequisites
 
-1. [Fork](https://github.com/the3ash/astro-chiri/fork) this repository, or use this template to [create a new repository](https://github.com/new?template_name=astro-chiri&template_owner=the3ash).
+- Node.js 18+
+- npm (package manager)
 
-2. Run the following commands:
+### Getting Started
 
+1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
-
-   cd <your-repo-name>
-
-   pnpm install
-
-   pnpm dev
+   git clone https://github.com/totem-grid/totem-grid.github.io.git
+   cd totem-grid.github.io
    ```
 
-3. Edit `src/config.ts` and `src/content/about/about.md` to your liking.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-4. Use `pnpm new <title>` to create new posts, or add your posts to `src/content/posts`.
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-5. Deploy to Netlify, Vercel, or other platforms, refer to [Astro Deployment Guides](https://docs.astro.build/en/guides/deploy/) for more details.
+4. Open [http://localhost:4321](http://localhost:4321) in your browser
 
-&emsp;[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start) [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new)
+### Available Commands
 
-## Commands
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint issues automatically
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check code formatting
 
-- `pnpm new <title>` - Create a new post (use `_title` for drafts)
-- `pnpm update-theme` - Update the theme to the latest version
+## Deploy
 
-## References
+The site deploys automatically to GitHub Pages when changes are pushed to the `main` branch.
 
-- https://paco.me/
-- https://benji.org/
-- https://shud.in/
-- https://retypeset.radishzz.cc/
+You can also trigger a deployment manually:
 
-## License
+1. Go to the [Actions tab](https://github.com/totem-grid/totem-grid.github.io/actions) in this repository
+2. Click on "Deploy to GitHub Pages" workflow
+3. Click "Run workflow" button
+4. Select the branch you want to deploy from and click "Run workflow"
 
-MIT
+## Configuration
+
+Site configuration is managed in `src/config.ts`:
+
+- **Site Info**: Title, description, author, domain
+- **General Settings**: Layout, styling, and feature toggles
+- **Totem Grid Features**: Beta signup, video demos, testimonials
+
+## Content Management
+
+- **Pages**: Located in `src/pages/`
+- **Components**: Located in `src/components/`
+- **Styles**: Located in `src/styles/`
+- **Assets**: Located in `public/`
+
+---
+
+**Totem Grid** - Connecting people at events, effortlessly.
