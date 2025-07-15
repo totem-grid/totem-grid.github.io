@@ -5,6 +5,9 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "baseUrl": ".",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "paths": {
       "@/*": ["src/*"]
     }
