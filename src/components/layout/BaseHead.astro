@@ -3,7 +3,6 @@
 // all pages through the use of the <BaseHead /> component.
 import { themeConfig } from '@/config'
 import type { BaseHeadProps } from '@/types/component.types'
-import 'katex/dist/katex.min.css'
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
@@ -24,12 +23,7 @@ const { title, description } = Astro.props as BaseHeadProps
   crossorigin="anonymous"
 />
 <link rel="sitemap" href="/sitemap-index.xml" />
-<link
-  rel="alternate"
-  type="application/rss+xml"
-  title={themeConfig.site.title}
-  href={new URL('rss.xml', Astro.site)}
-/>
+
 <meta name="generator" content={Astro.generator} />
 
 <!-- Canonical URL -->

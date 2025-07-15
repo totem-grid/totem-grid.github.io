@@ -1,18 +1,4 @@
-import type { TOCItem, ReadingTime } from './content.types'
 
-// TOC component props interface
-export interface TOCProps {
-  toc?: TOCItem[]
-}
-
-// Post layout props interface (generic, not tied to specific data source)
-export interface PostLayoutProps {
-  title: string
-  pubDate: Date
-  image?: string
-  readingTime?: ReadingTime
-  toc?: TOCItem[]
-}
 
 // Transition props interface
 export interface TransitionProps {
@@ -47,37 +33,4 @@ export interface ImageOptimizerProps {
   priority?: boolean
 }
 
-// FormattedDate component props interface
-export interface FormattedDateProps {
-  date: Date
-  format?: string
-  context?: 'list' | 'post' | 'default'
-}
 
-// GitHub repository data interface
-export interface GitHubRepoData {
-  owner?: {
-    avatar_url: string
-  }
-  description?: string
-  stargazers_count?: number
-  forks_count?: number
-  license?: {
-    spdx_id: string
-  }
-}
-
-// Cached repository data interface
-export interface CachedRepoData {
-  data: GitHubRepoData
-  timestamp: number
-}
-
-// GitHub card UI elements interface
-export interface CardElements {
-  avatar: HTMLElement | null
-  desc: HTMLElement | null
-  stars: HTMLElement | null
-  forks: HTMLElement | null
-  license: HTMLElement | null
-}
