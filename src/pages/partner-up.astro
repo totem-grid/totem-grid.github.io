@@ -3,10 +3,12 @@ import IndexLayout from '@/layouts/IndexLayout.astro'
 import { themeConfig } from '@/config'
 ---
 
-<IndexLayout title="Partner Up - Totem Grid" description="Turn your event up to 11 with Totem Grid. Reliable connectivity to ensure event safety, simplify logistics, and elevate attendee experiences.">
+<IndexLayout
+  title="Partner Up - Totem Grid"
+  description="Turn your event up to 11 with Totem Grid. Reliable connectivity to ensure event safety, simplify logistics, and elevate attendee experiences."
+>
   <main class="partner-page">
     <div class="partner-content">
-
       <!-- Hero Section -->
       <section class="partner-hero">
         <div class="hero-badge">
@@ -17,13 +19,20 @@ import { themeConfig } from '@/config'
           <span class="title-accent">🎸✨</span>
         </h1>
         <p class="hero-subtitle">
-          🪩 <strong>Reliable connectivity</strong> to ensure event safety, simplify logistics, and elevate attendee experiences.
+          🪩 <strong>Reliable connectivity</strong> to ensure event safety, simplify logistics, and elevate
+          attendee experiences.
         </p>
         <div class="hero-cta">
-          <button class="demo-btn" id="book-demo-btn">
+          <a
+            href="https://calendar.app.google/D91BfcdzWRircLBx6"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="demo-btn"
+            id="book-demo-btn"
+          >
             <span class="btn-text">Book Demo</span>
             <span class="btn-arrow">→</span>
-          </button>
+          </a>
         </div>
       </section>
 
@@ -34,16 +43,15 @@ import { themeConfig } from '@/config'
 
       <!-- Why Festivals Love Section -->
       <section class="why-festivals">
-        <h2 class="section-title">
-          🎉 Why Festivals Love Totem Grid
-        </h2>
+        <h2 class="section-title">🎉 Why Festivals Love Totem Grid</h2>
 
         <div class="features-grid">
           <div class="feature-card">
             <div class="feature-icon">✅</div>
             <h3 class="feature-title">Easy Setup</h3>
             <p class="feature-description">
-              We handle setup and logistics, simplifying operations so you can focus on delivering an unforgettable event.
+              We handle setup and logistics, simplifying operations so you can focus on delivering
+              an unforgettable event.
             </p>
           </div>
 
@@ -51,7 +59,8 @@ import { themeConfig } from '@/config'
             <div class="feature-icon">🛡️</div>
             <h3 class="feature-title">Safety, Simplified</h3>
             <p class="feature-description">
-              Improve emergency response accuracy with precise attendee locations and reliable communications.
+              Improve emergency response accuracy with precise attendee locations and reliable
+              communications.
             </p>
           </div>
 
@@ -59,7 +68,8 @@ import { themeConfig } from '@/config'
             <div class="feature-icon">📡</div>
             <h3 class="feature-title">Superior Coordination Tools</h3>
             <p class="feature-description">
-              Better communication & coordination tools that beat walkie-talkies—simple, reliable, no special training required.
+              Better communication & coordination tools that beat walkie-talkies—simple, reliable,
+              no special training required.
             </p>
           </div>
 
@@ -100,7 +110,6 @@ import { themeConfig } from '@/config'
           </button>
         </div>
       </section>
-
     </div>
   </main>
 </IndexLayout>
@@ -212,6 +221,7 @@ import { themeConfig } from '@/config'
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
   }
 
   .demo-btn::before,
@@ -293,12 +303,24 @@ import { themeConfig } from '@/config'
     animation-fill-mode: both;
   }
 
-  .feature-card:nth-child(1) { animation-delay: 0.1s; }
-  .feature-card:nth-child(2) { animation-delay: 0.2s; }
-  .feature-card:nth-child(3) { animation-delay: 0.3s; }
-  .feature-card:nth-child(4) { animation-delay: 0.4s; }
-  .feature-card:nth-child(5) { animation-delay: 0.5s; }
-  .feature-card:nth-child(6) { animation-delay: 0.6s; }
+  .feature-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .feature-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .feature-card:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .feature-card:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .feature-card:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .feature-card:nth-child(6) {
+    animation-delay: 0.6s;
+  }
 
   .feature-card::before {
     content: '';
@@ -329,12 +351,24 @@ import { themeConfig } from '@/config'
     animation: iconFloat 2s ease-in-out infinite;
   }
 
-  .feature-card:nth-child(1) .feature-icon { animation-delay: 0s; }
-  .feature-card:nth-child(2) .feature-icon { animation-delay: 0.3s; }
-  .feature-card:nth-child(3) .feature-icon { animation-delay: 0.6s; }
-  .feature-card:nth-child(4) .feature-icon { animation-delay: 0.9s; }
-  .feature-card:nth-child(5) .feature-icon { animation-delay: 1.2s; }
-  .feature-card:nth-child(6) .feature-icon { animation-delay: 1.5s; }
+  .feature-card:nth-child(1) .feature-icon {
+    animation-delay: 0s;
+  }
+  .feature-card:nth-child(2) .feature-icon {
+    animation-delay: 0.3s;
+  }
+  .feature-card:nth-child(3) .feature-icon {
+    animation-delay: 0.6s;
+  }
+  .feature-card:nth-child(4) .feature-icon {
+    animation-delay: 0.9s;
+  }
+  .feature-card:nth-child(5) .feature-icon {
+    animation-delay: 1.2s;
+  }
+  .feature-card:nth-child(6) .feature-icon {
+    animation-delay: 1.5s;
+  }
 
   .feature-title {
     font-size: 1.25rem;
@@ -357,11 +391,7 @@ import { themeConfig } from '@/config'
   }
 
   .cta-card {
-    background: linear-gradient(
-      135deg,
-      rgba(102, 126, 234, 0.1) 0%,
-      rgba(118, 75, 162, 0.1) 100%
-    );
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
     border: 1px solid rgba(102, 126, 234, 0.2);
     border-radius: 2rem;
     padding: 4rem 2rem;
@@ -442,7 +472,8 @@ import { themeConfig } from '@/config'
   }
 
   @keyframes emojiFloat {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0);
     }
     50% {
@@ -451,7 +482,8 @@ import { themeConfig } from '@/config'
   }
 
   @keyframes iconFloat {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0);
     }
     50% {
@@ -536,22 +568,14 @@ import { themeConfig } from '@/config'
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const bookDemoBtn = document.getElementById('book-demo-btn');
-    const contactBtn = document.getElementById('contact-btn');
-
-    if (bookDemoBtn) {
-      bookDemoBtn.addEventListener('click', function() {
-        // Here you would integrate with your booking system
-        alert('Demo booking coming soon! Please contact us directly for now.');
-      });
-    }
+  document.addEventListener('DOMContentLoaded', function () {
+    const contactBtn = document.getElementById('contact-btn')
 
     if (contactBtn) {
-      contactBtn.addEventListener('click', function() {
+      contactBtn.addEventListener('click', function () {
         // Here you would integrate with your contact form or redirect to contact page
-        alert('Contact form coming soon! Please reach out via email for now.');
-      });
+        alert('Contact form coming soon! Please reach out via email for now.')
+      })
     }
-  });
+  })
 </script>
