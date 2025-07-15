@@ -2,7 +2,7 @@
   "name": "astro-chiri",
   "type": "module",
   "version": "0.5.0",
-  "license": "MIT",
+  "license": "",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
