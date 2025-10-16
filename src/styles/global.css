@@ -1,8 +1,9 @@
 @import './fonts.css';
+@import './colors.css';
 
 :root {
   /* Min Content Width */
-  --content-width: 25rem;
+  --content-width: 845px;
 
   /* Typography */
   --font-sans:
@@ -11,9 +12,13 @@
   --font-pixel: Silkscreen, monospace;
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 
-  --font-size-s: 0.8125rem;
-  --font-size-m: 0.9375rem;
-  --font-size-l: 1.0625rem;
+  --font-size-xs: 11px;
+  --font-size-s: 16px;
+  --font-size-m: 20px;
+  --font-size-l: 24px;
+  --font-size-xl: 32px;
+  --font-size-2xl: 40px;
+  --font-size-3xl: 56px;
 
   --font-weight-light: 350;
   --font-weight-regular: 400;
@@ -23,8 +28,8 @@
   --spacing-m: -0.02em;
 
   /* Light Mode Colors (Default) */
-  --bg: #ffffff;
-  --text-primary: rgba(0, 0, 0, 0.85);
+  --bg: var(--colors-ink-95);
+  --text-primary:  var(--colors-ink-10);
   --text-secondary: rgba(0, 0, 0, 0.4);
   --text-tertiary: rgba(0, 0, 0, 0.24);
   --border: rgba(0, 0, 0, 0.1);
@@ -51,147 +56,6 @@
   --astro-code-token-string-expression: rgba(0, 0, 0, 0.55);
   --astro-code-token-punctuation: rgba(0, 0, 0, 0.55);
   --astro-code-token-link: rgba(0, 0, 0, 0.55);
-  
-  /* Brand - Ink */
-  --colors-ink-100: #fffbff;
-  --colors-ink-99: #fff7f9;
-  --colors-ink-95: #ffecf6;
-  --colors-ink-90: #ffd7ef;
-  --colors-ink-80: #ffade4;
-  --colors-ink-70: #ff6adc;
-  --colors-ink-60: #e857c8;
-  --colors-ink-50: #c83bac;
-  --colors-ink-40: #af0093;
-  --colors-ink-30: #860070;
-  --colors-ink-20: #5f004e;
-  --colors-ink-10: #3b0030;
-  --colors-ink-0:  #1e0017;
-
-  /* Brand - Bright Ink (sequential steps) */
-  --colors-bright-ink-1:  #ffffff;
-  --colors-bright-ink-2:  #fcf8ff;
-  --colors-bright-ink-3:  #f2efff;
-  --colors-bright-ink-4:  #ede8fe;
-  --colors-bright-ink-5:  #e1dcff;
-  --colors-bright-ink-6:  #c7c1ef;
-  --colors-bright-ink-7:  #aba6d8;
-  --colors-bright-ink-8:  #938ec1;
-  --colors-bright-ink-9:  #7b76aa;
-  --colors-bright-ink-10: #605b8f;
-  --colors-bright-ink-11: #484373;
-  --colors-bright-ink-12: #2f2b57;
-  --colors-bright-ink-13: #24204a;
-  --colors-bright-ink-14: #19153e;
-  --colors-bright-ink-15: #08042e;
-
-  /* Utility - Green */
-  --colors-green-100: #f4fff6;
-  --colors-green-99:  #f2fcf1;
-  --colors-green-95:  #c1ffd4;
-  --colors-green-90:  #9df6bb;
-  --colors-green-80:  #71db9b;
-  --colors-green-70:  #4ac07d;
-  --colors-green-60:  #14a661;
-  --colors-green-50:  #00894b;
-  --colors-green-40:  #006d3d;
-  --colors-green-30:  #00522d;
-  --colors-green-20:  #00391c;
-  --colors-green-10:  #00210f;
-  --colors-green-0:   #000a03;
-
-  /* Utility - Lime */
-  --colors-lime-100: #fdfee8;
-  --colors-lime-99:  #f6ffc5;
-  --colors-lime-95:  #ecfba4;
-  --colors-lime-90:  #d8ec85;
-  --colors-lime-80:  #bad067;
-  --colors-lime-70:  #9ab63c;
-  --colors-lime-60:  #789d18;
-  --colors-lime-50:  #5c8300;
-  --colors-lime-40:  #416605;
-  --colors-lime-30:  #304f00;
-  --colors-lime-20:  #203700;
-  --colors-lime-10:  #102000;
-  --colors-lime-0:   #050d00;
-
-  /* Utility - Red */
-  --colors-red-100: #fffbff;
-  --colors-red-99:  #fff8f7;
-  --colors-red-95:  #ffeced;
-  --colors-red-90:  #ffdadc;
-  --colors-red-80:  #ffb2b9;
-  --colors-red-70:  #ff8796;
-  --colors-red-60:  #f15e76;
-  --colors-red-50:  #d53e5d;
-  --colors-red-40:  #ba1043;
-  --colors-red-30:  #91002e;
-  --colors-red-20:  #67001c;
-  --colors-red-10:  #40000f;
-  --colors-red-0:   #1a0002;
-}
-
-/* Light Mode (Explicit) */
-html.light {
-  --bg: #ffffff;
-  --text-primary: rgba(0, 0, 0, 0.85);
-  --text-secondary: rgba(0, 0, 0, 0.4);
-  --text-tertiary: rgba(0, 0, 0, 0.24);
-  --border: rgba(0, 0, 0, 0.1);
-  --selection: rgba(0, 0, 0, 0.08);
-  --code-bg: rgba(0, 0, 0, 0.06);
-  --mark: #f3ffc4;
-
-  /* Totem Grid Components */
-  --color-bg: var(--bg);
-  --color-bg-secondary: rgba(0, 0, 0, 0.03);
-  --color-text-primary: var(--text-primary);
-  --color-text-secondary: var(--text-secondary);
-  --color-border: rgba(0, 0, 0, 0.1);
-
-  /* Syntax Theme  */
-  --astro-code-foreground: rgba(0, 0, 0, 0.85);
-  --astro-code-background: rgba(0, 0, 0, 0.03);
-  --astro-code-token-constant: rgba(0, 0, 0, 0.85);
-  --astro-code-token-string: rgba(0, 0, 0, 0.85);
-  --astro-code-token-comment: rgba(0, 0, 0, 0.35);
-  --astro-code-token-keyword: rgba(0, 0, 0, 0.5);
-  --astro-code-token-parameter: rgba(0, 0, 0, 0.85);
-  --astro-code-token-function: rgba(0, 0, 0, 0.85);
-  --astro-code-token-string-expression: rgba(0, 0, 0, 0.55);
-  --astro-code-token-punctuation: rgba(0, 0, 0, 0.55);
-  --astro-code-token-link: rgba(0, 0, 0, 0.55);
-}
-
-/* Dark Mode (Explicit) */
-html.dark {
-  --bg: #1c1c1c;
-  --text-primary: rgba(255, 255, 255, 0.9);
-  --text-secondary: rgba(255, 255, 255, 0.4);
-  --text-tertiary: rgba(255, 255, 255, 0.24);
-  --border: rgba(255, 255, 255, 0.1);
-  --selection: rgba(255, 255, 255, 0.08);
-  --code-bg: rgba(255, 255, 255, 0.06);
-  --mark: #545b37;
-
-  /* Totem Grid Components */
-  --color-bg: var(--bg);
-  --color-bg-secondary: rgba(255, 255, 255, 0.03);
-  --color-text-primary: var(--text-primary);
-  --color-text-secondary: var(--text-secondary);
-  --color-border: rgba(255, 255, 255, 0.1);
-
-  /* Syntax Theme  */
-  --astro-code-foreground: rgba(255, 255, 255, 0.9);
-  --astro-code-background: rgba(255, 255, 255, 0.03);
-  --astro-code-token-constant: rgba(255, 255, 255, 0.9);
-  --astro-code-token-string: rgba(255, 255, 255, 0.9);
-  --astro-code-token-comment: rgba(255, 255, 255, 0.35);
-  --astro-code-token-keyword: rgba(255, 255, 255, 0.55);
-  --astro-code-token-parameter: rgba(255, 255, 255, 0.9);
-  --astro-code-token-function: rgba(255, 255, 255, 0.9);
-  --astro-code-token-string-expression: rgba(255, 255, 255, 0.55);
-  --astro-code-token-punctuation: rgba(255, 255, 255, 0.55);
-  --astro-code-token-link: rgba(255, 255, 255, 0.55);
 }
 
 html {
@@ -218,8 +82,7 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  letter-spacing: var(--spacing-m);
-  padding: 6rem 1.5rem 1.5rem 1.5rem;
+  padding: 16px;
   overscroll-behavior-y: contain;
   transition: background-color 0.2s ease-out;
 }

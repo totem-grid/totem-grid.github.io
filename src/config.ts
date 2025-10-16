@@ -13,7 +13,7 @@ export const themeConfig: ThemeConfig = {
 
   // GENERAL SETTINGS ////////////////////////////////////////////////////////////////////////////////////
   general: {
-    contentWidth: '50rem', // Content area width - wider for landing page
+    contentWidth: '845px', // Content area width - wider for landing page
     centeredLayout: true, // Use centered layout (false for left-aligned)
     favicon: false, // Show favicon on index page
     themeToggle: false, // Show theme toggle button (uses system theme by default)
