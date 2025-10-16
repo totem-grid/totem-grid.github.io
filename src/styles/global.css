@@ -51,6 +51,83 @@
   --astro-code-token-string-expression: rgba(0, 0, 0, 0.55);
   --astro-code-token-punctuation: rgba(0, 0, 0, 0.55);
   --astro-code-token-link: rgba(0, 0, 0, 0.55);
+  
+  /* Brand - Ink */
+  --colors-ink-100: #fffbff;
+  --colors-ink-99: #fff7f9;
+  --colors-ink-95: #ffecf6;
+  --colors-ink-90: #ffd7ef;
+  --colors-ink-80: #ffade4;
+  --colors-ink-70: #ff6adc;
+  --colors-ink-60: #e857c8;
+  --colors-ink-50: #c83bac;
+  --colors-ink-40: #af0093;
+  --colors-ink-30: #860070;
+  --colors-ink-20: #5f004e;
+  --colors-ink-10: #3b0030;
+  --colors-ink-0:  #1e0017;
+
+  /* Brand - Bright Ink (sequential steps) */
+  --colors-bright-ink-1:  #ffffff;
+  --colors-bright-ink-2:  #fcf8ff;
+  --colors-bright-ink-3:  #f2efff;
+  --colors-bright-ink-4:  #ede8fe;
+  --colors-bright-ink-5:  #e1dcff;
+  --colors-bright-ink-6:  #c7c1ef;
+  --colors-bright-ink-7:  #aba6d8;
+  --colors-bright-ink-8:  #938ec1;
+  --colors-bright-ink-9:  #7b76aa;
+  --colors-bright-ink-10: #605b8f;
+  --colors-bright-ink-11: #484373;
+  --colors-bright-ink-12: #2f2b57;
+  --colors-bright-ink-13: #24204a;
+  --colors-bright-ink-14: #19153e;
+  --colors-bright-ink-15: #08042e;
+
+  /* Utility - Green */
+  --colors-green-100: #f4fff6;
+  --colors-green-99:  #f2fcf1;
+  --colors-green-95:  #c1ffd4;
+  --colors-green-90:  #9df6bb;
+  --colors-green-80:  #71db9b;
+  --colors-green-70:  #4ac07d;
+  --colors-green-60:  #14a661;
+  --colors-green-50:  #00894b;
+  --colors-green-40:  #006d3d;
+  --colors-green-30:  #00522d;
+  --colors-green-20:  #00391c;
+  --colors-green-10:  #00210f;
+  --colors-green-0:   #000a03;
+
+  /* Utility - Lime */
+  --colors-lime-100: #fdfee8;
+  --colors-lime-99:  #f6ffc5;
+  --colors-lime-95:  #ecfba4;
+  --colors-lime-90:  #d8ec85;
+  --colors-lime-80:  #bad067;
+  --colors-lime-70:  #9ab63c;
+  --colors-lime-60:  #789d18;
+  --colors-lime-50:  #5c8300;
+  --colors-lime-40:  #416605;
+  --colors-lime-30:  #304f00;
+  --colors-lime-20:  #203700;
+  --colors-lime-10:  #102000;
+  --colors-lime-0:   #050d00;
+
+  /* Utility - Red */
+  --colors-red-100: #fffbff;
+  --colors-red-99:  #fff8f7;
+  --colors-red-95:  #ffeced;
+  --colors-red-90:  #ffdadc;
+  --colors-red-80:  #ffb2b9;
+  --colors-red-70:  #ff8796;
+  --colors-red-60:  #f15e76;
+  --colors-red-50:  #d53e5d;
+  --colors-red-40:  #ba1043;
+  --colors-red-30:  #91002e;
+  --colors-red-20:  #67001c;
+  --colors-red-10:  #40000f;
+  --colors-red-0:   #1a0002;
 }
 
 /* Light Mode (Explicit) */

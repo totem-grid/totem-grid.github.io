@@ -1,0 +1,123 @@
+:root {  
+  /* Brand - Ink */
+  --colors-ink-100: hsla(0, 0%, 100%, 1);
+  --colors-ink-99: hsla(274, 100%, 99%, 1);
+  --colors-ink-98: hsla(251, 100%, 97%, 1);
+  --colors-ink-95: hsla(254, 92%, 95%, 1);
+  --colors-ink-90: hsla(249, 100%, 93%, 1);
+  --colors-ink-80: hsla(248, 59%, 85%, 1);
+  --colors-ink-70: hsla(246, 39%, 75%, 1);
+  --colors-ink-60: hsla(246, 29%, 66%, 1);
+  --colors-ink-50: hsla(246, 23%, 56%, 1);
+  --colors-ink-40: hsla(246, 22%, 46%, 1);
+  --colors-ink-30: hsla(246, 26%, 36%, 1);
+  --colors-ink-20: hsla(245, 34%, 25%, 1);
+  --colors-ink-15: hsla(246, 40%, 21%, 1);
+  --colors-ink-10: hsla(246, 49%, 16%, 1);
+  --colors-ink-0:  hsla(246, 84%, 10%, 1);
+
+  /* Brand - Bright Ink (sequential steps) */
+  --colors-bright-ink-100:  hsla(274, 100%, 99%, 1);
+  --colors-bright-ink-99:  hsla(258, 100%, 98%, 1);
+  --colors-bright-ink-95:  hsla(255, 100%, 96%, 1);
+  --colors-bright-ink-90:  hsla(252, 100%, 93%, 1);
+  --colors-bright-ink-80:  hsla(247, 83%, 86%, 1);
+  --colors-bright-ink-70:  hsla(247, 53%, 77%, 1);
+  --colors-bright-ink-60:  hsla(249, 41%, 66%, 1);
+  --colors-bright-ink-50:  hsla(251, 33%, 57%, 1);
+  --colors-bright-ink-40:  hsla(250, 30%, 47%, 1);
+  --colors-bright-ink-30:  hsla(249, 35%, 37%, 1);
+  --colors-bright-ink-20: hsla(252, 47%, 27%, 1);
+  --colors-bright-ink-10: hsla(255, 64%, 17%, 1);
+  --colors-bright-ink-0: hsla(256, 96%, 10%, 1);
+
+/* Brand - Indigo */
+  --colors-indigo-100: hsla(0, 0%, 100%, 1);
+  --colors-indigo-99: hsla(250, 100%, 99%, 1);
+  --colors-indigo-95: hsla(236, 100%, 97%, 1);
+  --colors-indigo-90: hsla(236, 100%, 94%, 1);
+  --colors-indigo-80: hsla(241, 100%, 88%, 1);
+  --colors-indigo-70: hsla(239, 100%, 81%, 1);
+  --colors-indigo-60: hsla(240, 100%, 74%, 1);
+  --colors-indigo-50: hsla(245, 100%, 65%, 1);
+  --colors-indigo-40: hsla(258, 100%, 50%, 1);
+  --colors-indigo-30: hsla(257, 100%, 43%, 1);
+  --colors-indigo-20: hsla(256, 100%, 31%, 1);
+  --colors-indigo-10: hsla(253, 100%, 20%, 1);
+  --colors-indigo-0: hsla(248, 100%, 11%, 1);
+
+/* Brand - teal */
+  --colors-teal-100: hsla(171, 100%, 97%, 1);
+  --colors-teal-99: hsla(176, 100%, 89%, 1);
+  --colors-teal-95: hsla(177, 82%, 70%, 1);
+  --colors-teal-90: hsla(177, 66%, 59%, 1);
+  --colors-teal-80: hsla(177, 60%, 49%, 1);
+  --colors-teal-70: hsla(178, 77%, 41%, 1);
+  --colors-teal-60: hsla(178, 78%, 37%, 1);
+  --colors-teal-50: hsla(181, 100%, 29%, 1);
+  --colors-teal-40: hsla(181, 100%, 24%, 1);
+  --colors-teal-30: hsla(181, 100%, 20%, 1);
+  --colors-teal-20: hsla(181, 98%, 16%, 1);
+  --colors-teal-10: hsla(179, 100%, 11%, 1);
+  --colors-teal-0: hsla(180, 100%, 6%, 1);
+
+/* Brand - fuchsia */
+  --colors-fuchsia-100: hsla(322, 100%, 98%, 1);
+  --colors-fuchsia-99: hsla(319, 100%, 94%, 1);
+  --colors-fuchsia-95: hsla(318, 100%, 87%, 1);
+  --colors-fuchsia-90: hsla(316, 100%, 79%, 1);
+  --colors-fuchsia-80: hsla(314, 100%, 71%, 1);
+  --colors-fuchsia-70: hsla(313, 92%, 63%, 1);
+  --colors-fuchsia-60: hsla(312, 83%, 55%, 1);
+  --colors-fuchsia-50: hsla(310, 100%, 43%, 1);
+  --colors-fuchsia-40: hsla(310, 88%, 39%, 1);
+  --colors-fuchsia-30: hsla(310, 95%, 32%, 1);
+  --colors-fuchsia-20: hsla(310, 100%, 24%, 1);
+  --colors-fuchsia-10: hsla(310, 100%, 17%, 1);
+  --colors-fuchsia-0: hsla(311, 100%, 10%, 1);
+
+  /* Utility - Yellow */
+  --colors-yellow-100: hsla(71, 89%, 96%, 1);
+  --colors-yellow-99:  hsla(69, 84%, 85%, 1);
+  --colors-yellow-95:  hsla(70, 69%, 75%, 1);
+  --colors-yellow-90:  hsla(70, 63%, 67%, 1);
+  --colors-yellow-80:  hsla(71, 60%, 62%, 1);
+  --colors-yellow-70:  hsla(72, 57%, 55%, 1);
+  --colors-yellow-60:  hsla(75, 57%, 47%, 1);
+  --colors-yellow-50:  hsla(77, 66%, 40%, 1);
+  --colors-yellow-40:  hsla(82, 66%, 34%, 1);
+  --colors-yellow-30:  hsla(82, 69%, 28%, 1);
+  --colors-yellow-20:  hsla(83, 90%, 21%, 1);
+  --colors-yellow-10:  hsla(82, 100%, 16%, 1);
+  --colors-yellow-0:   hsla(85, 100%, 10%, 1);
+
+  /* Utility - Green */
+  --colors-green-100: hsla(139, 100%, 96%, 1);
+  --colors-green-99:  hsla(139, 89%, 86%, 1);
+  --colors-green-95:  hsla(142, 77%, 76%, 1)a4;
+  --colors-green-90:  hsla(143, 65%, 71%, 1);
+  --colors-green-80:  hsla(144, 56%, 63%, 1);
+  --colors-green-70:  hsla(145, 51%, 55%, 1);
+  --colors-green-60:  hsla(149, 61%, 44%, 1);
+  --colors-green-50:  hsla(153, 100%, 30%, 1);
+  --colors-green-40:  hsla(154, 100%, 25%, 1);
+  --colors-green-30:  hsla(153, 100%, 19%, 1);
+  --colors-green-20:  hsla(152, 100%, 14%, 1);
+  --colors-green-10:  hsla(151, 100%, 11%, 1);
+  --colors-green-0:   hsla(146, 100%, 6%, 1);
+
+  /* Utility - Red */
+  --colors-red-100: hsla(356, 100%, 97%, 1);
+  --colors-red-99:  hsla(356, 100%, 92%, 1);
+  --colors-red-95:  hsla(355, 100%, 87%, 1);
+  --colors-red-90:  hsla(354, 100%, 81%, 1);
+  --colors-red-80:  hsla(353, 100%, 76%, 1);
+  --colors-red-70:  hsla(351, 100%, 72%, 1);
+  --colors-red-60:  hsla(348, 90%, 63%, 1);
+  --colors-red-50:  hsla(345, 81%, 54%, 1);
+  --colors-red-40:  hsla(344, 71%, 46%, 1);
+  --colors-red-30:  hsla(345, 75%, 40%, 1);
+  --colors-red-20:  hsla(345, 84%, 33%, 1);
+  --colors-red-10:  hsla(343, 94%, 25%, 1);
+  --colors-red-0:   hsla(346, 100%, 16%, 1);
+}
