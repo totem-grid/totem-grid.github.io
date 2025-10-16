@@ -1,167 +1,108 @@
 ---
-import { themeConfig } from '@/config'
-import ThemeToggle from '@/components/ui/ThemeToggle.astro'
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/beta-test', label: 'Attendees' },
+  { href: '/partner-up', label: 'Organizers' },
+  { href: '/manifesto', label: 'Mission' },
+]
+
+const normalizePath = (path: string) => {
+  const trimmed = path.replace(/\/+$/, '')
+  return trimmed === '' ? '/' : trimmed
+}
+
+const currentPath = normalizePath(Astro.url.pathname)
 ---
 
 <header>
-  <nav>
-    <div class="logo-container">
-      {themeConfig.general.favicon && <img src="/favicon.svg" alt="favicon" class="favicon" />}
-      <a href="/" class="brand-link">
-        <span class="brand-name">{themeConfig.site.title}</span>
-        <span class="brand-subtitle">Find your tribe, instantly</span>
-      </a>
+  <nav class="nav">
+    <div class="nav-pill card-depth" role="menubar">
+      {navLinks.map(({ href, label }) => (
+        <a
+          href={href}
+          class={`nav-link${normalizePath(href) === currentPath ? ' is-active' : ''}`}
+          role="menuitem"
+        >
+          {label}
+        </a>
+      ))}
     </div>
 
-    <div class="nav-links">
-      <a href="/partner-up" class="nav-link">Partner Up</a>
-      <a href="/about-us" class="nav-link">About Us</a>
-      <a href="/contribute" class="nav-link">Contribute</a>
-      <a href="/manifesto" class="nav-link">Manifesto</a>
-      <a href="/beta-test" class="nav-link beta-link">Beta</a>
-      {themeConfig.general.themeToggle && <ThemeToggle />}
-    </div>
+    <a href="/beta-test" class="beta-cta card-depth">
+      <span class="beta-label">Join Beta</span>
+    </a>
   </nav>
 </header>
 <style>
   header {
-    margin: 0 0 2rem 0;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--color-border);
-    background: var(--color-bg);
-    position: sticky;
-    top: 0;
+    position: fixed;
+    top: 24px;
+    left: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 100;
-    backdrop-filter: blur(10px);
   }
 
-  nav {
+  .nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: stretch;
+    gap: 8px;
+  }
+
+  .nav-pill {
+    display: flex;
+    padding: 2px;
+    justify-content: center;
     align-items: center;
-    max-width: 100%;
+    border-radius: 9px;
+    border: 1px solid var(--colors-indigo-40, #4D00FF);
+    background: var(--colors-ink-95, #EDE8FE);
+
+    .nav-link {
+      overflow: hidden;
+      color: var(--colors-ink-10, #19153E);
+      text-align: center;
+      text-decoration: none;
+      font-feature-settings: 'liga' off, 'clig' off;
+      text-overflow: ellipsis;
+      font-family: "Aspekta";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px; /* 150% */
+      display: flex;
+      height: 20px;
+      padding: 3px 10px;
+      align-items: center;
+      border-radius: 7px;
+    
+      &.is-active {
+        background: var(--colors-indigo-40);
+        color: var(--colors-teal-95);
+      }
+    }
   }
 
-  .logo-container {
-    position: relative;
-  }
-
-  .brand-link {
+  .beta-cta {
     display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
-
-  .brand-link:hover {
-    transform: translateY(-1px);
-  }
-
-  .brand-name {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-text-primary);
-    background: linear-gradient(135deg, var(--color-text-primary) 0%, #667eea 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1.2;
-  }
-
-  .brand-subtitle {
-    font-size: 0.75rem;
-    color: var(--color-text-secondary);
-    font-weight: 400;
-    letter-spacing: 0.025em;
-    margin-top: -2px;
-  }
-
-  .nav-links {
-    display: flex;
+    padding: 0 8px;
+    justify-content: center;
     align-items: center;
-    gap: 1.5rem;
-  }
-
-  .nav-link {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--color-text-secondary);
+    border-radius: 9px;
+    border: 1px solid var(--colors-indigo-40);
+    background: var(--colors-teal-95);
+    overflow: hidden;
+    color: var(--colors-indigo-40);
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    text-overflow: ellipsis;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    transition: all 0.2s ease;
-    position: relative;
-  }
-
-  .nav-link:hover {
-    color: var(--color-text-primary);
-    background-color: var(--color-bg-secondary);
-  }
-
-  .beta-link {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white !important;
+    font-size: 12px;
+    font-style: normal;
     font-weight: 600;
+    line-height: 18px; /* 150% */
   }
 
-  .beta-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
-  }
-
-  .favicon {
-    position: absolute;
-    width: 1.125rem;
-    height: 1.125rem;
-    bottom: calc(100% + 3.5rem);
-    left: 0;
-  }
-
-  @media (max-width: 640px) {
-    header {
-      padding: 0.75rem 0;
-    }
-
-    .brand-name {
-      font-size: 1.25rem;
-    }
-
-    .brand-subtitle {
-      font-size: 0.7rem;
-    }
-
-    .nav-links {
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .nav-link {
-      font-size: 0.75rem;
-      padding: 0.3rem 0.6rem;
-    }
-
-    /* Hide some nav links on very small screens */
-    .nav-link:nth-child(1),
-    .nav-link:nth-child(3) {
-      display: none;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .nav-links {
-      gap: 0.25rem;
-    }
-
-    .nav-link {
-      font-size: 0.7rem;
-      padding: 0.25rem 0.5rem;
-    }
-
-    /* Hide more nav links on extra small screens */
-    .nav-link:nth-child(2),
-    .nav-link:nth-child(4) {
-      display: none;
-    }
-  }
 </style>

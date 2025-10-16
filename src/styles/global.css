@@ -322,3 +322,7 @@ main {
     padding: 5rem 0;
   }
 }
+
+.card-depth {
+  box-shadow: 0 0 64px -32px rgba(159, 170, 255, 0.30), 0 -0.879px 3.516px -0.879px var(--colors-ink-500, #9B97CE) inset, 0 0.879px 3.516px -0.879px #FFF inset;
+}
