@@ -277,18 +277,6 @@ select:focus {
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
 }
 
-/* Scroll progress indicator */
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  z-index: 1000;
-  transition: width 0.1s ease;
-}
-
 main {
   flex: 1;
   display: flex;

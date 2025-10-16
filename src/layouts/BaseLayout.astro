@@ -29,7 +29,6 @@ const finalWidth = shouldUseCustomWidth ? `${widthValue}rem` : '25rem'
       ${shouldUseCustomWidth ? `--content-width: ${widthValue}rem;` : ''}
     `}
   >
-    <div class="scroll-progress" id="scroll-progress"></div>
     <ThemeManager />
     <FaviconThemeSwitcher />
 
@@ -44,55 +43,6 @@ const finalWidth = shouldUseCustomWidth ? `${widthValue}rem` : '25rem'
         </div>
       )
     }
-
-    <script>
-      // Scroll progress indicator
-      function updateScrollProgress() {
-        const scrollTop = window.scrollY
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight
-        const scrollPercent = (scrollTop / docHeight) * 100
-        const progressBar = document.getElementById('scroll-progress')
-        if (progressBar) {
-          progressBar.style.width = scrollPercent + '%'
-        }
-      }
-
-      // Intersection Observer for scroll animations
-      function initScrollAnimations() {
-        const observerOptions = {
-          threshold: 0.1,
-          rootMargin: '0px 0px -50px 0px'
-        }
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('in-view')
-            }
-          })
-        }, observerOptions)
-
-        // Observe all elements with scroll-animate class
-        document.querySelectorAll('.scroll-animate').forEach((el) => {
-          observer.observe(el)
-        })
-      }
-
-      // Initialize on page load
-      document.addEventListener('DOMContentLoaded', () => {
-        initScrollAnimations()
-        updateScrollProgress()
-      })
-
-      // Update scroll progress on scroll
-      window.addEventListener('scroll', updateScrollProgress, { passive: true })
-
-      // Re-initialize for page transitions
-      document.addEventListener('astro:page-load', () => {
-        initScrollAnimations()
-        updateScrollProgress()
-      })
-    </script>
   </body>
 </html>
 
