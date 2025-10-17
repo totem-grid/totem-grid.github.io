@@ -1,19 +1,570 @@
 ---
 import IndexLayout from '@/layouts/IndexLayout.astro'
-import Hero from '@/components/widgets/Hero.astro'
-import VideoDemo from '@/components/widgets/VideoDemo.astro'
-import Features from '@/components/widgets/Features.astro'
-import Testimonials from '@/components/widgets/Testimonials.astro'
-import CTASection from '@/components/widgets/CTASection.astro'
-import { themeConfig } from '@/config'
+import ImageOptimizer from '@/components/ui/ImageOptimizer.astro'
+
+const heroImage = 'https://www.figma.com/api/mcp/asset/cefe2195-807c-48b8-b3f4-1560de05dc9c'
+const testimonialImage = 'https://www.figma.com/api/mcp/asset/93ecb1f5-ee99-4d35-b5b4-6a91156cb21b'
+const networkImage = 'https://www.figma.com/api/mcp/asset/71c7d72c-b723-4a84-b64c-12af3dc26d2b'
+const faceGlyph = 'https://www.figma.com/api/mcp/asset/319639ab-6ced-4ca0-a0e5-6f20a9bf1241'
 ---
 
-<IndexLayout title={themeConfig.site.title} description={themeConfig.site.description}>
-  <Hero />
-  <main>
-    {themeConfig.totemGrid.videoDemo && <VideoDemo />}
-    <Features />
-    {themeConfig.totemGrid.testimonials && <Testimonials />}
-    <CTASection />
+<IndexLayout
+  title="Totem Grid — Lose Yourself, Not Your Friends"
+  description="Seamless connection at crowded events with Totem Grid. Discover how we keep crews together when the network dies."
+>
+  <header class="landing-hero card-depth" aria-labelledby="landing-hero-heading">
+    <div
+      class="landing-hero-unicorn"
+      data-us-project-src="/unicorn/slidebg.json"
+      data-us-production="true"
+      data-us-lazyload="false"
+      data-us-dpi="4"
+      data-us-alttext="Animated Totem Grid background"
+      data-us-arialabel="Animated hero background scene"
+    ></div>
+      <div class="landing-hero-content">
+        <img src="/brand/logoshape.svg" width="180" height="180" alt="Totem Grid" />
+        <div class="landing-hero-text">
+          <img src="/brand/logotype.svg" height="64" alt="Totem Grid" />
+          <span class="landing-hero-tagline">Lose yourself, <u>not</u>&nbsp;your&nbsp;friends</span>
+        </div>
+      </div>
+  </header>
+  <main class="remake-page">
+    <section class="hero-section">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Lose yourself, not your friends</span>
+        <h1 class="hero-heading">Totem Grid</h1>
+        <p class="hero-subheading">
+          Seamless connection at crowded events — no compass or cell service required.
+        </p>
+        <p class="hero-body">
+          We digitized the festival totem so your crew can stay synced when networks melt down. Built for extreme
+          density, remote locations, and unforgettable weekends.
+        </p>
+        <div class="hero-cta">
+          <a class="button button-primary" href="/beta-test">Join our beta</a>
+          <a class="button button-secondary" href="/beta-test#download">Get the app</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-device">
+          <ImageOptimizer src={heroImage} width={360} height={720} alt="Totem Grid mobile preview" priority />
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-grid" aria-label="Key capabilities">
+      <article class="feature-card">
+        <span class="feature-emoji" aria-hidden="true">✈️</span>
+        <h2>Works in Airplane Mode</h2>
+        <p>No data plan? No network? No problem. Built for remote festivals and rugged adventures.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-emoji" aria-hidden="true">📍</span>
+        <h2>Friend Finding</h2>
+        <p>Precise directions to your friends no matter where they are in the crowd.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-emoji" aria-hidden="true">🗺</span>
+        <h2>Event Maps</h2>
+        <p>Stages, vendors, bathrooms, even your tent — all available offline.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-emoji" aria-hidden="true">🛟</span>
+        <h2>Safety Check-ins</h2>
+        <p>Instantly let your crew or staff know you are safe or need help.</p>
+      </article>
+    </section>
+
+    <section class="highlight-block" aria-labelledby="highlight-heading">
+      <div class="highlight-overlay"></div>
+      <div class="highlight-content">
+        <h2 id="highlight-heading">We digitized the festival totem</h2>
+        <p>Just an app — no extra hardware. The bigger the crowd gets, the better it works.</p>
+      </div>
+    </section>
+
+    <section class="people-love" aria-labelledby="people-heading">
+      <div class="people-media">
+        <ImageOptimizer
+          src={testimonialImage}
+          width={960}
+          height={540}
+          alt="Festival goers smiling together"
+          class="people-image"
+        />
+      </div>
+      <p id="people-heading" class="people-caption">People love it</p>
+    </section>
+
+    <section class="why-section">
+      <h2 class="why-heading">Wait – but *why*?</h2>
+      <div class="why-content">
+        <div class="why-copy">
+          <h3>When the network dies, everyone feels it</h3>
+          <p>
+            Your crew is scattered somewhere in a sea of people and texts will not go through. Wi-Fi melts down, LTE
+            collapses, and even SOS signals can struggle. Events lose trust, sales, and safety — you and your crew lose
+            each other.
+          </p>
+        </div>
+        <div class="why-visual">
+          <ImageOptimizer src={networkImage} width={480} height={360} alt="Network outage visual" class="why-image" />
+        </div>
+      </div>
+      <p class="why-footnote">
+        Totem Grid connects phones directly, creating a living, breathing local network that thrives in dense crowds —
+        the bigger the crowd gets, the better it works.
+      </p>
+    </section>
   </main>
 </IndexLayout>
+
+<style>
+  .landing-hero {
+    position: relative;
+    padding: 4rem;
+    border-radius: 16px;
+    overflow: hidden;
+    color: var(--colors-ink-100);
+    border: 1px solid var(--colors-indigo-0);
+  }
+
+  .landing-hero img {
+    max-width: 100%;
+  }
+
+  .landing-hero-unicorn {
+    position: absolute;
+    inset: -35% -20% -10% -20%;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .landing-hero-unicorn canvas,
+  .landing-hero-unicorn video,
+  .landing-hero-unicorn iframe {
+    pointer-events: none;
+  }
+
+  .landing-hero-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .landing-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .landing-hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  .landing-hero-tagline {
+    font-size: var(--font-size-s);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 17px;
+  }
+
+  @media (min-width: 900px) {
+    .landing-hero {
+      
+    }
+
+    .landing-hero-content {
+      flex-direction: row;
+    }
+
+    .landing-hero-text {
+      align-items: flex-start;
+    }
+  }
+
+  .remake-page {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .hero-section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem;
+    padding: 3.5rem clamp(1.5rem, 3vw, 3rem);
+    border-radius: 1.5rem;
+    background: radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.12), transparent 60%),
+      radial-gradient(circle at 85% 10%, rgba(255, 255, 255, 0.12), transparent 55%),
+      linear-gradient(180deg, #4d00ff 0%, #19093a 100%);
+    color: var(--colors-ink-100);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 24px 48px rgba(36, 9, 72, 0.35);
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--font-pixel);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255, 241, 242, 0.85);
+  }
+
+  .hero-heading {
+    font-size: clamp(2.75rem, 6vw, 3.75rem);
+    margin: 0;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .hero-subheading {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    margin: 0;
+    color: var(--colors-ink-100);
+  }
+
+  .hero-body {
+    margin: 0;
+    line-height: 1.7;
+    color: rgba(255, 241, 242, 0.85);
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.75rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 1rem;
+  }
+
+  .button-primary {
+    background: linear-gradient(135deg, var(--colors-ink-70) 0%, var(--colors-ink-50) 100%);
+    color: #19093a;
+    box-shadow: 0 12px 24px rgba(118, 75, 162, 0.35);
+  }
+
+  .button-primary:hover,
+  .button-outline:hover {
+    transform: translateY(-2px);
+  }
+
+  .button-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--colors-ink-100);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .button-outline {
+    background: transparent;
+    color: var(--color-text-primary);
+    border: 2px solid var(--color-text-primary);
+  }
+
+  .button-outline:hover {
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
+  }
+
+  .hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-device {
+    background: rgba(24, 0, 56, 0.45);
+    border-radius: 1.75rem;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    display: inline-flex;
+  }
+
+  .hero-device :global(img) {
+    border-radius: 1.25rem;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    background: var(--color-bg);
+    border: 1px solid rgba(77, 0, 255, 0.12);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: left;
+    box-shadow: 0 12px 24px rgba(18, 10, 46, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 36px rgba(18, 10, 46, 0.12);
+  }
+
+  .feature-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.25rem;
+    color: var(--color-text-primary);
+  }
+
+  .feature-card p {
+    margin: 0;
+    color: var(--color-text-secondary);
+  }
+
+  .feature-emoji {
+    font-size: 2.5rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .highlight-block {
+    position: relative;
+    border-radius: 1.25rem;
+    padding: 3.5rem 2rem;
+    overflow: hidden;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(93, 56, 255, 0.85) 0%, rgba(32, 12, 72, 0.95) 100%);
+    color: var(--colors-ink-100);
+    border: 1px solid rgba(117, 241, 234, 0.4);
+  }
+
+  .highlight-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url({highlightTexture});
+    background-size: cover;
+    background-position: center;
+    opacity: 0.35;
+    mix-blend-mode: hard-light;
+    pointer-events: none;
+  }
+
+  .highlight-content {
+    position: relative;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .highlight-content h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: clamp(2.25rem, 5vw, 3.2rem);
+    letter-spacing: 0.08em;
+  }
+
+  .highlight-content p {
+    margin: 0;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  .people-love {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .people-image :global(img) {
+    border-radius: 1.25rem;
+    box-shadow: 0 20px 40px rgba(26, 9, 62, 0.2);
+  }
+
+  .people-caption {
+    font-family: var(--font-pixel);
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
+    color: #4d00ff;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .why-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    background: var(--color-bg);
+    border-radius: 1.25rem;
+    padding: 2.5rem;
+    border: 1px solid rgba(82, 0, 18, 0.15);
+    box-shadow: 0 24px 48px rgba(20, 5, 28, 0.08);
+  }
+
+  .why-heading {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    text-transform: uppercase;
+    color: #4d00ff;
+  }
+
+  .why-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .why-copy {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .why-copy h3 {
+    margin: 0;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    color: var(--color-text-primary);
+  }
+
+  .why-copy p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+  }
+
+  .why-visual {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(180deg, rgba(255, 135, 149, 0.25) 0%, rgba(122, 4, 38, 0.6) 100%);
+  }
+
+  .why-visual :global(img) {
+    border-radius: 0.75rem;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 16px 32px rgba(82, 0, 18, 0.35);
+  }
+
+  .why-footnote {
+    margin: 0;
+    text-align: center;
+    color: #4d00ff;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  .cta-final {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+    padding: 2.75rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(180deg, rgba(77, 0, 255, 0.15) 0%, rgba(118, 75, 162, 0.35) 100%);
+    border: 1px solid rgba(118, 75, 162, 0.35);
+    box-shadow: 0 18px 36px rgba(36, 9, 72, 0.18);
+  }
+
+  .cta-final-face {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    padding: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    display: inline-flex;
+  }
+
+  .cta-final-copy {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .cta-final-copy h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+  }
+
+  .cta-final-copy p {
+    margin: 0;
+    color: var(--color-text-secondary);
+  }
+
+  .cta-final-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    .hero-section {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .hero-content {
+      align-items: center;
+    }
+
+    .hero-cta {
+      justify-content: center;
+    }
+
+    .cta-final {
+      grid-template-columns: 1fr;
+      text-align: center;
+      justify-items: center;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .remake-page {
+      gap: 2.5rem;
+    }
+
+    .hero-section {
+      padding: 2.75rem 1.5rem;
+    }
+
+    .feature-card {
+      padding: 1.25rem 1.15rem;
+    }
+
+    .highlight-block {
+      padding: 2.75rem 1.5rem;
+    }
+
+    .why-section {
+      padding: 2rem 1.5rem;
+    }
+
+    .cta-final {
+      padding: 2.25rem 1.5rem;
+    }
+  }
+</style>
