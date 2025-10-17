@@ -1,59 +1,66 @@
 ---
 import IndexLayout from '@/layouts/IndexLayout.astro'
 import ImageOptimizer from '@/components/ui/ImageOptimizer.astro'
+import Button from '@/components/ui/Button.astro'
 
 const heroImage = 'https://www.figma.com/api/mcp/asset/cefe2195-807c-48b8-b3f4-1560de05dc9c'
 const testimonialImage = 'https://www.figma.com/api/mcp/asset/93ecb1f5-ee99-4d35-b5b4-6a91156cb21b'
 const networkImage = 'https://www.figma.com/api/mcp/asset/71c7d72c-b723-4a84-b64c-12af3dc26d2b'
-const faceGlyph = 'https://www.figma.com/api/mcp/asset/319639ab-6ced-4ca0-a0e5-6f20a9bf1241'
 ---
 
 <IndexLayout
   title="Totem Grid — Lose Yourself, Not Your Friends"
   description="Seamless connection at crowded events with Totem Grid. Discover how we keep crews together when the network dies."
 >
-  <header class="landing-hero card-depth" aria-labelledby="landing-hero-heading">
-    <div
-      class="landing-hero-unicorn"
-      data-us-project-src="/unicorn/slidebg.json"
-      data-us-production="true"
-      data-us-lazyload="false"
-      data-us-dpi="4"
-      data-us-alttext="Animated Totem Grid background"
-      data-us-arialabel="Animated hero background scene"
-    ></div>
-      <div class="landing-hero-content">
-        <img src="/brand/logoshape.svg" width="180" height="180" alt="Totem Grid" />
-        <div class="landing-hero-text">
-          <img src="/brand/logotype.svg" height="64" alt="Totem Grid" />
-          <span class="landing-hero-tagline">Lose yourself, <u>not</u>&nbsp;your&nbsp;friends</span>
+  <main class="landing-page">
+    <header class="landing-hero card-depth" aria-labelledby="landing-hero-heading">
+      <div
+        class="landing-hero-unicorn"
+        data-us-project-src="/unicorn/slidebg.json"
+        data-us-production="true"
+        data-us-lazyload="false"
+        data-us-dpi="4"
+        data-us-alttext="Animated Totem Grid background"
+        data-us-arialabel="Animated hero background scene"
+      ></div>
+        <div class="landing-hero-content">
+          <img src="/brand/logoshape.svg" width="180" height="180" alt="Totem Grid" />
+          <div class="landing-hero-text">
+            <img src="/brand/logotype.svg" height="64" alt="Totem Grid" />
+            <span class="landing-hero-tagline">Lose yourself, <u>not</u>&nbsp;your&nbsp;friends</span>
+          </div>
+        </div>
+    </header>
+    <section class="landing-app-pitch">
+      <div class="landing-app-pitch-content">
+        <h2 class="heading-xl" 
+          style="
+            margin: 0;
+            color: var(--colors-teal-95);
+            text-shadow: 4px 4px 8px var(--colors-teal-95);
+            -webkit-text-stroke-width: 1px; 
+            -webkit-text-stroke-color: var(--colors-indigo-40)
+        ">
+          <span style="color: var(--colors-ink-20);">Seamless connection at crowded events — </span>no compass or cell service required
+        </h2>
+        <div style="max-width: 380px;">
+          Find your friends no matter what. Built for crowded, remote festivals, and unforgettable weekends.
+        </div>
+        <Button
+          href="/beta-test"
+          label="Get the app"
+          variant="primary"
+          icon="▶"
+          ariaLabel="Get the Totem Grid app"
+        />
+        <div>
+          Organizing a festival? <a href="/partner-up">🤝 Partner Up</a>
         </div>
       </div>
-  </header>
-  <main class="remake-page">
-    <section class="hero-section">
-      <div class="hero-content">
-        <span class="hero-eyebrow">Lose yourself, not your friends</span>
-        <h1 class="hero-heading">Totem Grid</h1>
-        <p class="hero-subheading">
-          Seamless connection at crowded events — no compass or cell service required.
-        </p>
-        <p class="hero-body">
-          We digitized the festival totem so your crew can stay synced when networks melt down. Built for extreme
-          density, remote locations, and unforgettable weekends.
-        </p>
-        <div class="hero-cta">
-          <a class="button button-primary" href="/beta-test">Join our beta</a>
-          <a class="button button-secondary" href="/beta-test#download">Get the app</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-device">
-          <ImageOptimizer src={heroImage} width={360} height={720} alt="Totem Grid mobile preview" priority />
-        </div>
+      <div class="landing-app-pitch-demo card-depth">
+        <img src="/media/demo-walkthrough.gif" alt="Visual walkthrough of the app" />
       </div>
     </section>
-
     <section class="feature-grid" aria-label="Key capabilities">
       <article class="feature-card">
         <span class="feature-emoji" aria-hidden="true">✈️</span>
@@ -124,11 +131,14 @@ const faceGlyph = 'https://www.figma.com/api/mcp/asset/319639ab-6ced-4ca0-a0e5-6
 <style>
   .landing-hero {
     position: relative;
-    padding: 4rem;
+    padding: 4rem 2rem;
     border-radius: 16px;
     overflow: hidden;
     color: var(--colors-ink-100);
     border: 1px solid var(--colors-indigo-0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .landing-hero img {
@@ -171,10 +181,10 @@ const faceGlyph = 'https://www.figma.com/api/mcp/asset/319639ab-6ced-4ca0-a0e5-6
   }
 
   .landing-hero-tagline {
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-m);
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.12px;
     margin-left: 17px;
   }
 
@@ -192,123 +202,55 @@ const faceGlyph = 'https://www.figma.com/api/mcp/asset/319639ab-6ced-4ca0-a0e5-6
     }
   }
 
-  .remake-page {
+  .landing-app-pitch {
+     display: flex;
+     flex-direction: column;
+     padding: 2rem 0;
+     gap: 40px;
+     align-items: center;
+     justify-content: center;
+  }
+
+  .landing-app-pitch-content {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-  }
-
-  .hero-section {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2.5rem;
-    padding: 3.5rem clamp(1.5rem, 3vw, 3rem);
-    border-radius: 1.5rem;
-    background: radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.12), transparent 60%),
-      radial-gradient(circle at 85% 10%, rgba(255, 255, 255, 0.12), transparent 55%),
-      linear-gradient(180deg, #4d00ff 0%, #19093a 100%);
-    color: var(--colors-ink-100);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 24px 48px rgba(36, 9, 72, 0.35);
-  }
-
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-
-  .hero-eyebrow {
-    font-family: var(--font-pixel);
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: rgba(255, 241, 242, 0.85);
-  }
-
-  .hero-heading {
-    font-size: clamp(2.75rem, 6vw, 3.75rem);
-    margin: 0;
-    line-height: 1;
-    text-transform: uppercase;
-  }
-
-  .hero-subheading {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 600;
-    margin: 0;
-    color: var(--colors-ink-100);
-  }
-
-  .hero-body {
-    margin: 0;
-    line-height: 1.7;
-    color: rgba(255, 241, 242, 0.85);
-  }
-
-  .hero-cta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .button {
-    display: inline-flex;
+    gap: 16px;
+    max-width: 430px;
     align-items: center;
-    justify-content: center;
-    padding: 0.85rem 1.75rem;
-    border-radius: 999px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    font-size: 1rem;
   }
 
-  .button-primary {
-    background: linear-gradient(135deg, var(--colors-ink-70) 0%, var(--colors-ink-50) 100%);
-    color: #19093a;
-    box-shadow: 0 12px 24px rgba(118, 75, 162, 0.35);
+  .landing-app-pitch-demo {
+    overflow: hidden;
+    width: 200px;
+    height: 426px;
+    transform: rotate(1.781deg);
+    border-radius: 33px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    img {
+      position: relative;
+      top: -9px;
+      left: -10px;
+      width: 220px;
+    }
   }
 
-  .button-primary:hover,
-  .button-outline:hover {
-    transform: translateY(-2px);
-  }
+  @media (min-width: 768px) {
+    .landing-app-pitch {
+      flex-direction: row;
+      padding: 2rem;
+      padding-top: 0;
+    }
 
-  .button-secondary {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--colors-ink-100);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-  }
+    .landing-app-pitch-content {
+      text-align: right;
+      align-items: flex-end;
+    }
 
-  .button-outline {
-    background: transparent;
-    color: var(--color-text-primary);
-    border: 2px solid var(--color-text-primary);
-  }
-
-  .button-outline:hover {
-    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
-  }
-
-  .hero-visual {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero-device {
-    background: rgba(24, 0, 56, 0.45);
-    border-radius: 1.75rem;
-    padding: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
-    display: inline-flex;
-  }
-
-  .hero-device :global(img) {
-    border-radius: 1.25rem;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    .landing-app-pitch-demo {
+      margin-top: -80px;
+    }
   }
 
   .feature-grid {
@@ -349,49 +291,6 @@ const faceGlyph = 'https://www.figma.com/api/mcp/asset/319639ab-6ced-4ca0-a0e5-6
     margin-bottom: 1rem;
   }
 
-  .highlight-block {
-    position: relative;
-    border-radius: 1.25rem;
-    padding: 3.5rem 2rem;
-    overflow: hidden;
-    text-align: center;
-    background: linear-gradient(180deg, rgba(93, 56, 255, 0.85) 0%, rgba(32, 12, 72, 0.95) 100%);
-    color: var(--colors-ink-100);
-    border: 1px solid rgba(117, 241, 234, 0.4);
-  }
-
-  .highlight-overlay::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url({highlightTexture});
-    background-size: cover;
-    background-position: center;
-    opacity: 0.35;
-    mix-blend-mode: hard-light;
-    pointer-events: none;
-  }
-
-  .highlight-content {
-    position: relative;
-    display: grid;
-    gap: 1rem;
-  }
-
-  .highlight-content h2 {
-    margin: 0;
-    text-transform: uppercase;
-    font-size: clamp(2.25rem, 5vw, 3.2rem);
-    letter-spacing: 0.08em;
-  }
-
-  .highlight-content p {
-    margin: 0;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-  }
-
   .people-love {
     display: flex;
     flex-direction: column;
@@ -412,159 +311,5 @@ const faceGlyph = 'https://www.figma.com/api/mcp/asset/319639ab-6ced-4ca0-a0e5-6
     color: #4d00ff;
     text-transform: uppercase;
     margin: 0;
-  }
-
-  .why-section {
-    display: flex;
-    flex-direction: column;
-    gap: 1.75rem;
-    background: var(--color-bg);
-    border-radius: 1.25rem;
-    padding: 2.5rem;
-    border: 1px solid rgba(82, 0, 18, 0.15);
-    box-shadow: 0 24px 48px rgba(20, 5, 28, 0.08);
-  }
-
-  .why-heading {
-    margin: 0;
-    text-align: center;
-    font-size: clamp(2rem, 4vw, 2.75rem);
-    text-transform: uppercase;
-    color: #4d00ff;
-  }
-
-  .why-content {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 2rem;
-    align-items: center;
-  }
-
-  .why-copy {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .why-copy h3 {
-    margin: 0;
-    font-size: clamp(1.75rem, 3vw, 2.25rem);
-    color: var(--color-text-primary);
-  }
-
-  .why-copy p {
-    margin: 0;
-    color: var(--color-text-secondary);
-    line-height: 1.7;
-  }
-
-  .why-visual {
-    position: relative;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    background: linear-gradient(180deg, rgba(255, 135, 149, 0.25) 0%, rgba(122, 4, 38, 0.6) 100%);
-  }
-
-  .why-visual :global(img) {
-    border-radius: 0.75rem;
-    width: 100%;
-    height: auto;
-    box-shadow: 0 16px 32px rgba(82, 0, 18, 0.35);
-  }
-
-  .why-footnote {
-    margin: 0;
-    text-align: center;
-    color: #4d00ff;
-    font-weight: 600;
-    line-height: 1.6;
-  }
-
-  .cta-final {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 2rem;
-    align-items: center;
-    padding: 2.75rem;
-    border-radius: 1.5rem;
-    background: linear-gradient(180deg, rgba(77, 0, 255, 0.15) 0%, rgba(118, 75, 162, 0.35) 100%);
-    border: 1px solid rgba(118, 75, 162, 0.35);
-    box-shadow: 0 18px 36px rgba(36, 9, 72, 0.18);
-  }
-
-  .cta-final-face {
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 50%;
-    padding: 1.25rem;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    display: inline-flex;
-  }
-
-  .cta-final-copy {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .cta-final-copy h2 {
-    margin: 0;
-    text-transform: uppercase;
-    font-size: clamp(2rem, 4vw, 2.5rem);
-  }
-
-  .cta-final-copy p {
-    margin: 0;
-    color: var(--color-text-secondary);
-  }
-
-  .cta-final-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  @media (max-width: 900px) {
-    .hero-section {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-
-    .hero-content {
-      align-items: center;
-    }
-
-    .hero-cta {
-      justify-content: center;
-    }
-
-    .cta-final {
-      grid-template-columns: 1fr;
-      text-align: center;
-      justify-items: center;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .remake-page {
-      gap: 2.5rem;
-    }
-
-    .hero-section {
-      padding: 2.75rem 1.5rem;
-    }
-
-    .feature-card {
-      padding: 1.25rem 1.15rem;
-    }
-
-    .highlight-block {
-      padding: 2.75rem 1.5rem;
-    }
-
-    .why-section {
-      padding: 2rem 1.5rem;
-    }
-
-    .cta-final {
-      padding: 2.25rem 1.5rem;
-    }
   }
 </style>
