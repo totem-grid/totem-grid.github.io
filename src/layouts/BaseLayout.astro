@@ -31,18 +31,9 @@ const finalWidth = shouldUseCustomWidth ? `${widthValue}rem` : '25rem'
   >
     <ThemeManager />
     <FaviconThemeSwitcher />
-
-    {
-      fadeAnimation ? (
-        <TransitionWrapper type={type} class="layout-wrapper">
-          <slot />
-        </TransitionWrapper>
-      ) : (
-        <div class="layout-wrapper">
-          <slot />
-        </div>
-      )
-    }
+    <div class="layout-wrapper">
+      <slot />
+    </div>
   </body>
 </html>
 

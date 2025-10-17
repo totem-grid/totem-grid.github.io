@@ -17,6 +17,40 @@ const { title, description } = Astro.props as BaseHeadProps
 <link rel="preload" href="/fonts/AspektaVF.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 <link rel="preload" href="/fonts/Silkscreen-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
 <link rel="sitemap" href="/sitemap-index.xml" />
+<script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.33/dist/unicornStudio.umd.js"></script>
+<script is:inline>
+  (() => {
+    const initUnicorn = () => {
+      if (!window.UnicornStudio || typeof window.UnicornStudio.init !== 'function') {
+        setTimeout(initUnicorn, 120);
+        return;
+      }
+      if (typeof window.UnicornStudio.destroy === 'function') {
+        try {
+          window.UnicornStudio.destroy();
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      Promise.resolve(window.UnicornStudio.init()).catch((error) => {
+        console.error(error);
+      });
+    };
+
+    const schedule = () => {
+      requestAnimationFrame(initUnicorn);
+    };
+
+    if (document.readyState !== 'loading') {
+      schedule();
+    } else {
+      window.addEventListener('DOMContentLoaded', schedule, { once: true });
+    }
+
+    document.addEventListener('astro:page-load', schedule);
+    document.addEventListener('astro:after-swap', schedule);
+  })();
+</script>
 
 <meta name="generator" content={Astro.generator} />
 
