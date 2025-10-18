@@ -101,11 +101,15 @@ const networkImage = 'https://www.figma.com/api/mcp/asset/71c7d72c-b723-4a84-b64
       </article>
     </section>
 
-    <section class="highlight-block" aria-labelledby="highlight-heading">
-      <div class="highlight-overlay"></div>
+    <section class="highlight-block card-depth" aria-labelledby="highlight-heading">
+      <img
+        src="/media/festival-totem-card.png"
+        alt="Festival totem glowing in blue and purple light"
+        class="highlight-image"
+      />
       <div class="highlight-content">
-        <h2 id="highlight-heading">We digitized the festival totem</h2>
-        <p>Just an app — no extra hardware. The bigger the crowd gets, the better it works.</p>
+        <div class="heading-2xl">We digitized the festival totem</div>
+        <div class="heading-l">Just an app – no extra hardware</div>
       </div>
     </section>
 
@@ -149,7 +153,7 @@ const networkImage = 'https://www.figma.com/api/mcp/asset/71c7d72c-b723-4a84-b64
   .landing-hero {
     position: relative;
     padding: 4rem 2rem;
-    border-radius: 16px;
+    border-radius: 12px;
     overflow: hidden;
     color: var(--colors-ink-100);
     border: 1px solid var(--colors-indigo-0);
@@ -301,6 +305,61 @@ const networkImage = 'https://www.figma.com/api/mcp/asset/71c7d72c-b723-4a84-b64
   .feature-emoji {
     font-size: 2.5rem;
     display: inline-block;
+  }
+
+  .highlight-block {
+    margin-top: 32px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    color: var(--colors-teal-95);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    background-color: var(--colors-indigo-40);
+  }
+
+  .highlight-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* filter: saturate(1.4); */
+    mix-blend-mode: hard-light;
+  }
+
+  .highlight-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 0;
+    margin-top: 6rem;
+  }
+
+  .highlight-content .heading-2xl {
+    color: var(--colors-teal-95, #75F1EA);
+    text-align: center;
+    text-shadow: 4px 4px 8px var(--colors-teal-95, #75F1EA);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--colors-indigo-40, #4D00FF);
+  }
+
+  .highlight-content .heading-l {
+    color: var(--colors-ink-98, #F2EFFF);
+    text-align: center;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: var(--colors-indigo-40, #4D00FF);
+  }
+
+  @media (min-width: 768px) {
+    .highlight-content {
+      gap: 0.75rem;
+      padding: 4rem 2rem;
+    }
   }
 
   .people-love {
