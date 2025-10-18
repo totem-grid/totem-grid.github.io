@@ -61,10 +61,16 @@
   leading-trim: both;
   text-edge: cap;
   text-transform: uppercase;
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
   font-weight: 800;
   line-height: 100%;
   letter-spacing: 0.64px;
+}
+
+@media (min-width: 768px) {
+  .heading-2xl {
+    font-size: var(--font-size-2xl);
+  }
 }
 
 .body {
@@ -76,6 +82,7 @@
 }
 
 .body-l {
-
+  font-size: var(--font-size-l);
+  letter-spacing: -0.44px;
 }
 

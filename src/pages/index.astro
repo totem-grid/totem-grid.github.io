@@ -3,9 +3,7 @@ import IndexLayout from '@/layouts/IndexLayout.astro'
 import ImageOptimizer from '@/components/ui/ImageOptimizer.astro'
 import Button from '@/components/ui/Button.astro'
 
-const heroImage = 'https://www.figma.com/api/mcp/asset/cefe2195-807c-48b8-b3f4-1560de05dc9c'
 const testimonialImage = 'https://www.figma.com/api/mcp/asset/93ecb1f5-ee99-4d35-b5b4-6a91156cb21b'
-const networkImage = 'https://www.figma.com/api/mcp/asset/71c7d72c-b723-4a84-b64c-12af3dc26d2b'
 ---
 
 <IndexLayout
@@ -23,13 +21,13 @@ const networkImage = 'https://www.figma.com/api/mcp/asset/71c7d72c-b723-4a84-b64
         data-us-alttext="Animated Totem Grid background"
         data-us-arialabel="Animated hero background scene"
       ></div>
-        <div class="landing-hero-content">
+      <div class="landing-hero-content">
           <img src="/brand/logoshape.svg" width="180" height="180" alt="Totem Grid" />
           <div class="landing-hero-text">
             <img src="/brand/logotype.svg" height="64" alt="Totem Grid" />
             <span class="landing-hero-tagline">Lose yourself, <u>not</u>&nbsp;your&nbsp;friends</span>
-          </div>
         </div>
+      </div>
     </header>
     <section class="landing-app-pitch">
       <div class="landing-app-pitch-content">
@@ -61,44 +59,47 @@ const networkImage = 'https://www.figma.com/api/mcp/asset/71c7d72c-b723-4a84-b64
         <img src="/media/demo-walkthrough.gif" alt="Visual walkthrough of the app" />
       </div>
     </section>
-    <section class="feature-grid" aria-label="Key capabilities">
-      <article class="feature-card">
-        <span class="feature-emoji" aria-hidden="true">✈️</span>
-        <div class="feature-content">
-          <div class="heading-l">Works in Airplane Mode</div>
-          <div>No data plan? No network? No problem. Perfect for remote festivals.</div>
-        </div>
-      </article>
-      <article class="feature-card">
-        <span class="feature-emoji" aria-hidden="true">📍</span>
-        <div class="feature-content">
-          <div class="heading-l">Friend Finding</div>
-          <div>Precise directions to your friends no matter where they are in the crowd.</div>
-        </div>
-      </article>
-    </section>
-    <section class="feature-grid" aria-label="Key capabilities">
-      <article class="feature-card">
-        <span class="feature-emoji" aria-hidden="true">🗺</span>
-        <div class="feature-content">
-          <div class="heading-l">Event Maps</div>
-          <div>Find stages, vendors, toilets... your tent!</div>
-        </div>
-      </article>
-      <article class="feature-card">
-        <span class="feature-emoji" aria-hidden="true">🛟</span>
-        <div class="feature-content">
-          <div class="heading-l">Safety Check-ins</div>
-          <div>Get help or notify your group instantly</div>
-        </div>
-      </article>
-      <article class="feature-card">
-        <span class="feature-emoji" aria-hidden="true">🔐</span>
-        <div class="feature-content">
-          <div class="heading-l">Private</div>
-          <div>Only the friends you add can see you.</div>
-        </div>
-      </article>
+
+    <section>
+      <section class="feature-grid" aria-label="Key capabilities">
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">✈️</span>
+          <div class="feature-content">
+            <div class="heading-l">Works in Airplane Mode</div>
+            <div>No data plan? No network? No problem. Perfect for remote festivals.</div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">📍</span>
+          <div class="feature-content">
+            <div class="heading-l">Friend Finding</div>
+            <div>Precise directions to your friends no matter where they are in the crowd.</div>
+          </div>
+        </article>
+      </section>
+      <section class="feature-grid" aria-label="Key capabilities">
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">🗺</span>
+          <div class="feature-content">
+            <div class="heading-l">Event Maps</div>
+            <div>Find stages, vendors, toilets... your tent!</div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">🛟</span>
+          <div class="feature-content">
+            <div class="heading-l">Safety Check-ins</div>
+            <div>Get help or notify your group instantly</div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">🔐</span>
+          <div class="feature-content">
+            <div class="heading-l">Private</div>
+            <div>Only the friends you add can see you.</div>
+          </div>
+        </article>
+      </section>
     </section>
 
     <section class="highlight-block card-depth" aria-labelledby="highlight-heading">
@@ -112,44 +113,52 @@ const networkImage = 'https://www.figma.com/api/mcp/asset/71c7d72c-b723-4a84-b64
         <div class="heading-l">Just an app – no extra hardware</div>
       </div>
     </section>
+      
+    <div class="loud-text heading-2xl">
+      <img class="love-it-heart" src="/media/heart-icon.svg" width="54" height="54" alt="Heart icon" />
+      People love it
+      <img class="love-it-heart" src="/media/heart-icon.svg" width="54" height="54" alt="Heart icon" />
+    </div>
 
-    <section class="people-love" aria-labelledby="people-heading">
-      <div class="people-media">
-        <ImageOptimizer
-          src={testimonialImage}
-          width={960}
-          height={540}
-          alt="Festival goers smiling together"
-          class="people-image"
-        />
+    <iframe class="card-depth" style="aspect-ratio: 16/9; border: 1px solid var(--colors-indigo-40); border-radius: 12px;" src="https://www.youtube.com/embed/J_SyDGxYvrw?si=hqUhHdWx9zwbqatP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <div class="loud-text heading-2xl">
+      Wait – but *why*?
+    </div>
+
+    <section class="network-impact card-depth">
+      <div class="network-impact-image">
+        <h3 class="heading-2xl">
+          When the network dies, everyone feels it
+        </h3>
       </div>
-      <p id="people-heading" class="people-caption">People love it</p>
+      <div class="network-impact-content">
+        <p>Your crew is scattered somewhere in a sea of people, and texts won't go through. The night goes from unforgettable to impossible.</p>
+        <p>
+          <span>Wi-Fi melts down, LTE collapses, and even SOS signals can struggle. Events lose trust, sales, and safety — </span>
+          <b style="color: var(--colors-red-80);">you and your crew lose each other.</b>
+        </p>
+        <img src="/media/network-failure-card.png" alt="Phone screen showing lost signal" />
+      </div>
     </section>
 
-    <section class="why-section">
-      <h2 class="why-heading">Wait – but *why*?</h2>
-      <div class="why-content">
-        <div class="why-copy">
-          <h3>When the network dies, everyone feels it</h3>
-          <p>
-            Your crew is scattered somewhere in a sea of people and texts will not go through. Wi-Fi melts down, LTE
-            collapses, and even SOS signals can struggle. Events lose trust, sales, and safety — you and your crew lose
-            each other.
-          </p>
-        </div>
-        <div class="why-visual">
-          <ImageOptimizer src={networkImage} width={480} height={360} alt="Network outage visual" class="why-image" />
-        </div>
-      </div>
-      <p class="why-footnote">
-        Totem Grid connects phones directly, creating a living, breathing local network that thrives in dense crowds —
-        the bigger the crowd gets, the better it works.
+    <section>
+      <p class="body-l" style="color: var(--colors-ink-30); text-align: center; max-width: 540px; margin: 0 auto 16px;">
+        Totem Grid connects phones directly, creating a living, breathing local network that thrives in dense crowds —&nbsp;
+        <b style="color: var(--colors-indigo-40);">the&nbsp;bigger&nbsp;the&nbsp;crowd&nbsp;gets, the&nbsp;better&nbsp;it&nbsp;works.</b>
       </p>
+      <div class="loud-text heading-2xl">Lose yourself, not&nbsp;your&nbsp;friends</div>
     </section>
   </main>
 </IndexLayout>
 
 <style>
+  .landing-page {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
   .landing-hero {
     position: relative;
     padding: 4rem 2rem;
@@ -308,7 +317,6 @@ const networkImage = 'https://www.figma.com/api/mcp/asset/71c7d72c-b723-4a84-b64
   }
 
   .highlight-block {
-    margin-top: 32px;
     position: relative;
     border-radius: 12px;
     overflow: hidden;
@@ -336,7 +344,8 @@ const networkImage = 'https://www.figma.com/api/mcp/asset/71c7d72c-b723-4a84-b64
     align-items: center;
     gap: 0.5rem;
     text-align: center;
-    padding: 0;
+    gap: 0.75rem;
+    padding: 4rem 2rem;
     margin-top: 6rem;
   }
 
@@ -355,32 +364,95 @@ const networkImage = 'https://www.figma.com/api/mcp/asset/71c7d72c-b723-4a84-b64
     -webkit-text-stroke-color: var(--colors-indigo-40, #4D00FF);
   }
 
-  @media (min-width: 768px) {
-    .highlight-content {
-      gap: 0.75rem;
-      padding: 4rem 2rem;
+
+  .love-it-heart {
+    fill: var(--colors-fuchsia-80, #FF6ADC);
+    stroke-width: 8px;
+    stroke: var(--colors-indigo-40, #4D00FF);
+    filter: drop-shadow(4px 4px 8px var(--colors-teal-95, #75F1EA));
+  } 
+
+  .loud-text {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    color: var(--colors-indigo-40);
+    text-align: center;
+    text-shadow: 4px 4px 8px var(--colors-teal-200, #75F1EA);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--colors-teal-95, #75F1EA);
+  }
+
+  .network-impact {
+    background-color: var(--colors-red-20);
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+  }
+
+  .network-impact-image {
+    position: relative;
+    aspect-ratio: 16/9;
+    background-color: var(--colors-indigo-40);
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient(0deg, rgba(232, 42, 91, 0.40) 0%, rgba(232, 42, 91, 0.40) 100%), url('/media/network-dies-bg.png') no-repeat center center/cover;;
+    background-blend-mode: multiply, normal;
+    z-index: 10;
+
+    .heading-2xl {
+      margin: 0;
+      color: var(--colors-red-100);
+      text-shadow: 4px 4px 8px var(--colors-red-0, #520012);
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--colors-red-10, #7C0426);
+      padding: 40px;
+      letter-spacing: -3.5px;
+      mix-blend-mode: plus-lighter; 
     }
   }
 
-  .people-love {
+  .network-impact-content {
+    padding: 24px 40px;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    text-align: center;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    img {
+      width: 191.566px;
+      height: 271.273px;
+      transform: rotate(2.411deg);
+      aspect-ratio: 191.57/271.27;
+      position:absolute;
+      right: 32px;
+      bottom: 8px;
+      border-radius: 7.232px;
+      border: 2px solid var(--colors-red-60, #F64B6C);
+      background: linear-gradient(0deg, rgba(254, 185, 193, 0.40) 0%, rgba(254, 185, 193, 0.40) 100%), var(--Colors-Red-20, #9B0D31);
+      z-index: 0;
+    }
+
+    p {
+      max-width: 400px;
+      margin: 0;
+      color: var(--colors-ink-100);
+      font-size: var(--font-size-l);
+    }
   }
 
-  .people-image :global(img) {
-    border-radius: 1.25rem;
-    box-shadow: 0 20px 40px rgba(26, 9, 62, 0.2);
-  }
-
-  .people-caption {
-    font-family: var(--font-pixel);
-    font-size: 1.5rem;
-    letter-spacing: 0.08em;
-    color: #4d00ff;
-    text-transform: uppercase;
-    margin: 0;
+  @media screen and (max-width: 768px) {
+    .network-impact-image h3 {
+      padding: 24px;
+    }
+    .network-impact-content {
+      padding: 24px;
+      img {
+        display: none;
+      }
+    } 
   }
 </style>
