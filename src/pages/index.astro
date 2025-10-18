@@ -64,23 +64,40 @@ const networkImage = 'https://www.figma.com/api/mcp/asset/71c7d72c-b723-4a84-b64
     <section class="feature-grid" aria-label="Key capabilities">
       <article class="feature-card">
         <span class="feature-emoji" aria-hidden="true">✈️</span>
-        <h2>Works in Airplane Mode</h2>
-        <p>No data plan? No network? No problem. Built for remote festivals and rugged adventures.</p>
+        <div class="feature-content">
+          <div class="heading-l">Works in Airplane Mode</div>
+          <div>No data plan? No network? No problem. Perfect for remote festivals.</div>
+        </div>
       </article>
       <article class="feature-card">
         <span class="feature-emoji" aria-hidden="true">📍</span>
-        <h2>Friend Finding</h2>
-        <p>Precise directions to your friends no matter where they are in the crowd.</p>
+        <div class="feature-content">
+          <div class="heading-l">Friend Finding</div>
+          <div>Precise directions to your friends no matter where they are in the crowd.</div>
+        </div>
       </article>
+    </section>
+    <section class="feature-grid" aria-label="Key capabilities">
       <article class="feature-card">
         <span class="feature-emoji" aria-hidden="true">🗺</span>
-        <h2>Event Maps</h2>
-        <p>Stages, vendors, bathrooms, even your tent — all available offline.</p>
+        <div class="feature-content">
+          <div class="heading-l">Event Maps</div>
+          <div>Find stages, vendors, toilets... your tent!</div>
+        </div>
       </article>
       <article class="feature-card">
         <span class="feature-emoji" aria-hidden="true">🛟</span>
-        <h2>Safety Check-ins</h2>
-        <p>Instantly let your crew or staff know you are safe or need help.</p>
+        <div class="feature-content">
+          <div class="heading-l">Safety Check-ins</div>
+          <div>Get help or notify your group instantly</div>
+        </div>
+      </article>
+      <article class="feature-card">
+        <span class="feature-emoji" aria-hidden="true">🔐</span>
+        <div class="feature-content">
+          <div class="heading-l">Private</div>
+          <div>Only the friends you add can see you.</div>
+        </div>
       </article>
     </section>
 
@@ -256,39 +273,34 @@ const networkImage = 'https://www.figma.com/api/mcp/asset/71c7d72c-b723-4a84-b64
   .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
+    gap: 16px;
+    margin-bottom: 16px;
   }
 
   .feature-card {
-    background: var(--color-bg);
-    border: 1px solid rgba(77, 0, 255, 0.12);
-    border-radius: 1rem;
-    padding: 1.5rem;
-    text-align: left;
-    box-shadow: 0 12px 24px rgba(18, 10, 46, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    gap: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--colors-bright-ink-70, #ABA4E3);
+    background: var(--colors-ink-99, #FCF8FF);
+    box-shadow: 0 0.879px 35.156px 7.031px var(--colors-ink-150, #E4E0FA), 0 -0.879px 3.516px -0.879px var(--colors-Ink-500, #9B97CE) inset, 0 0.879px 3.516px -0.879px #FFF inset;
   }
 
-  .feature-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 36px rgba(18, 10, 46, 0.12);
-  }
+  .feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 
-  .feature-card h2 {
-    margin: 0 0 0.75rem;
-    font-size: 1.25rem;
-    color: var(--color-text-primary);
-  }
-
-  .feature-card p {
-    margin: 0;
-    color: var(--color-text-secondary);
+    .heading-l {
+      color: var(--colors-indigo-40);
+    }
   }
 
   .feature-emoji {
     font-size: 2.5rem;
     display: inline-block;
-    margin-bottom: 1rem;
   }
 
   .people-love {
