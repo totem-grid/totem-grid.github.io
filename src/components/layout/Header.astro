@@ -1,9 +1,9 @@
 ---
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/beta-test', label: 'Attendees' },
-  { href: '/partner-up', label: 'Organizers' },
-  { href: '/manifesto', label: 'Mission' },
+  { href: '/', label: 'For Attendees' },
+  // { href: '/beta-test', label: 'Attendees' },
+  { href: '/partner-up', label: 'For Organizers' },
+  { href: '/mission', label: 'Our Mission' },
 ]
 
 const normalizePath = (path: string) => {
@@ -29,7 +29,7 @@ const currentPath = normalizePath(Astro.url.pathname)
     </div>
 
     <a href="/beta-test" class="beta-cta card-depth">
-      <span class="beta-label">Join Beta</span>
+      <span class="beta-label">Join Our Beta</span>
     </a>
   </nav>
 </header>
