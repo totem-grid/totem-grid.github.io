@@ -86,3 +86,8 @@
   letter-spacing: -0.44px;
 }
 
+.body-xl {
+  font-size: var(--font-size-xl);
+  letter-spacing: -0.44px;
+}
+
