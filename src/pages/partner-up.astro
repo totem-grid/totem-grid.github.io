@@ -1,581 +1,453 @@
 ---
 import IndexLayout from '@/layouts/IndexLayout.astro'
-import { themeConfig } from '@/config'
+import Button from '@/components/ui/Button.astro'
 ---
 
 <IndexLayout
   title="Partner Up - Totem Grid"
   description="Turn your event up to 11 with Totem Grid. Reliable connectivity to ensure event safety, simplify logistics, and elevate attendee experiences."
 >
-  <main class="partner-page">
-    <div class="partner-content">
-      <!-- Hero Section -->
-      <section class="partner-hero">
-        <div class="hero-badge">
-          <span class="badge-text">🎸 For Event Organizers</span>
+  <main class="landing-page">
+    <header class="landing-hero card-depth" aria-labelledby="landing-hero-heading">
+      <div
+        class="landing-hero-unicorn"
+        data-us-project-src="/unicorn/slidebg.json"
+        data-us-production="true"
+        data-us-lazyload="false"
+        data-us-dpi="4"
+        data-us-alttext="Animated Totem Grid background"
+        data-us-arialabel="Animated hero background scene"
+      ></div>
+      <div class="landing-hero-content">
+          <img src="/brand/logoshape.svg" width="180" height="180" alt="Totem Grid" />
+          <div class="landing-hero-text">
+            <img src="/brand/logotype.svg" height="64" alt="Totem Grid" />
+            <span class="landing-hero-tagline">Game-changing event connectivity</span>
         </div>
-        <h1 class="hero-title">
-          Turn Your Event Up to 11 with Totem Grid
-          <span class="title-accent">🎸✨</span>
-        </h1>
-        <p class="hero-subtitle">
-          🪩 <strong>Reliable connectivity</strong> to ensure event safety, simplify logistics, and elevate
-          attendee experiences.
-        </p>
-        <div class="hero-cta">
-          <a
-            href="https://calendar.app.google/D91BfcdzWRircLBx6"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="demo-btn"
-            id="book-demo-btn"
-          >
-            <span class="btn-text">Book Demo</span>
-            <span class="btn-arrow">→</span>
-          </a>
+      </div>
+    </header>
+    <section class="landing-app-pitch">
+      <div class="landing-app-pitch-content">
+        <h2 class="heading-xl" 
+          style="
+            margin: 0;
+            color: var(--colors-teal-95);
+            text-shadow: 4px 4px 8px var(--colors-teal-95);
+            -webkit-text-stroke-width: 1px; 
+            -webkit-text-stroke-color: var(--colors-indigo-40)
+        ">
+          <span style="color: var(--colors-ink-20);">Improve safety, profitability&nbsp;&&nbsp;vibes </span> with our low-lift connectivity solution
+        </h2>
+        <div style="max-width: 380px;">
+          Streamline logistics & improve attendee experience with your own Totem Grid event network
         </div>
-      </section>
+        <Button
+          href="/beta-test"
+          label="Book a demo"
+          variant="primary"
+          icon="▶"
+          ariaLabel="Book a demo with our team"
+        />
+      </div>
+      <div class="landing-app-pitch-demo card-depth">
+        <img src="/media/demo-walkthrough.gif" alt="Visual walkthrough of the app" />
+      </div>
+    </section>
 
-      <!-- Game Changing Section -->
-      <section class="game-changer">
-        <h2 class="section-title">Game-changing event connectivity.</h2>
-      </section>
-
-      <!-- Why Festivals Love Section -->
-      <section class="why-festivals">
-        <h2 class="section-title">🎉 Why Festivals Love Totem Grid</h2>
-
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">✅</div>
-            <h3 class="feature-title">Easy Setup</h3>
-            <p class="feature-description">
-              We handle setup and logistics, simplifying operations so you can focus on delivering
-              an unforgettable event.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">🛡️</div>
-            <h3 class="feature-title">Safety, Simplified</h3>
-            <p class="feature-description">
-              Improve emergency response accuracy with precise attendee locations and reliable
-              communications.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">📡</div>
-            <h3 class="feature-title">Superior Coordination Tools</h3>
-            <p class="feature-description">
-              Better communication & coordination tools that beat walkie-talkies—simple, reliable,
-              no special training required.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">💸</div>
-            <h3 class="feature-title">App Profitability</h3>
-            <p class="feature-description">
-              Turn your event apps into revenue generators instead of expenses.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">🗺️</div>
-            <h3 class="feature-title">Custom Interactive Maps</h3>
-            <p class="feature-description">
-              Intuitive maps and waypoints ensure seamless navigation to premium amenities.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">📱</div>
-            <h3 class="feature-title">Premium Branded Experience</h3>
-            <p class="feature-description">
-              Deliver exclusive, branded digital experiences specifically for your community.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA Section -->
-      <section class="final-cta">
-        <div class="cta-card">
-          <h2 class="cta-title">Ready to Make It Happen?</h2>
-          <p class="cta-subtitle">Let's discuss how Totem Grid can transform your next event</p>
-          <button class="contact-btn" id="contact-btn">
-            <span class="btn-text">Get in Touch</span>
-            <span class="btn-arrow">→</span>
-          </button>
-        </div>
-      </section>
+    <div class="loud-text heading-2xl">
+      <img class="love-it-heart" src="/media/heart-icon.svg" width="54" height="54" alt="Heart icon" />
+      Festivals love it
+      <img class="love-it-heart" src="/media/heart-icon.svg" width="54" height="54" alt="Heart icon" />
     </div>
+
+    <section>
+      <section class="feature-grid" aria-label="Key capabilities">
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">✅</span>
+          <div class="feature-content">
+            <div class="heading-l">Easy Setup</div>
+            <div>We handle setup and logistics, simplifying operations so you can focus on delivering an unforgettable event.</div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">🛡️</span>
+          <div class="feature-content">
+            <div class="heading-l">Safety, Simplified</div>
+            <div>Improve emergency response accuracy with precise attendee locations and reliable communications.</div>
+          </div>
+        </article>
+      </section>
+      <section class="feature-grid" aria-label="Key capabilities">
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">📡</span>
+          <div class="feature-content">
+            <div class="heading-l">Superior Coordination Tools</div>
+            <div>Better communication & coordination tools that beat walkie-talkies—simple, reliable, no special training required.</div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">💸</span>
+          <div class="feature-content">
+            <div class="heading-l">App Profitability</div>
+            <div>Turn your event apps into revenue generators instead of expenses.</div>
+          </div>
+        </article>
+      </section>
+      <section class="feature-grid" aria-label="Key capabilities">
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">🗺️</span>
+          <div class="feature-content">
+            <div class="heading-l">Custom Interactive Maps</div>
+            <div>Intuitive maps and waypoints ensure seamless navigation to premium amenities.</div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">📱</span>
+          <div class="feature-content">
+            <div class="heading-l">Premium Branded Experience</div>
+            <div>Deliver exclusive, branded digital experiences specifically for your community.</div>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <iframe class="card-depth" style="aspect-ratio: 16/9; border: 1px solid var(--colors-indigo-40); border-radius: 12px;" src="https://www.youtube.com/embed/J_SyDGxYvrw?si=hqUhHdWx9zwbqatP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <div class="loud-text heading-2xl">
+      Wait – but *why*?
+    </div>
+
+    <section class="network-impact card-depth">
+      <div class="network-impact-image">
+        <h3 class="heading-2xl">
+          When the network dies, everyone feels it
+        </h3>
+      </div>
+      <div class="network-impact-content">
+        <p>
+          At minimum, network failure means frustrated fans, disrupted operations, and lost revenue. In the worst case scenario, lives are placed at risk & PR nightmares erupt.
+        </p>
+        <p>
+          Safety and trust are compromised. Brand reputation is tarnished.
+        </p>
+        <p>
+          <b style="color: var(--colors-red-80);">People don't return.</b>
+        </p>
+        <img src="/media/network-failure-card.png" alt="Phone screen showing lost signal" />
+      </div>
+    </section>
+
+    <section>
+      <p class="body-l" style="color: var(--colors-ink-30); text-align: center; max-width: 540px; margin: 0 auto 16px;">
+        Totem Grid connects phones directly, creating a living, breathing local network that thrives in dense crowds —&nbsp;
+        <b style="color: var(--colors-indigo-40);">the&nbsp;bigger&nbsp;the&nbsp;crowd&nbsp;gets, the&nbsp;better&nbsp;it&nbsp;works.</b>
+      </p>
+      <div class="loud-text heading-2xl">Turn your event<br/> up to 11</div>
+    </section>
   </main>
 </IndexLayout>
 
 <style>
-  .partner-page {
-    max-width: 64rem;
-    margin: 0 auto;
-    padding: 0 1rem;
+  .landing-page {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
-
-  .partner-content {
-    width: 100%;
-  }
-
-  /* Hero Section */
-  .partner-hero {
-    text-align: center;
-    padding: 3rem 0 5rem;
-    background: linear-gradient(
-      135deg,
-      rgba(102, 126, 234, 0.05) 0%,
-      rgba(118, 75, 162, 0.05) 100%
-    );
-    border-radius: 2rem;
-    margin-bottom: 4rem;
+  
+  .landing-hero {
     position: relative;
+    padding: 4rem 2rem;
+    border-radius: 12px;
     overflow: hidden;
+    color: var(--colors-ink-100);
+    border: 1px solid var(--colors-indigo-0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .partner-hero::before {
-    content: '';
+  .landing-hero img {
+    max-width: 100%;
+  }
+
+  .landing-hero-unicorn {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120%;
-    height: 100%;
-    background: radial-gradient(ellipse at center, rgba(102, 126, 234, 0.08) 0%, transparent 70%);
+    inset: -35% -20% -10% -20%;
     pointer-events: none;
     z-index: -1;
   }
 
-  .hero-badge {
-    display: inline-block;
-    margin-bottom: 1.5rem;
-    animation: badgeSlideIn 0.8s ease-out 0.2s both;
+  .landing-hero-unicorn canvas,
+  .landing-hero-unicorn video,
+  .landing-hero-unicorn iframe {
+    pointer-events: none;
   }
 
-  .badge-text {
-    display: inline-block;
-    padding: 0.5rem 1.25rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    letter-spacing: 0.025em;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-  }
-
-  .hero-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: var(--color-text-primary);
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-    animation: titleSlideUp 0.8s ease-out 0.4s both;
-  }
-
-  .title-accent {
-    display: inline-block;
-    animation: emojiFloat 2s ease-in-out infinite;
-  }
-
-  .hero-subtitle {
-    font-size: 1.4rem;
-    line-height: 1.6;
-    color: var(--color-text-secondary);
-    margin-bottom: 2.5rem;
-    max-width: 42rem;
-    margin-left: auto;
-    margin-right: auto;
-    animation: subtitleSlideUp 0.8s ease-out 0.6s both;
-  }
-
-  .hero-subtitle strong {
-    color: var(--color-text-primary);
-    font-weight: 600;
-  }
-
-  .hero-cta {
-    animation: ctaSlideUp 0.8s ease-out 0.8s both;
-  }
-
-  .demo-btn,
-  .contact-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1.25rem 2.5rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    border-radius: 0.75rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  .landing-hero-inner {
     position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .landing-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .landing-hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  .landing-hero-tagline {
+    font-size: var(--font-size-m);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.12px;
+    margin-left: 17px;
+  }
+
+  @media (min-width: 900px) {
+    .landing-hero {
+      
+    }
+
+    .landing-hero-content {
+      flex-direction: row;
+    }
+
+    .landing-hero-text {
+      align-items: flex-start;
+    }
+  }
+
+  .landing-app-pitch {
+     display: flex;
+     flex-direction: column;
+     padding: 2rem 0;
+     gap: 40px;
+     align-items: center;
+     justify-content: center;
+  }
+
+  .landing-app-pitch-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 430px;
+    align-items: center;
+  }
+
+  .landing-app-pitch-demo {
     overflow: hidden;
-    text-decoration: none;
+    width: 200px;
+    height: 426px;
+    transform: rotate(1.781deg);
+    border-radius: 33px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    img {
+      position: relative;
+      top: -9px;
+      left: -10px;
+      width: 220px;
+    }
   }
 
-  .demo-btn::before,
-  .contact-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
+  @media (min-width: 768px) {
+    .landing-app-pitch {
+      flex-direction: row;
+      padding: 2rem;
+      padding-top: 0;
+    }
+
+    .landing-app-pitch-content {
+      text-align: right;
+      align-items: flex-end;
+    }
+
+    .landing-app-pitch-demo {
+      margin-top: -80px;
+    }
   }
 
-  .demo-btn:hover::before,
-  .contact-btn:hover::before {
-    left: 100%;
-  }
-
-  .demo-btn:hover,
-  .contact-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-  }
-
-  .btn-arrow {
-    transition: transform 0.3s ease;
-  }
-
-  .demo-btn:hover .btn-arrow,
-  .contact-btn:hover .btn-arrow {
-    transform: translateX(3px);
-  }
-
-  /* Game Changer Section */
-  .game-changer {
-    text-align: center;
-    padding: 3rem 0;
-    margin-bottom: 3rem;
-  }
-
-  .section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--color-text-primary);
-    margin: 0;
-    line-height: 1.2;
-  }
-
-  /* Why Festivals Section */
-  .why-festivals {
-    padding: 4rem 0;
-    margin-bottom: 4rem;
-  }
-
-  .why-festivals .section-title {
-    text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.25rem;
-  }
-
-  .features-grid {
+  .feature-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
   }
 
   .feature-card {
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: 1rem;
-    padding: 2.5rem 2rem;
-    text-align: center;
-    transition: all 0.3s ease;
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    gap: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--colors-bright-ink-70, #ABA4E3);
+    background: var(--colors-ink-99, #FCF8FF);
+    box-shadow: 0 0.879px 35.156px 7.031px var(--colors-ink-150, #E4E0FA), 0 -0.879px 3.516px -0.879px var(--colors-Ink-500, #9B97CE) inset, 0 0.879px 3.516px -0.879px #FFF inset;
+  }
+
+  .feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .heading-l {
+      color: var(--colors-indigo-40);
+    }
+  }
+
+  .feature-emoji {
+    font-size: 2.5rem;
+    display: inline-block;
+  }
+
+  .highlight-block {
     position: relative;
+    border-radius: 12px;
     overflow: hidden;
-    animation: cardSlideUp 0.8s ease-out;
-    animation-fill-mode: both;
+    color: var(--colors-teal-95);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    background-color: var(--colors-indigo-40);
   }
 
-  .feature-card:nth-child(1) {
-    animation-delay: 0.1s;
-  }
-  .feature-card:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  .feature-card:nth-child(3) {
-    animation-delay: 0.3s;
-  }
-  .feature-card:nth-child(4) {
-    animation-delay: 0.4s;
-  }
-  .feature-card:nth-child(5) {
-    animation-delay: 0.5s;
-  }
-  .feature-card:nth-child(6) {
-    animation-delay: 0.6s;
-  }
-
-  .feature-card::before {
-    content: '';
+  .highlight-image {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #667eea, #764ba2);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* filter: saturate(1.4); */
+    mix-blend-mode: hard-light;
   }
 
-  .feature-card:hover::before {
-    transform: scaleX(1);
-  }
-
-  .feature-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
-    border-color: rgba(102, 126, 234, 0.2);
-  }
-
-  .feature-icon {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-    display: block;
-    animation: iconFloat 2s ease-in-out infinite;
-  }
-
-  .feature-card:nth-child(1) .feature-icon {
-    animation-delay: 0s;
-  }
-  .feature-card:nth-child(2) .feature-icon {
-    animation-delay: 0.3s;
-  }
-  .feature-card:nth-child(3) .feature-icon {
-    animation-delay: 0.6s;
-  }
-  .feature-card:nth-child(4) .feature-icon {
-    animation-delay: 0.9s;
-  }
-  .feature-card:nth-child(5) .feature-icon {
-    animation-delay: 1.2s;
-  }
-  .feature-card:nth-child(6) .feature-icon {
-    animation-delay: 1.5s;
-  }
-
-  .feature-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-text-primary);
-    margin-bottom: 1rem;
-    line-height: 1.3;
-  }
-
-  .feature-description {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--color-text-secondary);
-    margin: 0;
-  }
-
-  /* Final CTA Section */
-  .final-cta {
-    padding: 4rem 0;
-  }
-
-  .cta-card {
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-    border: 1px solid rgba(102, 126, 234, 0.2);
-    border-radius: 2rem;
-    padding: 4rem 2rem;
-    text-align: center;
+  .highlight-content {
     position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    gap: 0.75rem;
+    padding: 4rem 2rem;
+    margin-top: 6rem;
+  }
+
+  .highlight-content .heading-2xl {
+    color: var(--colors-teal-95, #75F1EA);
+    text-align: center;
+    text-shadow: 4px 4px 8px var(--colors-teal-95, #75F1EA);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--colors-indigo-40, #4D00FF);
+  }
+
+  .highlight-content .heading-l {
+    color: var(--colors-ink-98, #F2EFFF);
+    text-align: center;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: var(--colors-indigo-40, #4D00FF);
+  }
+
+
+  .love-it-heart {
+    fill: var(--colors-fuchsia-80, #FF6ADC);
+    stroke-width: 8px;
+    stroke: var(--colors-indigo-40, #4D00FF);
+    filter: drop-shadow(4px 4px 8px var(--colors-teal-95, #75F1EA));
+  } 
+
+  .loud-text {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    color: var(--colors-indigo-40);
+    text-align: center;
+    text-shadow: 4px 4px 8px var(--colors-teal-200, #75F1EA);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--colors-teal-95, #75F1EA);
+  }
+
+  .network-impact {
+    background-color: var(--colors-red-20);
     overflow: hidden;
+    border-radius: 12px;
+    position: relative;
   }
 
-  .cta-title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: var(--color-text-primary);
-    margin-bottom: 1rem;
-    line-height: 1.2;
-  }
+  .network-impact-image {
+    position: relative;
+    aspect-ratio: 16/9;
+    background-color: var(--colors-indigo-40);
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient(0deg, rgba(232, 42, 91, 0.40) 0%, rgba(232, 42, 91, 0.40) 100%), url('/media/network-dies-bg.png') no-repeat center center/cover;;
+    background-blend-mode: multiply, normal;
+    z-index: 10;
 
-  .cta-subtitle {
-    font-size: 1.1rem;
-    color: var(--color-text-secondary);
-    margin-bottom: 2.5rem;
-    line-height: 1.5;
-  }
-
-  /* Animations */
-  @keyframes badgeSlideIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes titleSlideUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+    .heading-2xl {
+      margin: 0;
+      color: var(--colors-red-100);
+      text-shadow: 4px 4px 8px var(--colors-red-0, #520012);
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--colors-red-10, #7C0426);
+      padding: 40px;
+      letter-spacing: -3.5px;
+      mix-blend-mode: plus-lighter; 
     }
   }
 
-  @keyframes subtitleSlideUp {
-    from {
-      opacity: 0;
-      transform: translateY(25px);
+  .network-impact-content {
+    padding: 24px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    img {
+      width: 191.566px;
+      height: 271.273px;
+      transform: rotate(2.411deg);
+      aspect-ratio: 191.57/271.27;
+      position:absolute;
+      right: 32px;
+      bottom: 8px;
+      border-radius: 7.232px;
+      border: 2px solid var(--colors-red-60, #F64B6C);
+      background: linear-gradient(0deg, rgba(254, 185, 193, 0.40) 0%, rgba(254, 185, 193, 0.40) 100%), var(--Colors-Red-20, #9B0D31);
+      z-index: 0;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+    p {
+      max-width: 400px;
+      margin: 0;
+      color: var(--colors-ink-100);
+      font-size: var(--font-size-l);
     }
   }
 
-  @keyframes ctaSlideUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
+  @media screen and (max-width: 768px) {
+    .network-impact-image h3 {
+      padding: 24px;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes cardSlideUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes emojiFloat {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-5px);
-    }
-  }
-
-  @keyframes iconFloat {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-3px);
-    }
-  }
-
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .partner-hero {
-      padding: 2rem 1rem 3rem;
-      margin-bottom: 3rem;
-    }
-
-    .hero-title {
-      font-size: 2.25rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1.2rem;
-    }
-
-    .section-title {
-      font-size: 2rem;
-    }
-
-    .why-festivals .section-title {
-      font-size: 1.875rem;
-    }
-
-    .features-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-
-    .feature-card {
-      padding: 2rem 1.5rem;
-    }
-
-    .cta-card {
-      padding: 3rem 1.5rem;
-    }
-
-    .cta-title {
-      font-size: 1.875rem;
-    }
-
-    .demo-btn,
-    .contact-btn {
-      width: 100%;
-      max-width: 280px;
-      justify-content: center;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .hero-badge,
-    .hero-title,
-    .hero-subtitle,
-    .hero-cta,
-    .feature-card {
-      animation: none;
-    }
-
-    .title-accent,
-    .feature-icon {
-      animation: none;
-    }
-
-    .demo-btn,
-    .contact-btn,
-    .feature-card,
-    .btn-arrow {
-      transition: none;
-    }
-
-    .demo-btn::before,
-    .contact-btn::before {
-      transition: none;
-    }
+    .network-impact-content {
+      padding: 24px;
+      img {
+        display: none;
+      }
+    } 
   }
 </style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const contactBtn = document.getElementById('contact-btn')
-
-    if (contactBtn) {
-      contactBtn.addEventListener('click', function () {
-        // Here you would integrate with your contact form or redirect to contact page
-        alert('Contact form coming soon! Please reach out via email for now.')
-      })
-    }
-  })
-</script>
