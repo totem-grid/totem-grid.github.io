@@ -7,9 +7,9 @@ import IndexLayout from '@/layouts/IndexLayout.astro'
   description="Learn about Totem Grid's mission, values, and team. Delivering the benefits of decentralized networks with a better way to build."
 >
   <main class="landing-page">
-    <header class="landing-hero card-depth" aria-labelledby="landing-hero-heading">
+    <header class="hero card-depth" aria-labelledby="landing-hero-heading">
       <div
-        class="landing-hero-unicorn"
+        class="hero-unicorn"
         data-us-project-src="/unicorn/slidebg.json"
         data-us-production="true"
         data-us-lazyload="false"
@@ -17,8 +17,8 @@ import IndexLayout from '@/layouts/IndexLayout.astro'
         data-us-alttext="Animated Totem Grid background"
         data-us-arialabel="Animated hero background scene"
       ></div>
-      <div class="landing-hero-content">
-          <div class="landing-hero-text">
+      <div class="hero-content">
+          <div class="hero-text">
             <h1 class="heading-2xl" 
           style="
             margin: 0;
@@ -337,38 +337,6 @@ import IndexLayout from '@/layouts/IndexLayout.astro'
     display: flex;
     flex-direction: column;
     gap: 40px;
-  }
-  
-  .landing-hero {
-    position: relative;
-    padding: 4rem 2rem;
-    border-radius: 12px;
-    overflow: hidden;
-    color: var(--colors-ink-100);
-    border: 1px solid var(--colors-indigo-0);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .landing-hero-unicorn {
-    position: absolute;
-    inset: -35% -20% -10% -20%;
-    pointer-events: none;
-    z-index: -1;
-  }
-
-  .landing-hero-unicorn canvas,
-  .landing-hero-unicorn video,
-  .landing-hero-unicorn iframe {
-    pointer-events: none;
-  }
-
-  .landing-hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
   }
 
   .loud-text {

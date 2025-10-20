@@ -8,9 +8,9 @@ import Button from '@/components/ui/Button.astro'
   description="Turn your event up to 11 with Totem Grid. Reliable connectivity to ensure event safety, simplify logistics, and elevate attendee experiences."
 >
   <main class="landing-page">
-    <header class="landing-hero card-depth" aria-labelledby="landing-hero-heading">
+    <header class="hero card-depth" aria-labelledby="landing-hero-heading">
       <div
-        class="landing-hero-unicorn"
+        class="hero-unicorn"
         data-us-project-src="/unicorn/slidebg.json"
         data-us-production="true"
         data-us-lazyload="false"
@@ -18,11 +18,11 @@ import Button from '@/components/ui/Button.astro'
         data-us-alttext="Animated Totem Grid background"
         data-us-arialabel="Animated hero background scene"
       ></div>
-      <div class="landing-hero-content">
+      <div class="hero-content">
           <img src="/brand/logoshape.svg" width="180" height="180" alt="Totem Grid" />
-          <div class="landing-hero-text">
+          <div class="hero-text">
             <img src="/brand/logotype.svg" height="64" alt="Totem Grid" />
-            <span class="landing-hero-tagline">Game-changing event connectivity</span>
+            <span class="hero-tagline">Game-changing event connectivity</span>
         </div>
       </div>
     </header>
@@ -152,79 +152,6 @@ import Button from '@/components/ui/Button.astro'
     display: flex;
     flex-direction: column;
     gap: 32px;
-  }
-  
-  .landing-hero {
-    position: relative;
-    padding: 4rem 2rem;
-    border-radius: 12px;
-    overflow: hidden;
-    color: var(--colors-ink-100);
-    border: 1px solid var(--colors-indigo-0);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .landing-hero img {
-    max-width: 100%;
-  }
-
-  .landing-hero-unicorn {
-    position: absolute;
-    inset: -35% -20% -10% -20%;
-    pointer-events: none;
-    z-index: -1;
-  }
-
-  .landing-hero-unicorn canvas,
-  .landing-hero-unicorn video,
-  .landing-hero-unicorn iframe {
-    pointer-events: none;
-  }
-
-  .landing-hero-inner {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .landing-hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .landing-hero-text {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 8px;
-    text-align: center;
-  }
-
-  .landing-hero-tagline {
-    font-size: var(--font-size-m);
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1.12px;
-    margin-left: 17px;
-  }
-
-  @media (min-width: 900px) {
-    .landing-hero {
-      
-    }
-
-    .landing-hero-content {
-      flex-direction: row;
-    }
-
-    .landing-hero-text {
-      align-items: flex-start;
-    }
   }
 
   .landing-app-pitch {
