@@ -11,6 +11,7 @@
   font-size: var(--font-size-m);
   font-weight: 644;
   line-height: 100%;
+  letter-spacing: 0;
 }
 
 .heading-l {
@@ -24,6 +25,7 @@
   font-size: var(--font-size-xl);
   font-weight: 800;
   line-height: 100%;
+  letter-spacing: 0;
 }
 
 .heading-2xl {
@@ -31,6 +33,7 @@
   font-size: var(--font-size-xl);
   font-weight: 800;
   line-height: 100%;
+  letter-spacing: 0;
 }
 
 @media (min-width: 768px) {

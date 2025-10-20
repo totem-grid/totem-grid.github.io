@@ -40,7 +40,7 @@ const today = new Date()
 </span>
 <style>
   .footer {
-    margin-top: 32px;
+    margin-top: 64px;
     position: relative;
     border-radius: 16px;
     background: var(--colors-indigo-40);
@@ -82,22 +82,26 @@ const today = new Date()
   .footer-cta {
     display: flex;
     flex-direction: column;
-    align-items: center;
     max-width: 320px;
-    gap: 1rem;
+    gap: 24px;
   }
 
   .cta-group {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 4px;
+    align-items: stretch;
+    gap: 8px;
+
+    .button {
+      width: 100%;
+    }
   }
 
   .cta-eyebrow {
-    color: var(--colors-ink-95);
+    color: var(--colors-ink-90);
     font-size: var(--font-size-m);
-    font-weight: 400;
+    font-weight: 600;
+    text-align: center;
   }
 
   .meta-text {
