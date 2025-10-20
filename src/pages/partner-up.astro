@@ -31,15 +31,13 @@ import Button from '@/components/ui/Button.astro'
         <h2 class="heading-xl" 
           style="
             margin: 0;
-            color: var(--colors-teal-95);
+            color: var(--colors-indigo-40);
             text-shadow: 4px 4px 8px var(--colors-teal-95);
-            -webkit-text-stroke-width: 1px; 
-            -webkit-text-stroke-color: var(--colors-indigo-40)
         ">
-          <span style="color: var(--colors-ink-20);">Improve safety, profitability&nbsp;&&nbsp;vibes </span> with our low-lift connectivity solution
+          <div style="color: var(--colors-ink-20);">Improve safety, profitability&nbsp;&&nbsp;vibes </div> with our low-lift connectivity solution
         </h2>
-        <div style="max-width: 380px;">
-          Streamline logistics & improve attendee experience with your own Totem Grid event network
+        <div>
+          Streamline your logistics & improve attendee experience by launching your own turn-key Totem Grid event network
         </div>
         <Button
           href="/beta-test"
@@ -168,8 +166,8 @@ import Button from '@/components/ui/Button.astro'
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: 430px;
     align-items: center;
+    max-width: 430px;
   }
 
   .landing-app-pitch-demo {
@@ -238,73 +236,12 @@ import Button from '@/components/ui/Button.astro'
     display: inline-block;
   }
 
-  .highlight-block {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    color: var(--colors-teal-95);
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    background-color: var(--colors-indigo-40);
-  }
-
-  .highlight-image {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* filter: saturate(1.4); */
-    mix-blend-mode: hard-light;
-  }
-
-  .highlight-content {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    text-align: center;
-    gap: 0.75rem;
-    padding: 4rem 2rem;
-    margin-top: 6rem;
-  }
-
-  .highlight-content .heading-2xl {
-    color: var(--colors-teal-95, #75F1EA);
-    text-align: center;
-    text-shadow: 4px 4px 8px var(--colors-teal-95, #75F1EA);
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--colors-indigo-40, #4D00FF);
-  }
-
-  .highlight-content .heading-l {
-    color: var(--colors-ink-98, #F2EFFF);
-    text-align: center;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: var(--colors-indigo-40, #4D00FF);
-  }
-
-
   .love-it-heart {
     fill: var(--colors-fuchsia-80, #FF6ADC);
     stroke-width: 8px;
     stroke: var(--colors-indigo-40, #4D00FF);
     filter: drop-shadow(4px 4px 8px var(--colors-teal-95, #75F1EA));
   } 
-
-  .loud-text {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    justify-content: center;
-    color: var(--colors-indigo-40);
-    text-align: center;
-    text-shadow: 4px 4px 8px var(--colors-teal-200, #75F1EA);
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--colors-teal-95, #75F1EA);
-  }
 
   .network-impact {
     background-color: var(--colors-red-20);
@@ -328,8 +265,6 @@ import Button from '@/components/ui/Button.astro'
       margin: 0;
       color: var(--colors-red-100);
       text-shadow: 4px 4px 8px var(--colors-red-0, #520012);
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: var(--colors-red-10, #7C0426);
       padding: 40px;
       letter-spacing: -3.5px;
       mix-blend-mode: plus-lighter; 

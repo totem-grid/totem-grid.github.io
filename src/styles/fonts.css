@@ -1,25 +1,3 @@
-@font-face {
-  font-family: 'Aspekta';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url('/fonts/AspektaVF.woff2') format('woff2');
-  unicode-range:
-    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074,
-    U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Silkscreen';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/Silkscreen-Regular.ttf') format('truetype');
-  unicode-range:
-    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074,
-    U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
 .sans {
   font-family: var(--font-sans);
 }
@@ -29,42 +7,30 @@
 }
 
 .heading {
-  leading-trim: both;
-  text-edge: cap;
   text-transform: uppercase;
   font-size: var(--font-size-m);
-  letter-spacing: 1.28px;
   font-weight: 644;
   line-height: 100%;
 }
 
 .heading-l {
-  leading-trim: both;
-  text-edge: cap;
   font-size: var(--font-size-l);
-  font-weight: 644;
+  font-weight: 600;
   line-height: 120%;
 }
 
 .heading-xl {
-  leading-trim: both;
-  text-edge: cap;
   text-transform: uppercase;
   font-size: var(--font-size-xl);
   font-weight: 800;
   line-height: 100%;
-  
-  letter-spacing: 1.12px;
 }
 
 .heading-2xl {
-  leading-trim: both;
-  text-edge: cap;
   text-transform: uppercase;
   font-size: var(--font-size-xl);
   font-weight: 800;
   line-height: 100%;
-  letter-spacing: 0.64px;
 }
 
 @media (min-width: 768px) {
@@ -83,11 +49,20 @@
 
 .body-l {
   font-size: var(--font-size-l);
-  letter-spacing: -0.44px;
 }
 
 .body-xl {
   font-size: var(--font-size-xl);
-  letter-spacing: -0.44px;
+}
+
+.loud-text {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  color: var(--colors-indigo-40);
+  text-align: center;
+  text-shadow: 4px 4px 8px var(--colors-teal-200, #75F1EA);
+  margin: 0;
 }
 

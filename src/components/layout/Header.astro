@@ -1,9 +1,9 @@
 ---
 const navLinks = [
-  { href: '/', label: 'For Attendees' },
+  { href: '/', label: 'Attendees' },
   // { href: '/beta-test', label: 'Attendees' },
-  { href: '/partner-up', label: 'For Organizers' },
-  { href: '/mission', label: 'Our Mission' },
+  { href: '/partner-up', label: 'Organizers' },
+  { href: '/mission', label: 'Mission' },
 ]
 
 const normalizePath = (path: string) => {
@@ -29,7 +29,7 @@ const currentPath = normalizePath(Astro.url.pathname)
     </div>
 
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSduCM6cOmQd2xNFpeqKcyyYNI8efWHrgY4u1Rdln4XoYUSQsw/viewform?usp=header" class="beta-cta card-depth">
-      <span class="beta-label">Join Our Beta</span>
+      <span class="beta-label">Try It</span>
     </a>
   </nav>
 </header>
@@ -57,7 +57,7 @@ const currentPath = normalizePath(Astro.url.pathname)
     justify-content: center;
     align-items: center;
     border-radius: 9px;
-    border: 1px solid var(--colors-indigo-40, #4D00FF);
+    border: 1px solid var(--colors-indigo-80, #4D00FF);
     background: var(--colors-ink-95, #EDE8FE);
 
     .nav-link {
@@ -67,14 +67,12 @@ const currentPath = normalizePath(Astro.url.pathname)
       text-decoration: none;
       font-feature-settings: 'liga' off, 'clig' off;
       text-overflow: ellipsis;
-      font-family: "Aspekta";
-      font-size: 12px;
+      font-family: "Inclusive Sans";
+      font-size: var(--font-size-s);
       font-style: normal;
-      font-weight: 400;
-      line-height: 18px; /* 150% */
+      font-weight: 500;
       display: flex;
-      height: 20px;
-      padding: 3px 10px;
+      padding: 4px 8px;
       align-items: center;
       border-radius: 7px;
     

@@ -31,12 +31,10 @@ import Button from '@/components/ui/Button.astro'
         <h2 class="heading-xl" 
           style="
             margin: 0;
-            color: var(--colors-teal-95);
+            color: var(--colors-indigo-40);
             text-shadow: 4px 4px 8px var(--colors-teal-95);
-            -webkit-text-stroke-width: 1px; 
-            -webkit-text-stroke-color: var(--colors-indigo-40)
         ">
-          <span style="color: var(--colors-ink-20);">Seamless connection at crowded events — </span>no compass or cell service required
+          <div style="color: var(--colors-ink-20);">Seamless connection at crowded events — </div>no compass or cell service required
         </h2>
         <div style="max-width: 380px;">
           Find your friends no matter what. Built for crowded, remote festivals, and unforgettable weekends.
@@ -150,12 +148,6 @@ import Button from '@/components/ui/Button.astro'
 </IndexLayout>
 
 <style>
-  .landing-page {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-
   .landing-app-pitch {
      display: flex;
      flex-direction: column;
@@ -228,7 +220,6 @@ import Button from '@/components/ui/Button.astro'
   .feature-content {
     display: flex;
     flex-direction: column;
-    gap: 4px;
 
     .heading-l {
       color: var(--colors-indigo-40);
@@ -277,15 +268,11 @@ import Button from '@/components/ui/Button.astro'
     color: var(--colors-teal-95, #75F1EA);
     text-align: center;
     text-shadow: 4px 4px 8px var(--colors-teal-95, #75F1EA);
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--colors-indigo-40, #4D00FF);
   }
 
   .highlight-content .heading-l {
     color: var(--colors-ink-98, #F2EFFF);
     text-align: center;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: var(--colors-indigo-40, #4D00FF);
   }
 
 
@@ -295,18 +282,6 @@ import Button from '@/components/ui/Button.astro'
     stroke: var(--colors-indigo-40, #4D00FF);
     filter: drop-shadow(4px 4px 8px var(--colors-teal-95, #75F1EA));
   } 
-
-  .loud-text {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    justify-content: center;
-    color: var(--colors-indigo-40);
-    text-align: center;
-    text-shadow: 4px 4px 8px var(--colors-teal-200, #75F1EA);
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--colors-teal-95, #75F1EA);
-  }
 
   .network-impact {
     background-color: var(--colors-red-20);
@@ -330,8 +305,6 @@ import Button from '@/components/ui/Button.astro'
       margin: 0;
       color: var(--colors-red-100);
       text-shadow: 4px 4px 8px var(--colors-red-0, #520012);
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: var(--colors-red-10, #7C0426);
       padding: 40px;
       letter-spacing: -3.5px;
       mix-blend-mode: plus-lighter; 

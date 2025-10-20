@@ -7,7 +7,7 @@
 
   /* Typography */
   --font-sans:
-    Aspekta, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    "Inclusive Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --font-pixel: Silkscreen, monospace;
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
@@ -24,7 +24,7 @@
   --font-weight-bold: 500;
 
   --spacing-s: -0.08em;
-  --spacing-m: -0.02em;
+  --spacing-m: -.44px;
 
   /* Light Mode Colors (Default) */
   --bg: var(--colors-ink-95);
@@ -70,7 +70,8 @@ body {
   font-feature-settings: 'ss03' 1;
   font-size: var(--font-size-m);
   text-autospace: normal;
-  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  letter-spacing: var(--spacing-m);
   color: var(--text-primary);
   font-display: swap;
   word-wrap: break-word;
