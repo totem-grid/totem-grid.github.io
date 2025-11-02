@@ -1,0 +1,10 @@
+---
+// Serve the static index.html file for the root URL
+import fs from 'fs';
+import path from 'path';
+
+const staticIndexPath = path.join(process.cwd(), 'public', 'index.html');
+const staticContent = fs.readFileSync(staticIndexPath, 'utf-8');
+---
+
+<div set:html={staticContent} />

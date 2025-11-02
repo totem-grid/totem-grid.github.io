@@ -1,0 +1,10 @@
+---
+// Serve the static partner-up.html file
+import fs from 'fs';
+import path from 'path';
+
+const staticPartnerUpPath = path.join(process.cwd(), 'public', 'partner-up.html');
+const staticContent = fs.readFileSync(staticPartnerUpPath, 'utf-8');
+---
+
+<div set:html={staticContent} />

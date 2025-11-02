@@ -1,0 +1,10 @@
+---
+// Serve the static contribute.html file
+import fs from 'fs';
+import path from 'path';
+
+const staticContributePath = path.join(process.cwd(), 'public', 'contribute.html');
+const staticContent = fs.readFileSync(staticContributePath, 'utf-8');
+---
+
+<div set:html={staticContent} />

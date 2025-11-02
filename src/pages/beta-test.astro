@@ -1,0 +1,10 @@
+---
+// Serve the static beta-test.html file
+import fs from 'fs';
+import path from 'path';
+
+const staticBetaTestPath = path.join(process.cwd(), 'public', 'beta-test.html');
+const staticContent = fs.readFileSync(staticBetaTestPath, 'utf-8');
+---
+
+<div set:html={staticContent} />

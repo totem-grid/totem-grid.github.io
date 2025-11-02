@@ -1,0 +1,10 @@
+---
+// Serve the static burn.html file
+import fs from 'fs';
+import path from 'path';
+
+const staticBurnPath = path.join(process.cwd(), 'public', 'burn.html');
+const staticContent = fs.readFileSync(staticBurnPath, 'utf-8');
+---
+
+<div set:html={staticContent} />

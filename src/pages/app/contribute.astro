@@ -1,3 +1,134 @@
 ---
-return Astro.redirect('/mission', 302)
+import IndexLayout from '@/layouts/IndexLayout.astro'
+import Button from '@/components/ui/Button.astro'
 ---
+
+<IndexLayout
+  title="Contribute — Totem Grid Network"
+  description="Become a contributor to Totem Grid"
+>
+  <main class="contribute-page">
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="heading-2xl">Join our Collective Revolution</h1>
+        <p class="body-l">
+          <strong>Productize diffuse sovereignty with us</strong>
+        </p>
+      </div>
+    </section>
+
+    <section class="mission-section">
+      <div class="mission-content">
+        <h2 class="heading-xl">Building a better internet for humanity begins by building better organizations.</h2>
+        <p class="body-l">
+          We believe in creating technology that serves people, not the other way around. Totem Grid is more than just an app—it's a movement toward decentralized, human-centered connection.
+        </p>
+        <p class="body-l">
+          Join us in building the future of event technology where privacy, autonomy, and genuine connection come first.
+        </p>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-content">
+        <h3 class="heading-l">Ready to contribute?</h3>
+        <p class="body-m">
+          Whether you're a developer, designer, event organizer, or passionate about decentralized technology, we'd love to have you join our mission.
+        </p>
+        <div class="cta-buttons">
+          <Button
+            href="https://docs.google.com/forms/d/e/1FAIpQLSduCM6cOmQd2xNFpeqKcyyYNI8efWHrgY4u1Rdln4XoYUSQsw/viewform?usp=header"
+            label="Get involved"
+            variant="primary"
+            ariaLabel="Get involved with Totem Grid"
+          />
+          <Button
+            href="https://x.com/totemgrid"
+            label="Follow our journey"
+            variant="secondary"
+            ariaLabel="Follow Totem Grid on X"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</IndexLayout>
+
+<style>
+  .contribute-page {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 2rem 0;
+  }
+
+  .hero-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--colors-indigo-10) 0%, var(--colors-teal-10) 100%);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .mission-section {
+    padding: 0 2rem;
+  }
+
+  .mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .cta-section {
+    padding: 0 2rem;
+  }
+
+  .cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .contribute-page {
+      padding: 4rem 0;
+    }
+
+    .hero-section {
+      padding: 6rem 4rem;
+    }
+
+    .mission-section,
+    .cta-section {
+      padding: 0 4rem;
+    }
+
+    .cta-buttons {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+</style>
