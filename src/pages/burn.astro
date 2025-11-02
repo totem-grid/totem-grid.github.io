@@ -1,6 +1,10 @@
 ---
-// Redirect to Google Form
-const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSduCM6cOmQd2xNFpeqKcyyYNI8efWHrgY4u1Rdln4XoYUSQsw/viewform?usp=header'
+// Serve the static burn.html file
+import fs from 'fs';
+import path from 'path';
 
-return Astro.redirect(GOOGLE_FORM_URL, 302)
+const staticBurnPath = path.join(process.cwd(), 'public', 'burn.html');
+const staticContent = fs.readFileSync(staticBurnPath, 'utf-8');
 ---
+
+<div set:html={staticContent} />

@@ -1,3 +1,10 @@
 ---
-return Astro.redirect('/mission', 302)
+// Serve the static about-us.html file
+import fs from 'fs';
+import path from 'path';
+
+const staticAboutUsPath = path.join(process.cwd(), 'public', 'about-us.html');
+const staticContent = fs.readFileSync(staticAboutUsPath, 'utf-8');
 ---
+
+<div set:html={staticContent} />
