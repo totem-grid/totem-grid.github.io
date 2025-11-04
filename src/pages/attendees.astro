@@ -1,0 +1,348 @@
+---
+import IndexLayout from '@/layouts/IndexLayout.astro'
+import Button from '@/components/ui/Button.astro'
+---
+
+<IndexLayout
+  title="Totem Grid — Lose Yourself, Not Your Friends"
+  description="Find your friends at crowded events — no compass or cell service required."
+>
+  <main class="landing-page">
+    <header class="hero card-depth" aria-labelledby="landing-hero-heading">
+      <div
+        class="hero-unicorn"
+        data-us-project-src="/unicorn/slidebg.json"
+        data-us-production="true"
+        data-us-lazyload="false"
+        data-us-dpi="4"
+        data-us-alttext="Animated Totem Grid background"
+        data-us-arialabel="Animated hero background scene"
+      ></div>
+      <div class="hero-content">
+          <img src="/brand/logoshape.svg" width="180" height="180" alt="Totem Grid" />
+          <div class="hero-text">
+            <img src="/brand/logotype.svg" height="64" alt="Totem Grid" />
+            <span class="hero-tagline">Lose yourself, <u>not</u>&nbsp;your&nbsp;friends</span>
+          </div>
+      </div>
+    </header>
+    <section class="landing-app-pitch">
+      <div class="landing-app-pitch-content">
+        <h2 class="heading-xl" 
+          style="
+            margin: 0;
+            color: var(--colors-indigo-40);
+            text-shadow: 4px 4px 8px var(--colors-teal-95);
+        ">
+          <div style="color: var(--colors-ink-20);">Seamless connection at crowded events — </div>no compass or cell service required
+        </h2>
+        <div style="max-width: 380px;">
+          Find your friends no matter what. Built for unforgettable experiences, anywhere there's crowds.
+        </div>
+        <Button
+          href="https://docs.google.com/forms/d/e/1FAIpQLSduCM6cOmQd2xNFpeqKcyyYNI8efWHrgY4u1Rdln4XoYUSQsw/viewform?usp=header"
+          label="Get the app"
+          variant="primary"
+          icon="▶"
+          ariaLabel="Get the Totem Grid app"
+        />
+        <div>
+          Organizing a festival? <a href="/partner-up">🤝 Partner Up</a>
+        </div>
+      </div>
+      <div class="landing-app-pitch-demo card-depth">
+        <img src="/media/demo-walkthrough.gif" alt="Visual walkthrough of the app" />
+      </div>
+    </section>
+
+    <section>
+      <section class="feature-grid" aria-label="Key capabilities">
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">✈️</span>
+          <div class="feature-content">
+            <div class="heading-l">Works in Airplane Mode</div>
+            <div>No connectivity? No problem. Perfect for deep basements & remote festivals.</div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">📍</span>
+          <div class="feature-content">
+            <div class="heading-l">Friend Finding</div>
+            <div>Get precise directions to your friends, no matter where they are in the crowd.</div>
+          </div>
+        </article>
+      </section>
+      <section class="feature-grid" aria-label="Key capabilities">
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">🗺</span>
+          <div class="feature-content">
+            <div class="heading-l">Event Maps</div>
+            <div>Find stages, vendors, toilets... your tent!</div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">🛟</span>
+          <div class="feature-content">
+            <div class="heading-l">Safety Check-ins</div>
+            <div>Get help or notify your group instantly</div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">🔐</span>
+          <div class="feature-content">
+            <div class="heading-l">Private</div>
+            <div>Only the friends you add can see you.</div>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <section class="highlight-block card-depth" aria-labelledby="highlight-heading">
+      <img
+        src="/media/festival-totem-card.png"
+        alt="Festival totem glowing in blue and purple light"
+        class="highlight-image"
+      />
+      <div class="highlight-content">
+        <div class="heading-2xl">We digitized the festival totem</div>
+        <div class="heading-l">Just an app – no extra hardware</div>
+      </div>
+    </section>
+
+    <div class="loud-text heading-2xl">
+      Wait – but *why*?
+    </div>
+
+    <section class="network-impact card-depth">
+      <div class="network-impact-image">
+        <h3 class="heading-2xl">
+          When the network dies, everyone&nbsp;feels&nbsp;it
+        </h3>
+      </div>
+      <div class="network-impact-content">
+        <p>Your crew is scattered somewhere in a sea of people, and texts won't go through. The night goes from unforgettable to impossible.</p>
+        <p>
+          <span>Wi-Fi melts down, LTE collapses, and even SOS signals can struggle. Events lose trust, sales, and safety — </span>
+          <b style="color: var(--colors-red-80);">you and your crew lose each other.</b>
+        </p>
+        <img src="/media/network-failure-card.png" alt="Phone screen showing lost signal" />
+      </div>
+    </section>
+
+    <section>
+      <p class="body-l" style="color: var(--colors-ink-30); text-align: center; max-width: 540px; margin: 0 auto 16px;">
+        Totem Grid connects phones directly, creating a living, breathing local network that thrives in dense crowds —&nbsp;
+        <b style="color: var(--colors-indigo-40);">the&nbsp;bigger&nbsp;the&nbsp;crowd&nbsp;gets, the&nbsp;better&nbsp;it&nbsp;works.</b>
+      </p>
+      <div class="loud-text heading-2xl">Lose yourself,<br/> not&nbsp;your&nbsp;friends</div>
+    </section>
+  </main>
+</IndexLayout>
+
+<style>
+  .landing-app-pitch {
+     display: flex;
+     flex-direction: column;
+     padding: 2rem 0;
+     gap: 40px;
+     align-items: center;
+     justify-content: center;
+     margin-top: -24px;
+  }
+
+  .landing-app-pitch-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 430px;
+    align-items: center;
+  }
+
+  .landing-app-pitch-demo {
+    overflow: hidden;
+    width: 200px;
+    height: 426px;
+    transform: rotate(1.781deg);
+    border-radius: 33px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    img {
+      position: relative;
+      top: -9px;
+      left: -10px;
+      width: 220px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .landing-app-pitch {
+      flex-direction: row;
+      padding: 2rem;
+      padding-top: 0;
+    }
+
+    .landing-app-pitch-content {
+      text-align: right;
+      align-items: flex-end;
+    }
+
+    .landing-app-pitch-demo {
+      margin-top: -80px;
+    }
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .feature-card {
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    gap: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--colors-bright-ink-70, #ABA4E3);
+    background: var(--colors-ink-99, #FCF8FF);
+    box-shadow: 0 0.879px 35.156px 7.031px var(--colors-ink-150, #E4E0FA), 0 -0.879px 3.516px -0.879px var(--colors-Ink-500, #9B97CE) inset, 0 0.879px 3.516px -0.879px #FFF inset;
+  }
+
+  .feature-content {
+    display: flex;
+    flex-direction: column;
+
+    .heading-l {
+      color: var(--colors-indigo-40);
+    }
+  }
+
+  .feature-emoji {
+    font-size: 2.5rem;
+    display: inline-block;
+  }
+
+  .highlight-block {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    color: var(--colors-teal-95);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    background-color: var(--colors-indigo-40);
+  }
+
+  .highlight-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* filter: saturate(1.4); */
+    mix-blend-mode: hard-light;
+  }
+
+  .highlight-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    gap: 0.75rem;
+    padding: 4rem 2rem;
+    margin-top: 6rem;
+  }
+
+  .highlight-content .heading-2xl {
+    color: var(--colors-teal-95, #75F1EA);
+    text-align: center;
+    text-shadow: 4px 4px 8px var(--colors-teal-95, #75F1EA);
+  }
+
+  .highlight-content .heading-l {
+    color: var(--colors-ink-98, #F2EFFF);
+    text-align: center;
+  }
+
+
+  .love-it-heart {
+    fill: var(--colors-fuchsia-80, #FF6ADC);
+    stroke-width: 8px;
+    stroke: var(--colors-indigo-40, #4D00FF);
+    filter: drop-shadow(4px 4px 8px var(--colors-teal-95, #75F1EA));
+  } 
+
+  .network-impact {
+    background-color: var(--colors-red-20);
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+  }
+
+  .network-impact-image {
+    position: relative;
+    aspect-ratio: 16/9;
+    background-color: var(--colors-indigo-40);
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient(0deg, rgba(232, 42, 91, 0.40) 0%, rgba(232, 42, 91, 0.40) 100%), url('/media/network-dies-bg.png') no-repeat center center/cover;;
+    background-blend-mode: multiply, normal;
+    z-index: 10;
+
+    .heading-2xl {
+      margin: 0;
+      color: var(--colors-red-100);
+      text-shadow: 4px 4px 8px var(--colors-red-0, #520012);
+      padding: 40px;
+      letter-spacing: -3.5px;
+      mix-blend-mode: plus-lighter; 
+    }
+  }
+
+  .network-impact-content {
+    padding: 24px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    img {
+      width: 191.566px;
+      height: 271.273px;
+      transform: rotate(2.411deg);
+      aspect-ratio: 191.57/271.27;
+      position:absolute;
+      right: 32px;
+      bottom: 8px;
+      border-radius: 7.232px;
+      border: 2px solid var(--colors-red-60, #F64B6C);
+      background: linear-gradient(0deg, rgba(254, 185, 193, 0.40) 0%, rgba(254, 185, 193, 0.40) 100%), var(--Colors-Red-20, #9B0D31);
+      z-index: 0;
+    }
+
+    p {
+      max-width: 400px;
+      margin: 0;
+      color: var(--colors-ink-100);
+      font-size: var(--font-size-l);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .network-impact-image h3 {
+      padding: 24px;
+    }
+    .network-impact-content {
+      padding: 24px;
+      img {
+        display: none;
+      }
+    } 
+  }
+</style>

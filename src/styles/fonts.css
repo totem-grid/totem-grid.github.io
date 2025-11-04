@@ -60,12 +60,12 @@
 
 .loud-text {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   align-items: center;
   justify-content: center;
   color: var(--colors-indigo-40);
   text-align: center;
   text-shadow: 4px 4px 8px var(--colors-teal-200, #75F1EA);
-  margin: 0;
 }
 

@@ -1,7 +1,7 @@
 ---
 const navLinks = [
-  { href: '/', label: 'Attendees' },
-  // { href: '/beta-test', label: 'Attendees' },
+  { href: '/', label: 'Home' },
+  { href: '/attendees', label: 'Attendees' },
   { href: '/partner-up', label: 'Organizers' },
   { href: '/mission', label: 'Mission' },
 ]
@@ -42,7 +42,7 @@ const currentPath = normalizePath(Astro.url.pathname)
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 100;
+    z-index: 10000;
   }
 
   .nav {
