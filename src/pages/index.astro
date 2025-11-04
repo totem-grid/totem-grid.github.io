@@ -5,7 +5,7 @@ import Button from '@/components/ui/Button.astro'
 
 <IndexLayout
   title="Totem Grid — Lose Yourself, Not Your Friends"
-  description="Seamless connection at crowded events with Totem Grid. Discover how we keep crews together when the network dies."
+  description="Find your friends at crowded events — no compass or cell service required."
 >
   <main class="landing-page">
     <header class="hero card-depth" aria-labelledby="landing-hero-heading">
@@ -19,190 +19,234 @@ import Button from '@/components/ui/Button.astro'
         data-us-arialabel="Animated hero background scene"
       ></div>
       <div class="hero-content">
-          <img src="/brand/logoshape.svg" width="180" height="180" alt="Totem Grid" />
-          <div class="hero-text">
-            <img src="/brand/logotype.svg" height="64" alt="Totem Grid" />
-            <span class="hero-tagline">Lose yourself, <u>not</u>&nbsp;your&nbsp;friends</span>
-          </div>
+        <img src="/brand/logoshape.svg" width="180" height="180" alt="Totem Grid" />
+        <div class="hero-text">
+          <img src="/brand/logotype.svg" height="64" alt="Totem Grid" />
+          <span class="hero-tagline">Lose yourself, <u>not</u>&nbsp;your&nbsp;friends</span>
+        </div>
       </div>
     </header>
-    <section class="landing-app-pitch">
-      <div class="landing-app-pitch-content">
-        <h2 class="heading-xl" 
-          style="
-            margin: 0;
-            color: var(--colors-indigo-40);
-            text-shadow: 4px 4px 8px var(--colors-teal-95);
-        ">
-          <div style="color: var(--colors-ink-20);">Seamless connection at crowded events — </div>no compass or cell service required
-        </h2>
-        <div style="max-width: 380px;">
-          Find your friends no matter what. Built for unforgettable experiences, anywhere there's crowds.
+
+    <section class="demos-section">
+      <h2 class="loud-text heading-2xl">
+        <div style="color: var(--colors-ink-20);">Seamless connection at crowded events — </div>no compass or cell service required
+      </h2>
+      <div class="demos">
+        <img class="chat-screenshot"
+            src="/media/tg-proto-chat.png"
+            aria-label="Screenshot of the chat view"
+          />
+        <div class="sizzle-reel card-depth">
+          <video
+            src="/media/tg-proto-sizzle.mp4"
+            aria-label="Visual walkthrough of the app"
+            autoplay
+            loop
+            muted
+            playsinline
+          />
         </div>
-        <Button
-          href="https://docs.google.com/forms/d/e/1FAIpQLSduCM6cOmQd2xNFpeqKcyyYNI8efWHrgY4u1Rdln4XoYUSQsw/viewform?usp=header"
-          label="Get the app"
-          variant="primary"
-          icon="▶"
-          ariaLabel="Get the Totem Grid app"
-        />
-        <div>
-          Organizing a festival? <a href="/partner-up">🤝 Partner Up</a>
-        </div>
-      </div>
-      <div class="landing-app-pitch-demo card-depth">
-        <img src="/media/demo-walkthrough.gif" alt="Visual walkthrough of the app" />
+        <img class="ar-screenshot"
+            src="/media/tg-proto-ar.png"
+            aria-label="Screenshot of the augmented reality friend finding"
+          />
       </div>
     </section>
 
     <section>
-      <section class="feature-grid" aria-label="Key capabilities">
-        <article class="feature-card">
-          <span class="feature-emoji" aria-hidden="true">✈️</span>
-          <div class="feature-content">
-            <div class="heading-l">Works in Airplane Mode</div>
-            <div>No connectivity? No problem. Perfect for deep basements & remote festivals.</div>
-          </div>
-        </article>
-        <article class="feature-card">
-          <span class="feature-emoji" aria-hidden="true">📍</span>
-          <div class="feature-content">
-            <div class="heading-l">Friend Finding</div>
-            <div>Get precise directions to your friends, no matter where they are in the crowd.</div>
-          </div>
-        </article>
-      </section>
-      <section class="feature-grid" aria-label="Key capabilities">
-        <article class="feature-card">
-          <span class="feature-emoji" aria-hidden="true">🗺</span>
-          <div class="feature-content">
-            <div class="heading-l">Event Maps</div>
-            <div>Find stages, vendors, toilets... your tent!</div>
-          </div>
-        </article>
-        <article class="feature-card">
-          <span class="feature-emoji" aria-hidden="true">🛟</span>
-          <div class="feature-content">
-            <div class="heading-l">Safety Check-ins</div>
-            <div>Get help or notify your group instantly</div>
-          </div>
-        </article>
-        <article class="feature-card">
-          <span class="feature-emoji" aria-hidden="true">🔐</span>
-          <div class="feature-content">
-            <div class="heading-l">Private</div>
-            <div>Only the friends you add can see you.</div>
-          </div>
-        </article>
-      </section>
-    </section>
-
-    <section class="highlight-block card-depth" aria-labelledby="highlight-heading">
-      <img
-        src="/media/festival-totem-card.png"
-        alt="Festival totem glowing in blue and purple light"
-        class="highlight-image"
-      />
-      <div class="highlight-content">
-        <div class="heading-2xl">We digitized the festival totem</div>
-        <div class="heading-l">Just an app – no extra hardware</div>
-      </div>
-    </section>
-      
-    <!-- <div class="loud-text heading-2xl">
-      <img class="love-it-heart" src="/media/heart-icon.svg" width="54" height="54" alt="Heart icon" />
-      People love it
-      <img class="love-it-heart" src="/media/heart-icon.svg" width="54" height="54" alt="Heart icon" />
-    </div> -->
-
-    <!-- <iframe class="card-depth" style="aspect-ratio: 16/9; border: 1px solid var(--colors-indigo-40); border-radius: 12px;" src="https://www.youtube.com/embed/J_SyDGxYvrw?si=hqUhHdWx9zwbqatP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-
-    <div class="loud-text heading-2xl">
-      Wait – but *why*?
-    </div>
-
-    <section class="network-impact card-depth">
-      <div class="network-impact-image">
-        <h3 class="heading-2xl">
-          When the network dies, everyone&nbsp;feels&nbsp;it
-        </h3>
-      </div>
-      <div class="network-impact-content">
-        <p>Your crew is scattered somewhere in a sea of people, and texts won't go through. The night goes from unforgettable to impossible.</p>
-        <p>
-          <span>Wi-Fi melts down, LTE collapses, and even SOS signals can struggle. Events lose trust, sales, and safety — </span>
-          <b style="color: var(--colors-red-80);">you and your crew lose each other.</b>
-        </p>
-        <img src="/media/network-failure-card.png" alt="Phone screen showing lost signal" />
-      </div>
-    </section>
-
-    <section>
-      <p class="body-l" style="color: var(--colors-ink-30); text-align: center; max-width: 540px; margin: 0 auto 16px;">
-        Totem Grid connects phones directly, creating a living, breathing local network that thrives in dense crowds —&nbsp;
-        <b style="color: var(--colors-indigo-40);">the&nbsp;bigger&nbsp;the&nbsp;crowd&nbsp;gets, the&nbsp;better&nbsp;it&nbsp;works.</b>
+      <h2 class="loud-text heading-2xl">
+        Say Hello to the connected&nbsp;crowd&nbsp;👋
+      </h2>
+      <p class="body-xl" style="color: var(--colors-ink-30); text-align: center;">
+        Totem Grid connects phones directly, creating a living, breathing local network that thrives in dense crowds —
+        <b>the bigger the crowd gets, the better it works</b>
       </p>
-      <div class="loud-text heading-2xl">Lose yourself,<br/> not&nbsp;your&nbsp;friends</div>
+      <section class="feature-grid" aria-label="Key capabilities">
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">🛡️</span>
+          <div class="feature-content">
+            <div class="body-xl">Stay Safe & Connected</div>
+            <div class="body-l">Quickly find your group or get help—even when networks fail</div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">📶</span>
+          <div class="feature-content">
+            <div class="body-xl">Reliable Event-Networks</div>
+            <div class="body-l">Secure p2p internet technology ensures dependable communication at crowded venues</div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <span class="feature-emoji" aria-hidden="true">😊</span>
+          <div class="feature-content">
+            <div class="body-xl">Worry-Free Experiences</div>
+            <div class="body-l">Enjoy events with peace of mind, your crew is always within reach</div>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <section class="network-impact">
+      <h2 class="loud-text heading-2xl">
+        Wave Goodbye to the disconnected state 📵
+      </h2>
+      <p class="body-xl" style="color: var(--colors-ink-30); text-align: center;">
+        No more struggling with failing networks
+      </p>
+      <figure class="network-impact-image card-depth">
+        <img src="/media/network-failure-card.png" alt="Phone screen showing lost signal" />
+      </figure>
+    </section>
+
+    <section>
+      <h2 class="loud-text heading-2xl">
+        Festivals Love It
+      </h2>
+      <div class="testimonials">
+        <div class="testimonials-card">
+          <h3 class="heading-l">
+            What Organizers Say
+          </h3>
+          <ul class="body-l">
+            <li>"Safety is our biggest concern"</li>
+            <li>"We've been looking for a platform that does this"</li>
+            <li>"An upgraded Walkie Talkie"</li>
+            <li>"Game Changer!"</li>
+          </ul>
+          <div class="testimonial-cta">
+            <Button
+              href="/partner-up"
+              label="Partner Up"
+              variant="primary"
+              icon="▶"
+              ariaLabel="Partner Up"
+            />
+          </div>
+        </div>
+        <div class="testimonials-card">
+          <h3 class="heading-l">
+            What Attendees Say
+          </h3>
+          <ul class="body-l">
+            <li>"Dude, I needed this at the gorge last weekend"</li>
+            <li>"Finally, we've needed someone to solve this for so long"</li>
+            <li>"I can't wait to send this to my friends"</li>
+          </ul>
+          <div class="testimonial-cta">
+            <Button
+              href="/attendees"
+              label="Get The App"
+              variant="primary"
+              icon="▶"
+              ariaLabel="Partner Up"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 </IndexLayout>
 
 <style>
-  .landing-app-pitch {
-     display: flex;
-     flex-direction: column;
-     padding: 2rem 0;
-     gap: 40px;
-     align-items: center;
-     justify-content: center;
-     margin-top: -24px;
-  }
-
-  .landing-app-pitch-content {
-    text-align: center;
+  .testimonials { 
+    margin-top: 32px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: 430px;
+    align-items: stretch;
+    justify-content: stretch;
+
+  }
+
+  .testimonial-cta {
+    display: flex;
     align-items: center;
+    justify-content: center;
   }
 
-  .landing-app-pitch-demo {
-    overflow: hidden;
-    width: 200px;
-    height: 426px;
-    transform: rotate(1.781deg);
-    border-radius: 33px;
-    flex-shrink: 0;
-    flex-grow: 0;
-    img {
-      position: relative;
-      top: -9px;
-      left: -10px;
-      width: 220px;
+  .testimonials-card {
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid var(--colors-bright-ink-70, #ABA4E3);
+    background: var(--colors-ink-99, #FCF8FF);
+    box-shadow: 0 0.879px 35.156px 7.031px var(--colors-ink-150, #E4E0FA), 0 -0.879px 3.516px -0.879px var(--colors-Ink-500, #9B97CE) inset, 0 0.879px 3.516px -0.879px #FFF inset;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h3 {
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    ul {
+      /* padding-left: 8px; */
+    }
+
+    li {
+      margin: 0 0 16px 0;
+
     }
   }
 
-  @media (min-width: 768px) {
-    .landing-app-pitch {
+  @media screen and (min-width: 768px) {
+    .testimonials {
       flex-direction: row;
-      padding: 2rem;
-      padding-top: 0;
+    }
+  }
+
+  .demos-section {
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .demos {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+
+    .sizzle-reel {
+      display: inline-block;
+      overflow: hidden;
+      border-radius: 6px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 2px solid var(--colors-bright-ink-10);
+      position: relative;
+      box-shadow: 4px 4px 24px var(--colors-teal-200, #75F1EA);
+      z-index: 1000;
+
+      video {
+        position: relative;
+        width: 230px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+      }
     }
 
-    .landing-app-pitch-content {
-      text-align: right;
-      align-items: flex-end;
+    .chat-screenshot {
+      height: 480px;
+      transform: rotate(-1.781deg);
+      position: absolute;
+      left: -200px;
+      top: 30px;
     }
 
-    .landing-app-pitch-demo {
-      margin-top: -80px;
+    .ar-screenshot {
+      height: 480px;
+      transform: rotate(1.781deg);
+      position: absolute;
+      right: -200px;
+      top: 30px;
     }
   }
 
   .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 16px;
     margin-bottom: 16px;
   }
@@ -221,14 +265,15 @@ import Button from '@/components/ui/Button.astro'
   .feature-content {
     display: flex;
     flex-direction: column;
+    gap: 4px;
 
-    .heading-l {
+    .body-xl {
       color: var(--colors-indigo-40);
     }
   }
 
   .feature-emoji {
-    font-size: 2.5rem;
+    font-size: 3rem;
     display: inline-block;
   }
 
@@ -276,7 +321,6 @@ import Button from '@/components/ui/Button.astro'
     text-align: center;
   }
 
-
   .love-it-heart {
     fill: var(--colors-fuchsia-80, #FF6ADC);
     stroke-width: 8px;
@@ -285,72 +329,44 @@ import Button from '@/components/ui/Button.astro'
   } 
 
   .network-impact {
-    background-color: var(--colors-red-20);
-    overflow: hidden;
-    border-radius: 12px;
-    position: relative;
+    .loud-text {
+      color: var(--colors-red-20);
+      text-shadow: 4px 4px 8px var(--colors-yellow-100);
+    }
   }
 
   .network-impact-image {
-    position: relative;
-    aspect-ratio: 16/9;
-    background-color: var(--colors-indigo-40);
-    margin: 0;
-    display: flex;
-    align-items: flex-end;
-    background: linear-gradient(0deg, rgba(232, 42, 91, 0.40) 0%, rgba(232, 42, 91, 0.40) 100%), url('/media/network-dies-bg.png') no-repeat center center/cover;;
-    background-blend-mode: multiply, normal;
-    z-index: 10;
-
-    .heading-2xl {
+      position: relative;
+      aspect-ratio: 1;
+      background-color: var(--colors-indigo-40);
       margin: 0;
-      color: var(--colors-red-100);
-      text-shadow: 4px 4px 8px var(--colors-red-0, #520012);
-      padding: 40px;
-      letter-spacing: -3.5px;
-      mix-blend-mode: plus-lighter; 
-    }
-  }
+      display: flex;
+      align-items: flex-end;
+      background: linear-gradient(0deg, rgba(232, 42, 91, 0.40) 0%, rgba(232, 42, 91, 0.40) 100%), url('/media/network-dies-bg.png') no-repeat center center/cover;;
+      background-blend-mode: multiply, normal;
+      z-index: 10;
+      border-radius: 24px;
+      overflow: hidden;
 
-  .network-impact-content {
-    padding: 24px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: flex-start;
-    justify-content: flex-start;
-
-    img {
-      width: 191.566px;
-      height: 271.273px;
-      transform: rotate(2.411deg);
-      aspect-ratio: 191.57/271.27;
-      position:absolute;
-      right: 32px;
-      bottom: 8px;
-      border-radius: 7.232px;
-      border: 2px solid var(--colors-red-60, #F64B6C);
-      background: linear-gradient(0deg, rgba(254, 185, 193, 0.40) 0%, rgba(254, 185, 193, 0.40) 100%), var(--Colors-Red-20, #9B0D31);
-      z-index: 0;
-    }
-
-    p {
-      max-width: 400px;
-      margin: 0;
-      color: var(--colors-ink-100);
-      font-size: var(--font-size-l);
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    .network-impact-image h3 {
-      padding: 24px;
-    }
-    .network-impact-content {
-      padding: 24px;
       img {
-        display: none;
+        margin: 0 auto;
+        height: 100%;
+        /* transform: rotate(2.411deg); */
+        aspect-ratio: 191.57/271.27;
+        right: 30%;
+        bottom: 8px;
+        background: linear-gradient(0deg, rgba(254, 185, 193, 0.40) 0%, rgba(254, 185, 193, 0.40) 100%), var(--Colors-Red-20, #9B0D31);
+        box-shadow: 0px 0px 16px #9B0D31;
+        z-index: 0;
+        display: block;
       }
-    } 
+    }
+
+  @media screen and (min-width: 768px) {
+    .network-impact-image {
+      aspect-ratio: 16/9;
+    }
+    
   }
+
 </style>
