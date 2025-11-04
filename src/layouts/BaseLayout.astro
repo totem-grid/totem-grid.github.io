@@ -12,7 +12,7 @@ const { type = 'page' } = Astro.props
 const language = themeConfig.site.language || 'en-US'
 const contentWidth = themeConfig.general.contentWidth
 const fadeAnimation = themeConfig.general.fadeAnimation
-const widthValue = Math.min(parseFloat(contentWidth), 52)
+const widthValue = Math.min(parseFloat(contentWidth), 60)
 const shouldUseCustomWidth = widthValue > 25
 const finalWidth = shouldUseCustomWidth ? `${widthValue}rem` : '25rem'
 ---
