@@ -22,7 +22,10 @@ const { title, description } = Astro.props as BaseHeadProps
   <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 </noscript>
 <link rel="sitemap" href="/sitemap-index.xml" />
-<script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.33/dist/unicornStudio.umd.js"></script>
+<!-- Preload Unicorn Studio JSON with low priority to avoid blocking critical path -->
+<link rel="preload" href="/unicorn/slidebg.json" as="fetch" crossorigin="anonymous" fetchpriority="low" />
+<!-- Load Unicorn Studio script asynchronously to avoid blocking critical path -->
+<script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.33/dist/unicornStudio.umd.js" defer></script>
 <script is:inline>
   (() => {
     const initUnicorn = () => {
@@ -42,13 +45,33 @@ const { title, description } = Astro.props as BaseHeadProps
       });
     };
 
+    // Delay initialization until after critical content loads
     const schedule = () => {
-      requestAnimationFrame(initUnicorn);
+      // Use requestIdleCallback if available to defer until browser is idle
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(initUnicorn, { timeout: 2000 });
+      } else {
+        // Fallback: wait for next idle period
+        setTimeout(() => {
+          requestAnimationFrame(initUnicorn);
+        }, 200);
+      }
     };
 
-    if (document.readyState !== 'loading') {
-      schedule();
+    // Wait for Unicorn Studio script to load (since it's deferred)
+    const waitForScript = () => {
+      if (window.UnicornStudio) {
+        schedule();
+      } else {
+        setTimeout(waitForScript, 50);
+      }
+    };
+
+    // Initialize after page load to avoid blocking critical path
+    if (document.readyState === 'complete') {
+      waitForScript();
     } else {
+      window.addEventListener('load', waitForScript);
       document.addEventListener('astro:page-load', schedule);
       document.addEventListener('astro:after-swap', schedule);
     }
