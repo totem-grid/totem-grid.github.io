@@ -13,15 +13,29 @@ import Button from '@/components/ui/Button.astro'
         class="hero-unicorn"
         data-us-project-src="/unicorn/slidebg.json"
         data-us-production="true"
-        data-us-lazyload="false"
-        data-us-dpi="4"
+        data-us-lazyload="true"
+        data-us-dpi="3"
         data-us-alttext="Animated Totem Grid background"
         data-us-arialabel="Animated hero background scene"
       ></div>
       <div class="hero-content">
-        <img src="/brand/logoshape.svg" width="180" height="180" alt="Totem Grid" />
+        <img 
+          src="/brand/logoshape.svg" 
+          width="180" 
+          height="180" 
+          alt="Totem Grid"
+          fetchpriority="high"
+          loading="eager"
+        />
         <div class="hero-text">
-          <img src="/brand/logotype.svg" height="64" alt="Totem Grid" />
+          <img 
+            src="/brand/logotype.svg" 
+            width="453" 
+            height="64" 
+            alt="Totem Grid"
+            fetchpriority="high"
+            loading="eager"
+          />
           <span class="hero-tagline">Lose yourself, <u>not</u>&nbsp;your&nbsp;friends</span>
         </div>
       </div>
@@ -33,22 +47,33 @@ import Button from '@/components/ui/Button.astro'
       </h2>
       <div class="demos">
         <img class="chat-screenshot"
-            src="/media/tg-proto-chat.png"
+            src="/media/tg-proto-chat.webp"
             aria-label="Screenshot of the chat view"
+            loading="lazy"
+            decoding="async"
+            width="480"
+            height="853"
           />
         <div class="sizzle-reel card-depth">
           <video
-            src="/media/tg-proto-sizzle.mp4"
             aria-label="Visual walkthrough of the app"
             autoplay
             loop
             muted
             playsinline
-          />
+            preload="none"
+          >
+            <source src="/media/tg-proto-sizzle.webm" type="video/webm" />
+            <source src="/media/tg-proto-sizzle.mp4" type="video/mp4" />
+          </video>
         </div>
         <img class="ar-screenshot"
-            src="/media/tg-proto-ar.png"
+            src="/media/tg-proto-ar.webp"
             aria-label="Screenshot of the augmented reality friend finding"
+            loading="lazy"
+            decoding="async"
+            width="480"
+            height="853"
           />
       </div>
     </section>
@@ -94,7 +119,14 @@ import Button from '@/components/ui/Button.astro'
         No more struggling with failing networks
       </p>
       <figure class="network-impact-image card-depth">
-        <img src="/media/network-failure-card.png" alt="Phone screen showing lost signal" />
+        <img 
+          src="/media/network-failure-card.webp" 
+          alt="Phone screen showing lost signal"
+          loading="lazy"
+          decoding="async"
+          width="382"
+          height="542"
+        />
       </figure>
     </section>
 
@@ -229,6 +261,7 @@ import Button from '@/components/ui/Button.astro'
 
     .chat-screenshot {
       height: 480px;
+      width: 250px;
       transform: rotate(-1.781deg);
       position: absolute;
       left: -200px;
@@ -237,6 +270,7 @@ import Button from '@/components/ui/Button.astro'
 
     .ar-screenshot {
       height: 480px;
+      width: 250px;
       transform: rotate(1.781deg);
       position: absolute;
       right: -200px;
@@ -337,12 +371,11 @@ import Button from '@/components/ui/Button.astro'
 
   .network-impact-image {
       position: relative;
-      aspect-ratio: 1;
       background-color: var(--colors-indigo-40);
       margin: 0;
       display: flex;
       align-items: flex-end;
-      background: linear-gradient(0deg, rgba(232, 42, 91, 0.40) 0%, rgba(232, 42, 91, 0.40) 100%), url('/media/network-dies-bg.png') no-repeat center center/cover;;
+      background: linear-gradient(0deg, rgba(232, 42, 91, 0.40) 0%, rgba(232, 42, 91, 0.40) 100%), url('/media/network-dies-bg.webp') no-repeat center center/cover;;
       background-blend-mode: multiply, normal;
       z-index: 10;
       border-radius: 24px;
@@ -350,9 +383,6 @@ import Button from '@/components/ui/Button.astro'
 
       img {
         margin: 0 auto;
-        height: 100%;
-        /* transform: rotate(2.411deg); */
-        aspect-ratio: 191.57/271.27;
         right: 30%;
         bottom: 8px;
         background: linear-gradient(0deg, rgba(254, 185, 193, 0.40) 0%, rgba(254, 185, 193, 0.40) 100%), var(--Colors-Red-20, #9B0D31);

@@ -18,9 +18,23 @@ import Button from '@/components/ui/Button.astro'
       data-us-arialabel="Animated hero background scene"
     ></div>
     <div class="hero-content">
-        <img src="/brand/logoshape.svg" width="180" height="180" alt="Totem Grid" />
+        <img 
+          src="/brand/logoshape.svg" 
+          width="180" 
+          height="180" 
+          alt="Totem Grid"
+          fetchpriority="high"
+          loading="eager"
+        />
         <div class="hero-text">
-          <img src="/brand/logotype.svg" height="64" alt="Totem Grid" />
+          <img 
+            src="/brand/logotype.svg" 
+            width="453" 
+            height="64" 
+            alt="Totem Grid"
+            fetchpriority="high"
+            loading="eager"
+          />
           <span class="hero-tagline">Game-changing event connectivity</span>
       </div>
     </div>
@@ -130,7 +144,7 @@ import Button from '@/components/ui/Button.astro'
       <p>
         <b style="color: var(--colors-red-80);">People don't return.</b>
       </p>
-      <img src="/media/network-failure-card.png" alt="Phone screen showing lost signal" />
+      <img src="/media/network-failure-card.webp" alt="Phone screen showing lost signal" />
     </div>
   </section>
 
@@ -250,7 +264,7 @@ import Button from '@/components/ui/Button.astro'
     margin: 0;
     display: flex;
     align-items: flex-end;
-    background: linear-gradient(0deg, rgba(232, 42, 91, 0.40) 0%, rgba(232, 42, 91, 0.40) 100%), url('/media/network-dies-bg.png') no-repeat center center/cover;;
+    background: linear-gradient(0deg, rgba(232, 42, 91, 0.40) 0%, rgba(232, 42, 91, 0.40) 100%), url('/media/network-dies-bg.webp') no-repeat center center/cover;;
     background-blend-mode: multiply, normal;
     z-index: 10;
 

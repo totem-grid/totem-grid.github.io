@@ -16,7 +16,11 @@ const { title, description } = Astro.props as BaseHeadProps
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<!-- Async load Google Fonts to prevent render blocking -->
+<link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</noscript>
 <link rel="sitemap" href="/sitemap-index.xml" />
 <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.33/dist/unicornStudio.umd.js"></script>
 <script is:inline>
