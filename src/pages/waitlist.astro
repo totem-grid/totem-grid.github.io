@@ -76,13 +76,43 @@ import { themeConfig } from '@/config'
         </div>
 
         <div class="form-group">
+          <label>Contact Method</label>
+          <div class="contact-method-toggle">
+            <input type="radio" id="contact-email" name="contactMethod" value="email" checked />
+            <label for="contact-email" class="toggle-option">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              <span>Email</span>
+            </label>
+            <input type="radio" id="contact-phone" name="contactMethod" value="phone" />
+            <label for="contact-phone" class="toggle-option">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span>Phone</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group" id="emailGroup">
           <label for="email">Email Address</label>
           <input
             type="email"
             id="email"
             name="email"
             placeholder="your@email.com"
-            required
+          />
+        </div>
+
+        <div class="form-group" id="phoneGroup" style="display: none;">
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+1 (555) 000-0000"
           />
         </div>
 
@@ -335,15 +365,18 @@ import { themeConfig } from '@/config'
     cursor: pointer;
   }
 
+  .contact-method-toggle,
   .platform-select {
     display: flex;
     gap: 0.5rem;
   }
 
+  .contact-method-toggle input[type="radio"],
   .platform-select input[type="radio"] {
     display: none;
   }
 
+  .toggle-option,
   .platform-option {
     flex: 1;
     display: flex;
@@ -361,11 +394,13 @@ import { themeConfig } from '@/config'
     font-weight: 500;
   }
 
+  .toggle-option:hover,
   .platform-option:hover {
     border-color: var(--primary-color, #6366f1);
     background: rgba(99, 102, 241, 0.05);
   }
 
+  .contact-method-toggle input[type="radio"]:checked + .toggle-option,
   .platform-select input[type="radio"]:checked + .platform-option {
     border-color: var(--primary-color, #6366f1);
     background: rgba(99, 102, 241, 0.1);
@@ -384,6 +419,7 @@ import { themeConfig } from '@/config'
     color: #3ddc84;
   }
 
+  .toggle-option svg,
   .platform-option svg {
     flex-shrink: 0;
   }
@@ -476,6 +512,32 @@ import { themeConfig } from '@/config'
   // Get referral ID from URL query params
   const urlParams = new URLSearchParams(window.location.search)
   const referrerId = urlParams.get('referral')
+  
+  // Toggle contact method visibility
+  const contactMethodRadios = document.querySelectorAll('input[name="contactMethod"]')
+  const emailGroup = document.getElementById('emailGroup')
+  const phoneGroup = document.getElementById('phoneGroup')
+  const emailInput = document.getElementById('email') as HTMLInputElement
+  const phoneInput = document.getElementById('phone') as HTMLInputElement
+
+  function updateContactMethod() {
+    const selectedMethod = document.querySelector('input[name="contactMethod"]:checked') as HTMLInputElement
+    if (selectedMethod?.value === 'email') {
+      emailGroup!.style.display = 'flex'
+      phoneGroup!.style.display = 'none'
+      emailInput.required = true
+      phoneInput.required = false
+    } else {
+      emailGroup!.style.display = 'none'
+      phoneGroup!.style.display = 'flex'
+      emailInput.required = false
+      phoneInput.required = true
+    }
+  }
+
+  contactMethodRadios.forEach(radio => {
+    radio.addEventListener('change', updateContactMethod)
+  })
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault()
@@ -485,12 +547,13 @@ import { themeConfig } from '@/config'
     submitButton.textContent = 'Joining...'
 
     const formData = new FormData(form)
+    const contactMethod = formData.get('contactMethod')
     
     // Build payload matching your Edge Function's expected format
     const payload: any = {
       name: formData.get('name'),
-      email: formData.get('email'),
-      phone: null,
+      email: contactMethod === 'email' ? formData.get('email') : null,
+      phone: contactMethod === 'phone' ? formData.get('phone') : null,
       platform: formData.get('platform'),
       metadata: {
         newsletter: formData.get('newsletter') === 'on'
