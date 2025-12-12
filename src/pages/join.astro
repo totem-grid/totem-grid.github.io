@@ -1,0 +1,633 @@
+---
+import IndexLayout from '@/layouts/IndexLayout.astro'
+import BaseHead from '@/components/layout/BaseHead.astro'
+import { themeConfig } from '@/config'
+---
+
+<IndexLayout>
+  <BaseHead
+    slot="head"
+    title="Join Our Waitlist"
+    description="Sign up to get early access and stay updated on our latest developments."
+  />
+
+  <main class="waitlist-page">
+    <div class="waitlist-container">
+      <div class="waitlist-header" id="waitlistHeader">
+        <h1>Become a Pioneer for TotemGrid!</h1>
+        <p class="subtitle">
+          Be among the first to experience our platform. Sign up now and we'll notify you when we launch.
+        </p>
+      </div>
+
+      <div class="success-container" id="successContainer" style="display: none;">
+        <div class="success-content">
+          <div class="success-icon">🎉</div>
+          <h2 class="success-title">You're In!</h2>
+          <p class="success-message">
+            Thanks for joining the waitlist! We're thrilled to have you on board. 
+            You'll be among the first to know when we launch.
+          </p>
+          <div class="social-links">
+            <p class="social-text">Follow us for updates!</p>
+            <div class="social-icons">
+              <a href="https://instagram.com/totemgrid" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+              </a>
+              <a href="https://twitter.com/totemgrid" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="share-section">
+            <p class="share-text">Know someone who'd love this? Share the waitlist:</p>
+            <div class="share-buttons">
+              <button class="share-button" id="copyLinkBtn" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                </svg>
+                <span id="copyText">Copy Link</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form 
+        class="waitlist-form" 
+        id="waitlistForm"
+      >
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="What's your name?"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Contact Method</label>
+          <div class="contact-method-toggle">
+            <input type="radio" id="contact-email" name="contactMethod" value="email" checked />
+            <label for="contact-email" class="toggle-option">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              <span>Email</span>
+            </label>
+            <input type="radio" id="contact-phone" name="contactMethod" value="phone" />
+            <label for="contact-phone" class="toggle-option">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span>Phone</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group" id="emailGroup">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="your@email.com"
+          />
+        </div>
+
+        <div class="form-group" id="phoneGroup" style="display: none;">
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+1 (555) 000-0000"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="platform">Platform (select all that apply)</label>
+          <div class="platform-select">
+            <input type="checkbox" id="platform-ios" name="platform" value="ios" />
+            <label for="platform-ios" class="platform-option">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+              </svg>
+              <span>iOS</span>
+            </label>
+            <input type="checkbox" id="platform-android" name="platform" value="android" />
+            <label for="platform-android" class="platform-option">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.637.637 0 0 0-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67a.643.643 0 0 0-.87-.2c-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/>
+              </svg>
+              <span>Android</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="newsletter" />
+            <span>Subscribe to our newsletter for updates</span>
+          </label>
+        </div>
+
+        <button type="submit" class="submit-button">Join Waitlist</button>
+        
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </div>
+  </main>
+</IndexLayout>
+
+<style>
+  .waitlist-page {
+    padding: 6rem 2rem 4rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .waitlist-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .waitlist-header {
+    text-align: center;
+  }
+
+  .waitlist-header h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, var(--primary-color, #6366f1), var(--secondary-color, #8b5cf6));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary, #6b7280);
+    line-height: 1.5;
+  }
+
+  .success-container {
+    background: var(--card-bg, #ffffff);
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .success-content {
+    text-align: center;
+  }
+
+  .success-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    animation: bounceIn 0.6s ease-out;
+  }
+
+  @keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .success-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color, #6366f1), var(--secondary-color, #8b5cf6));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .success-message {
+    font-size: 1.125rem;
+    color: var(--text-secondary, #6b7280);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-links {
+    margin-bottom: 2rem;
+  }
+
+  .social-text {
+    font-size: 0.875rem;
+    color: var(--text-secondary, #6b7280);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--input-bg, #ffffff);
+    border: 2px solid var(--border-color, #e5e7eb);
+    color: var(--text-secondary, #6b7280);
+    transition: all 0.2s;
+  }
+
+  .social-icon:hover {
+    border-color: var(--primary-color, #6366f1);
+    color: var(--primary-color, #6366f1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+  }
+
+  .share-section {
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color, #e5e7eb);
+  }
+
+  .share-text {
+    font-size: 0.875rem;
+    color: var(--text-secondary, #6b7280);
+    margin-bottom: 1rem;
+  }
+
+  .share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .share-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color, #6366f1);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .share-button:hover {
+    background: var(--secondary-color, #8b5cf6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  }
+
+  .share-button:active {
+    transform: translateY(0);
+  }
+
+  .share-button.copied {
+    background: #10b981;
+  }
+
+  .waitlist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: var(--card-bg, #ffffff);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--text-primary, #111827);
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color, #d1d5db);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.2s;
+    background: var(--input-bg, #ffffff);
+    color: var(--text-primary, #111827);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color, #6366f1);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  }
+
+  .checkbox-group {
+    flex-direction: row;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+  }
+
+  .contact-method-toggle,
+  .platform-select {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .contact-method-toggle input[type="radio"],
+  .platform-select input[type="checkbox"] {
+    display: none;
+  }
+
+  .toggle-option,
+  .platform-option {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border-color, #d1d5db);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--input-bg, #ffffff);
+    color: var(--text-secondary, #6b7280);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .toggle-option:hover,
+  .platform-option:hover {
+    border-color: var(--primary-color, #6366f1);
+    background: rgba(99, 102, 241, 0.05);
+  }
+
+  .contact-method-toggle input[type="radio"]:checked + .toggle-option,
+  .platform-select input[type="checkbox"]:checked + .platform-option {
+    border-color: var(--primary-color, #6366f1);
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary-color, #6366f1);
+  }
+
+  #platform-ios:checked + .platform-option {
+    border-color: #007aff;
+    background: rgba(0, 122, 255, 0.1);
+    color: #007aff;
+  }
+
+  #platform-android:checked + .platform-option {
+    border-color: #3ddc84;
+    background: rgba(61, 220, 132, 0.1);
+    color: #3ddc84;
+  }
+
+  .toggle-option svg,
+  .platform-option svg {
+    flex-shrink: 0;
+  }
+
+  .submit-button {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color, #6366f1), var(--secondary-color, #8b5cf6));
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
+  }
+
+  .submit-button:active {
+    transform: translateY(0);
+  }
+
+  .submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .form-message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+  }
+
+  .form-message.success {
+    display: block;
+    background: #d1fae5;
+    color: #065f46;
+  }
+
+  .form-message.error {
+    display: block;
+    background: #fee2e2;
+    color: #991b1b;
+  }
+
+  @media (max-width: 768px) {
+    .waitlist-page {
+      padding: 4rem 1rem 2rem;
+    }
+
+    .waitlist-header h1 {
+      font-size: 1.5rem;
+    }
+
+    .subtitle {
+      font-size: 0.9375rem;
+    }
+
+    .waitlist-form {
+      padding: 1.5rem;
+    }
+
+    .success-container {
+      padding: 2rem 1.5rem;
+    }
+
+    .success-title {
+      font-size: 1.5rem;
+    }
+
+    .success-message {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  const SUPABASE_URL = 'https://mrqzulsrhqmdienzzohi.supabase.co'
+  const SUPABASE_ANON_KEY = 'YOUR_ANON_KEY_HERE' // Replace with your actual anon key from Supabase dashboard
+  
+  const form = document.getElementById('waitlistForm') as HTMLFormElement
+  const message = document.getElementById('formMessage') as HTMLDivElement
+  
+  // Get referral ID from URL query params
+  const urlParams = new URLSearchParams(window.location.search)
+  const referrerId = urlParams.get('referral')
+  
+  // Toggle contact method visibility
+  const contactMethodRadios = document.querySelectorAll('input[name="contactMethod"]')
+  const emailGroup = document.getElementById('emailGroup')
+  const phoneGroup = document.getElementById('phoneGroup')
+  const emailInput = document.getElementById('email') as HTMLInputElement
+  const phoneInput = document.getElementById('phone') as HTMLInputElement
+
+  function updateContactMethod() {
+    const selectedMethod = document.querySelector('input[name="contactMethod"]:checked') as HTMLInputElement
+    if (selectedMethod?.value === 'email') {
+      emailGroup!.style.display = 'flex'
+      phoneGroup!.style.display = 'none'
+      emailInput.required = true
+      phoneInput.required = false
+    } else {
+      emailGroup!.style.display = 'none'
+      phoneGroup!.style.display = 'flex'
+      emailInput.required = false
+      phoneInput.required = true
+    }
+  }
+
+  contactMethodRadios.forEach(radio => {
+    radio.addEventListener('change', updateContactMethod)
+  })
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault()
+
+    const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement
+    submitButton.disabled = true
+    submitButton.textContent = 'Joining...'
+
+    const formData = new FormData(form)
+    const contactMethod = formData.get('contactMethod')
+    
+    // Get all checked platform checkboxes
+    const platformCheckboxes = document.querySelectorAll('input[name="platform"]:checked') as NodeListOf<HTMLInputElement>
+    const platforms = Array.from(platformCheckboxes).map(cb => cb.value)
+    const platformValue = platforms.length > 0 ? platforms.join(' | ') : null
+    
+    // Build payload matching your Edge Function's expected format
+    const payload: any = {
+      name: formData.get('name'),
+      email: formData.get('email') || null,
+      phone: formData.get('phone') || null,
+      platform: platformValue,
+      metadata: {
+        newsletter: formData.get('newsletter') === 'on'
+      }
+    }
+
+    // Add referrer_id if present in URL
+    if (referrerId) {
+      payload.referrer_id = referrerId
+    }
+
+    try {
+      const response = await fetch(`${SUPABASE_URL}/functions/v1/waitlist-signup`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'apikey': SUPABASE_ANON_KEY,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Submission failed')
+      }
+
+      // Success - hide form and show success message
+      document.getElementById('waitlistHeader')!.style.display = 'none'
+      document.getElementById('waitlistForm')!.style.display = 'none'
+      document.getElementById('successContainer')!.style.display = 'block'
+      
+      // Get the totem_ref_id from response
+      const totemRefId = result.totem_ref_id
+      
+      // Setup copy link button with referral parameter
+      const copyBtn = document.getElementById('copyLinkBtn')
+      const copyText = document.getElementById('copyText')
+      copyBtn?.addEventListener('click', async () => {
+        try {
+          const baseUrl = window.location.origin + window.location.pathname
+          const referralUrl = `${baseUrl}?referral=${totemRefId}`
+          await navigator.clipboard.writeText(referralUrl)
+          copyText!.textContent = 'Copied!'
+          copyBtn!.classList.add('copied')
+          setTimeout(() => {
+            copyText!.textContent = 'Copy Link'
+            copyBtn!.classList.remove('copied')
+          }, 2000)
+        } catch (err) {
+          console.error('Failed to copy:', err)
+        }
+      })
+      
+    } catch (error: any) {
+      console.error('Error submitting form:', error)
+      const errorMessage = error.message.toLowerCase()
+      if (errorMessage.includes('too many requests')) {
+        message.textContent = '⏱️ Please wait before submitting again.'
+      } else if (errorMessage.includes('invalid email')) {
+        message.textContent = '❌ Please enter a valid email address.'
+      } else {
+        message.textContent = '❌ Something went wrong. Please try again.'
+      }
+      message.className = 'form-message error'
+    } finally {
+      submitButton.disabled = false
+      submitButton.textContent = 'Join Waitlist'
+    }
+  })
+</script>
