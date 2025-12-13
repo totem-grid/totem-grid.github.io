@@ -3,7 +3,15 @@ import IndexLayout from '@/layouts/IndexLayout.astro'
 import BaseHead from '@/components/layout/BaseHead.astro'
 import { themeConfig } from '@/config'
 
-const referralCode = Astro.url.searchParams.get('referral');
+let referralCode = Astro.url.searchParams.get('referral');
+
+// Validate the referral code to ensure it's alphanumeric
+const isValidReferralCode = referralCode && /^[a-zA-Z0-9]+$/.test(referralCode);
+
+if (!isValidReferralCode) {
+  referralCode = null;
+}
+
 const welcomeMessage = referralCode
   ? 'Your friend wants you to join them in being among the first to experience our platform. Sign up now and we\'ll notify you when we launch.'
   : 'Be among the first to experience our platform. Sign up now and we\'ll notify you when we launch.';
