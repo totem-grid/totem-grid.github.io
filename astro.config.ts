@@ -21,9 +21,6 @@ export default defineConfig({
   },
   integrations: [sitemap()],
   vite: {
-    server: {
-      allowedHosts: ['.ngrok-free.app']
-    },
     resolve: {
       alias: {
         '@': path.resolve('./src')
