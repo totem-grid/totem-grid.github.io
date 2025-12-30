@@ -1,0 +1,323 @@
+---
+import IndexLayout from '@/layouts/IndexLayout.astro'
+import Button from '@/components/ui/Button.astro'
+---
+<IndexLayout
+  title="Countdown to 2026 - Totem Grid"
+  description="Welcome the New Year with Totem Grid's revolutionary event connectivity solution."
+>
+
+  <header class="hero card-depth" aria-labelledby="landing-hero-heading">
+    <div
+      class="hero-unicorn"
+      data-us-project-src="/unicorn/slidebg.json"
+      data-us-production="true"
+      data-us-lazyload="false"
+      data-us-dpi="2"
+      data-us-alttext="Animated Totem Grid background"
+      data-us-arialabel="Animated hero background scene"
+    ></div>
+    <div class="hero-content">
+        <img 
+          src="/brand/logoshape.svg" 
+          width="180" 
+          height="90" 
+          alt="Totem Grid"
+          fetchpriority="high"
+          loading="eager"
+        />
+        <div class="hero-text">
+          <img 
+            src="/brand/logotype.svg" 
+            width="453" 
+            height="64" 
+            alt="Totem Grid"
+            fetchpriority="high"
+            loading="eager"
+          />
+          <span class="hero-tagline">Game-changing event connectivity</span>
+      </div>
+    </div>
+  </header>
+  
+  <section class="countdown-section">
+    <div id="countdown" class="countdown-display">Loading countdown...</div>
+  </section>
+  <section class="landing-app-pitch">  
+    <div class="landing-app-pitch-content">
+      <h2 class="heading-xl" 
+        style="
+          margin: 0;
+          color: var(--colors-indigo-40);
+          text-shadow: 4px 4px 8px var(--colors-teal-95);
+      ">
+        <a href="https://www.eventbrite.com/e/the-glitch-mob-nye-party-w-special-guest-craze-tickets-1790684107369?aff=ebdsoporgprofile/" target="_blank" rel="noopener noreferrer">
+            <div style="color: var(--colors-ink-20);">
+            New Years Eve Seattle <br> Totem Grid Goes Live </div></a> at Substation with the Glitch Mob
+        </a>
+      </h2>
+      <div>
+        Meet at Midnight. Move as One.
+      </div>
+
+    </div>
+    <div>
+      <img src="/media/nye2025-substation.png" alt="NYE with TGM" style="width: 400px; height: auto;" />
+    </div>
+  </section>
+
+
+<style>
+  .landing-app-pitch {
+     display: flex;
+     flex-direction: column;
+     padding: 2rem 0;
+     gap: 40px;
+     align-items: center;
+     justify-content: center;
+     margin-top: -24px;
+  }
+
+  .landing-app-pitch-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    max-width: 430px;
+  }
+
+  .landing-app-pitch-demo {
+    overflow: hidden;
+    width: 200px;
+    height: 426px;
+    transform: rotate(1.781deg);
+    border-radius: 33px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    img {
+      position: relative;
+      top: -9px;
+      left: -10px;
+      width: 220px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .landing-app-pitch {
+      flex-direction: row;
+      padding: 2rem;
+      padding-top: 0;
+    }
+
+    .landing-app-pitch-content {
+      text-align: right;
+      align-items: flex-end;
+    }
+
+    .landing-app-pitch-demo {
+      margin-top: -80px;
+    }
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .feature-card {
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    gap: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--colors-bright-ink-70, #ABA4E3);
+    background: var(--colors-ink-99, #FCF8FF);
+    box-shadow: 0 0.879px 35.156px 7.031px var(--colors-ink-150, #E4E0FA), 0 -0.879px 3.516px -0.879px var(--colors-Ink-500, #9B97CE) inset, 0 0.879px 3.516px -0.879px #FFF inset;
+  }
+
+  .feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .heading-l {
+      color: var(--colors-indigo-40);
+    }
+  }
+
+  .feature-emoji {
+    font-size: 2.5rem;
+    display: inline-block;
+  }
+
+  .love-it-heart {
+    fill: var(--colors-fuchsia-80, #FF6ADC);
+    stroke-width: 8px;
+    stroke: var(--colors-indigo-40, #4D00FF);
+    filter: drop-shadow(4px 4px 8px var(--colors-teal-95, #75F1EA));
+  } 
+
+  .network-impact {
+    background-color: var(--colors-red-20);
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+  }
+
+  .network-impact-image {
+    position: relative;
+    aspect-ratio: 16/9;
+    background-color: var(--colors-indigo-40);
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient(0deg, rgba(232, 42, 91, 0.40) 0%, rgba(232, 42, 91, 0.40) 100%), url('/media/network-dies-bg.webp') no-repeat center center/cover;;
+    background-blend-mode: multiply, normal;
+    z-index: 10;
+
+    .heading-2xl {
+      margin: 0;
+      color: var(--colors-red-100);
+      text-shadow: 4px 4px 8px var(--colors-red-0, #520012);
+      padding: 40px;
+      letter-spacing: -3.5px;
+      mix-blend-mode: plus-lighter; 
+    }
+  }
+
+  .network-impact-content {
+    padding: 24px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    img {
+      width: 191.566px;
+      height: 271.273px;
+      transform: rotate(2.411deg);
+      aspect-ratio: 191.57/271.27;
+      position:absolute;
+      right: 32px;
+      bottom: 8px;
+      border-radius: 7.232px;
+      border: 2px solid var(--colors-red-60, #F64B6C);
+      background: linear-gradient(0deg, rgba(254, 185, 193, 0.40) 0%, rgba(254, 185, 193, 0.40) 100%), var(--Colors-Red-20, #9B0D31);
+      z-index: 0;
+    }
+
+    p {
+      max-width: 400px;
+      margin: 0;
+      color: var(--colors-ink-100);
+      font-size: var(--font-size-l);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .network-impact-image h3 {
+      padding: 24px;
+    }
+    .network-impact-content {
+      padding: 24px;
+      img {
+        display: none;
+      }
+    } 
+  }
+
+  .countdown-section {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--colors-indigo-99);
+    border-radius: 12px;
+    margin: 1rem 0;
+  }
+
+  .countdown-display {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--colors-indigo-20);
+    font-family: var(--font-mono);
+  }
+</style>
+
+<canvas id="fireworks" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 1000;"></canvas>
+
+<script>
+  function updateCountdown() {
+    const now = new Date();
+    const nye = new Date('2026-01-01T00:00:00');
+    const diff = nye - now;
+    if (diff > 0) {
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      document.getElementById('countdown').innerText = `${days}d ${hours}h ${minutes}m ${seconds}s until 2026`;
+    } else {
+      document.getElementById('countdown').innerText = 'Happy New Year 2026!';
+    }
+  }
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+
+
+// Fireworks effect
+const canvas = document.getElementById('fireworks');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+function createParticle(x, y, color) {
+  return {
+    x, y,
+    vx: (Math.random() - 0.5) * 10,
+    vy: (Math.random() - 0.5) * 10,
+    life: 100,
+    color
+  };
+}
+
+function updateParticles() {
+  particles = particles.filter(p => p.life > 0);
+  particles.forEach(p => {
+    p.x += p.vx;
+    p.y += p.vy;
+    p.vy += 0.1; // gravity
+    p.life--;
+  });
+}
+
+function drawParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particles.forEach(p => {
+    ctx.fillStyle = p.color;
+    ctx.fillRect(p.x, p.y, 8, 8);
+  });
+}
+
+function animateFireworks() {
+  updateParticles();
+  drawParticles();
+  requestAnimationFrame(animateFireworks);
+}
+
+animateFireworks();
+
+// Auto launch fireworks
+setInterval(() => {
+  const x = Math.random() * canvas.width;
+  const y = Math.random() * canvas.height / 2;
+  for(let i = 0; i < 30; i++) {
+    particles.push(createParticle(x, y, `hsl(${Math.random()*360}, 100%, 50%)`));
+  }
+}, 3000);
+
+</script>
