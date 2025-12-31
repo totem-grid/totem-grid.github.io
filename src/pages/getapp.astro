@@ -19,10 +19,27 @@ import Button from '@/components/ui/Button.astro'
       <article class="platform-card card-depth" aria-label="iOS">
         <h2 class="heading-xl">iOS</h2>
         <p class="body-l platform-description">
-          iOS access is currently via waitlist.
+          Install <b>TotemGrid Beta</b> using TestFlight.
         </p>
         <div class="platform-actions">
-          <Button href="/join" label="Join iOS Waitlist" variant="primary" />
+          <Button
+            href="https://testflight.apple.com/join/fJG9DsaW"
+            label="Install via TestFlight"
+            variant="primary"
+            target="_blank"
+            rel="noopener noreferrer"
+            ariaLabel="Open the TotemGrid Pilot TestFlight link"
+          />
+        </div>
+
+        <div class="install-instructions" aria-label="iOS TestFlight install instructions">
+          <div class="heading">Install steps</div>
+          <ol class="steps">
+            <li>Install the Apple <b>TestFlight</b> app from the App Store (if you don’t have it).</li>
+            <li>Open the link above on your iPhone.</li>
+            <li>Tap <b>Start Testing</b>, then <b>Install</b>.</li>
+            <li>Open TotemGrid Pilot from your home screen.</li>
+          </ol>
         </div>
       </article>
 
