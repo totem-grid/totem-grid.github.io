@@ -1,0 +1,160 @@
+---
+import IndexLayout from '@/layouts/IndexLayout.astro'
+import Button from '@/components/ui/Button.astro'
+---
+
+<IndexLayout
+  title="Get the App — Totem Grid"
+  description="Install Totem Grid on iOS or Android."
+>
+  <main class="getapp-page" aria-labelledby="getapp-title">
+    <header class="getapp-hero card-depth">
+      <h1 id="getapp-title" class="loud-text heading-2xl">Get Totem Grid</h1>
+      <p class="body-l getapp-subtitle">
+        Choose your platform to get started.
+      </p>
+    </header>
+
+    <section class="platform-grid" aria-label="Download options">
+      <article class="platform-card card-depth" aria-label="iOS">
+        <h2 class="heading-xl">iOS</h2>
+        <p class="body-l platform-description">
+          Install <b>TotemGrid Beta</b> using TestFlight.
+        </p>
+        <div class="platform-actions">
+          <Button
+            href="https://testflight.apple.com/join/fJG9DsaW"
+            label="Install via TestFlight"
+            variant="primary"
+            target="_blank"
+            rel="noopener noreferrer"
+            ariaLabel="Open the TotemGrid Pilot TestFlight link"
+          />
+        </div>
+
+        <div class="install-instructions" aria-label="iOS TestFlight install instructions">
+          <div class="heading">Install steps</div>
+          <ol class="steps">
+            <li>Install the Apple <b>TestFlight</b> app from the App Store (if you don’t have it).</li>
+            <li>Open the link above on your iPhone.</li>
+            <li>Tap <b>Start Testing</b>, then <b>Install</b>.</li>
+            <li>Open TotemGrid Pilot from your home screen.</li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="platform-card card-depth" aria-label="Android">
+        <h2 class="heading-xl">Android</h2>
+        <p class="body-l platform-description">
+          Install <b>TotemGrid Pilot</b> from the link below.
+        </p>
+        <div class="platform-actions">
+          <Button
+            href="https://steep-brook-941e.quantumsix492.workers.dev"
+            label="Install TotemGrid Pilot"
+            variant="secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+            ariaLabel="Open the TotemGrid Pilot install link"
+          />
+        </div>
+
+        <div class="install-instructions" aria-label="Android install instructions">
+          <div class="heading">Install steps</div>
+          <ol class="steps">
+            <li>Open the link above on your Android phone.</li>
+            <li>Download the APK for TotemGrid Pilot.</li>
+            <li>
+              If prompted, allow installs from your browser ("unknown sources") for this install.
+            </li>
+            <li>Open the downloaded file and follow the prompts to install.</li>
+          </ol>
+        </div>
+      </article>
+    </section>
+  </main>
+</IndexLayout>
+
+<style>
+  .getapp-page {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 12px 0 32px;
+  }
+
+  .getapp-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+  }
+
+  .getapp-subtitle {
+    margin: 8px 0 0;
+    color: var(--colors-ink-30);
+    text-transform: none;
+    letter-spacing: var(--spacing-m);
+  }
+
+  .platform-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .platform-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+  }
+
+  .platform-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+  }
+
+  .platform-card h2 {
+    margin: 0;
+  }
+
+  .platform-description {
+    margin: 0;
+    color: var(--colors-ink-30);
+  }
+
+  .platform-actions {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .install-instructions {
+    margin-top: 8px;
+    padding-top: 12px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .steps {
+    margin: 12px 0 0;
+    padding-left: 1.2rem;
+    color: var(--colors-ink-30);
+  }
+
+  .steps li {
+    margin: 8px 0;
+  }
+</style>
