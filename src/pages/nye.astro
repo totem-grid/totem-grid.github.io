@@ -66,6 +66,30 @@ import Button from '@/components/ui/Button.astro'
     </div>
   </section>
 
+  <section class="getapp-section card-depth" aria-label="Get the Totem Grid app">
+    <div class="getapp-content">
+      <h2 class="heading-xl" style="margin: 0; color: var(--colors-indigo-40);">Get the app</h2>
+      <p class="body-l" style="margin: 0; color: var(--colors-ink-30);">
+        Scan or tap the QR code, or use the button.
+      </p>
+      <div class="getapp-actions">
+        <Button href="/getapp" label="Get the App" variant="primary" />
+      </div>
+    </div>
+
+    <a class="getapp-qr" href="/getapp" aria-label="Open /getapp">
+      <img
+        src="/media/get-app-qr.png"
+        alt="QR code to open Totem Grid app download page"
+        width="240"
+        height="240"
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="getapp-qr-hint">Tap to open</div>
+    </a>
+  </section>
+
 
 <style>
   .landing-app-pitch {
@@ -243,6 +267,78 @@ import Button from '@/components/ui/Button.astro'
     font-weight: bold;
     color: var(--colors-indigo-20);
     font-family: var(--font-mono);
+  }
+
+  .getapp-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-secondary);
+  }
+
+  .getapp-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    max-width: 520px;
+  }
+
+  .getapp-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .getapp-qr {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    background: var(--colors-ink-99, #FCF8FF);
+  }
+
+  .getapp-qr img {
+    width: min(260px, 70vw);
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .getapp-qr:hover {
+    transform: translateY(-2px);
+  }
+
+  .getapp-qr-hint {
+    font-family: var(--font-pixel);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--colors-ink-30);
+    font-size: 0.95rem;
+  }
+
+  @media (min-width: 768px) {
+    .getapp-section {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      padding: 24px 28px;
+    }
+
+    .getapp-content {
+      align-items: flex-start;
+    }
   }
 </style>
 
