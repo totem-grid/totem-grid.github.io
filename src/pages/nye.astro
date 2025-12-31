@@ -255,10 +255,10 @@ import Button from '@/components/ui/Button.astro'
     const diff = nye - now;
     if (diff > 0) {
       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)+days*24);
       const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-      document.getElementById('countdown').innerText = `${days}d ${hours}h ${minutes}m ${seconds}s until 2026`;
+      document.getElementById('countdown').innerText = `${hours} hours ${minutes} minutes  Until 2026`;
     } else {
       document.getElementById('countdown').innerText = 'Happy New Year 2026!';
     }
