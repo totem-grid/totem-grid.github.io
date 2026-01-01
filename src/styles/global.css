@@ -372,19 +372,11 @@ main {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.12px;
-  margin-left: 17px;
+  text-align: center;
 }
 
 @media (min-width: 900px) {
-  .hero {
-    
-  }
-
   .hero-content {
     flex-direction: row;
-  }
-
-  .hero-text {
-    align-items: flex-start;
   }
 }
