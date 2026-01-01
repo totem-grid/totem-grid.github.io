@@ -355,36 +355,5 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
   position: relative;
-}
-
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 8px;
-  text-align: center;
-}
-
-.hero-tagline {
-  font-size: var(--font-size-m);
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1.12px;
-  margin-left: 17px;
-}
-
-@media (min-width: 900px) {
-  .hero {
-    
-  }
-
-  .hero-content {
-    flex-direction: row;
-  }
-
-  .hero-text {
-    align-items: flex-start;
-  }
 }
