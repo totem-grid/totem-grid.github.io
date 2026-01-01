@@ -24,236 +24,69 @@ import Button from '@/components/ui/Button.astro'
         fetchpriority="high"
         loading="eager"
       />
+      <div id="countdown" class="countdown-display">Loading countdown...</div>
     </div>
   </header>
-  
-  <section class="countdown-section">
-    <div id="countdown" class="countdown-display">Loading countdown...</div>
-  </section>
-  <section class="landing-app-pitch">  
-    <div class="landing-app-pitch-content">
-      <h2 class="heading-xl" 
-        style="
-          margin: 0;
-          color: var(--colors-indigo-40);
-          text-shadow: 4px 4px 8px var(--colors-teal-95);
-      ">
-            <div style="color: var(--colors-ink-20);">
-                <a href="https://www.eventbrite.com/e/the-glitch-mob-nye-party-w-special-guest-craze-tickets-1790684107369?aff=ebdsoporgprofile/" target="_blank" rel="noopener noreferrer">
-                New Years Eve Seattle <br> Totem Grid Goes Live </a>
-            </div>at Substation with the Glitch Mob
-      </h2>
-      <div>
-        Meet at Midnight. Move as One.
-      </div>
 
-    </div>
+  <h2 class="heading-2xl" style="margin: 0;">
     <div>
+        <a href="https://www.eventbrite.com/e/the-glitch-mob-nye-party-w-special-guest-craze-tickets-1790684107369?aff=ebdsoporgprofile/" target="_blank" rel="noopener noreferrer">
+        New Years Eve Seattle <br> Totem Grid Goes Live </a>
+    </div>at Substation with the Glitch Mob. Meet at Midnight. Move as One.
+  </h2>
+
+  <section class="nye-side-by-side">
+    <div class="event-poster-blcok">  
       <img src="/media/nye2025-substation.png" alt="NYE with TGM" style="width: 400px; height: auto;" />
     </div>
-  </section>
-
-  <section class="getapp-section card-depth" aria-label="Get the Totem Grid app">
-    <div class="getapp-content">
-      <h2 class="heading-xl" style="margin: 0; color: var(--colors-indigo-40);">Get the app</h2>
-      <p class="body-l" style="margin: 0; color: var(--colors-ink-30);">
-        Scan or tap the QR code, or use the button.
-      </p>
-      <div class="getapp-actions">
-        <Button href="/getapp" label="Get the App" variant="primary" />
-      </div>
+    <div class="getapp-block">
+      <a class="getapp-qr" href="/getapp" aria-label="Open /getapp">
+        <img
+          src="/media/get-app-qr.svg"
+          alt="QR code to open Totem Grid app download page"
+          width="240"
+          height="240"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+      <Button href="/getapp" label="Get the App" variant="primary" />
     </div>
-
-    <a class="getapp-qr" href="/getapp" aria-label="Open /getapp">
-      <img
-        src="/media/get-app-qr.png"
-        alt="QR code to open Totem Grid app download page"
-        width="240"
-        height="240"
-        loading="lazy"
-        decoding="async"
-      />
-      <div class="getapp-qr-hint">Tap to open</div>
-    </a>
   </section>
-
 
 <style>
-  .landing-app-pitch {
-     display: flex;
-     flex-direction: column;
-     padding: 2rem 0;
-     gap: 40px;
-     align-items: center;
-     justify-content: center;
-     margin-top: -24px;
-  }
-
-  .landing-app-pitch-content {
-    text-align: center;
+  .nye-side-by-side {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
     align-items: center;
-    max-width: 430px;
+    justify-content: space-between;
+    background-color: var(--colors-ink-0);
   }
 
-  .landing-app-pitch-demo {
-    overflow: hidden;
-    width: 200px;
-    height: 426px;
-    transform: rotate(1.781deg);
-    border-radius: 33px;
-    flex-shrink: 0;
-    flex-grow: 0;
-    img {
-      position: relative;
-      top: -9px;
-      left: -10px;
-      width: 220px;
-    }
+  .getapp-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    padding: 16px;
+    justify-content: center;
+    flex-grow: 1;
   }
 
   @media (min-width: 768px) {
-    .landing-app-pitch {
+    .nye-side-by-side {
       flex-direction: row;
-      padding: 2rem;
-      padding-top: 0;
+      gap: 48px;
     }
-
-    .landing-app-pitch-content {
-      text-align: right;
-      align-items: flex-end;
-    }
-
-    .landing-app-pitch-demo {
-      margin-top: -80px;
-    }
-  }
-
-  .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-    margin-bottom: 16px;
-  }
-
-  .feature-card {
-    display: flex;
-    padding: 16px;
-    align-items: center;
-    gap: 16px;
-    border-radius: 12px;
-    border: 1px solid var(--colors-bright-ink-70, #ABA4E3);
-    background: var(--colors-ink-99, #FCF8FF);
-    box-shadow: 0 0.879px 35.156px 7.031px var(--colors-ink-150, #E4E0FA), 0 -0.879px 3.516px -0.879px var(--colors-Ink-500, #9B97CE) inset, 0 0.879px 3.516px -0.879px #FFF inset;
-  }
-
-  .feature-content {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-
-    .heading-l {
-      color: var(--colors-indigo-40);
-    }
-  }
-
-  .feature-emoji {
-    font-size: 2.5rem;
-    display: inline-block;
-  }
-
-  .love-it-heart {
-    fill: var(--colors-fuchsia-80, #FF6ADC);
-    stroke-width: 8px;
-    stroke: var(--colors-indigo-40, #4D00FF);
-    filter: drop-shadow(4px 4px 8px var(--colors-teal-95, #75F1EA));
-  } 
-
-  .network-impact {
-    background-color: var(--colors-red-20);
-    overflow: hidden;
-    border-radius: 12px;
-    position: relative;
-  }
-
-  .network-impact-image {
-    position: relative;
-    aspect-ratio: 16/9;
-    background-color: var(--colors-indigo-40);
-    margin: 0;
-    display: flex;
-    align-items: flex-end;
-    background: linear-gradient(0deg, rgba(232, 42, 91, 0.40) 0%, rgba(232, 42, 91, 0.40) 100%), url('/media/network-dies-bg.webp') no-repeat center center/cover;;
-    background-blend-mode: multiply, normal;
-    z-index: 10;
-
-    .heading-2xl {
-      margin: 0;
-      color: var(--colors-red-100);
-      text-shadow: 4px 4px 8px var(--colors-red-0, #520012);
-      padding: 40px;
-      letter-spacing: -3.5px;
-      mix-blend-mode: plus-lighter; 
-    }
-  }
-
-  .network-impact-content {
-    padding: 24px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: flex-start;
-    justify-content: flex-start;
-
-    img {
-      width: 191.566px;
-      height: 271.273px;
-      transform: rotate(2.411deg);
-      aspect-ratio: 191.57/271.27;
-      position:absolute;
-      right: 32px;
-      bottom: 8px;
-      border-radius: 7.232px;
-      border: 2px solid var(--colors-red-60, #F64B6C);
-      background: linear-gradient(0deg, rgba(254, 185, 193, 0.40) 0%, rgba(254, 185, 193, 0.40) 100%), var(--Colors-Red-20, #9B0D31);
-      z-index: 0;
-    }
-
-    p {
-      max-width: 400px;
-      margin: 0;
-      color: var(--colors-ink-100);
-      font-size: var(--font-size-l);
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    .network-impact-image h3 {
-      padding: 24px;
-    }
-    .network-impact-content {
-      padding: 24px;
-      img {
-        display: none;
-      }
-    } 
-  }
-
-  .countdown-section {
-    text-align: center;
-    padding: 2rem 0;
-    background: var(--colors-indigo-99);
-    border-radius: 12px;
-    margin: 1rem 0;
   }
 
   .countdown-display {
-    font-size: 2rem;
+    font-size: var(--font-size-l);
     font-weight: bold;
-    color: var(--colors-indigo-20);
+    color: var(--colors-teal-95);
     font-family: var(--font-mono);
+    margin-top: 24px;
   }
 
   .getapp-section {
@@ -285,16 +118,6 @@ import Button from '@/components/ui/Button.astro'
   }
 
   .getapp-qr {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: inherit;
-    padding: 12px;
-    border-radius: 12px;
-    border: 1px solid var(--color-border);
-    background: var(--colors-ink-99, #FCF8FF);
   }
 
   .getapp-qr img {
