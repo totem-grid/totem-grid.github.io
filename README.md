@@ -50,7 +50,17 @@ Totem Grid is a revolutionary platform that enables seamless connections at crow
 
 ## Deploy
 
+### NOTE: Cloudflare
+
+1. 2026.01.18: mirror deployment now live on Cloudflare
+2. Target is https://resilientnet.io as a landing page
+3. Configs at https://dash.cloudflare.com/470104177acbc7d630c02d8f2101fe7d/pages/view/totem-grid-github-io
+
+### GitHub Pages
+
 The site deploys automatically to GitHub Pages when changes are pushed to the `main` branch.
+
+### Manual deployment
 
 You can also trigger a deployment manually:
 
